@@ -81,7 +81,6 @@ namespace ModernWpf.Controls
 
         const string c_itemsContainer = "ItemsContainerGrid";
         const string c_itemsContainerRow = "ItemsContainerRow";
-        const string c_visualItemsSeparator = "VisualItemsSeparator";
         const string c_menuItemsScrollViewer = "MenuItemsScrollViewer";
         const string c_footerItemsScrollViewer = "FooterItemsScrollViewer";
 
@@ -93,6 +92,9 @@ namespace ModernWpf.Controls
         const string c_paneHeaderToggleButtonColumn = "PaneHeaderToggleButtonColumn";
         const string c_paneHeaderContentBorderRow = "PaneHeaderContentBorderRow";
 
+        const string c_separatorVisibleStateName = "SeparatorVisible";
+        const string c_separatorCollapsedStateName = "SeparatorCollapsed";
+
         const int c_backButtonHeight = 40;
         const int c_backButtonWidth = 40;
         const int c_paneToggleButtonHeight = 40;
@@ -100,6 +102,7 @@ namespace ModernWpf.Controls
         const int c_toggleButtonHeightWhenShouldPreserveNavigationViewRS3Behavior = 56;
         const int c_backButtonRowDefinition = 1;
         const float c_paneElevationTranslationZ = 32;
+        const int c_paneItemsSeparatorHeight = 9;
 
         const int c_mainMenuBlockIndex = 0;
         const int c_footerMenuBlockIndex = 1;
@@ -711,12 +714,11 @@ namespace ModernWpf.Controls
             m_itemsContainerRow = GetTemplateChildT<RowDefinition>(c_itemsContainerRow, controlProtected);
             m_menuItemsScrollViewer = GetTemplateChildT<FrameworkElement>(c_menuItemsScrollViewer, controlProtected);
             m_footerItemsScrollViewer = GetTemplateChildT<FrameworkElement>(c_footerItemsScrollViewer, controlProtected);
-            m_visualItemsSeparator = GetTemplateChildT<FrameworkElement>(c_visualItemsSeparator, controlProtected);
 
             m_itemsContainerSizeChangedRevoker?.Revoke();
-            if (GetTemplateChildT<FrameworkElement>(c_itemsContainer, controlProtected) is { } itemsContainerRow)
+            if (GetTemplateChildT<FrameworkElement>(c_itemsContainer, controlProtected) is { } itemsContainer)
             {
-                m_itemsContainerSizeChangedRevoker = new FrameworkElementSizeChangedRevoker(itemsContainerRow, OnItemsContainerSizeChanged);
+                m_itemsContainerSizeChangedRevoker = new FrameworkElementSizeChangedRevoker(itemsContainer, OnItemsContainerSizeChanged);
             }
 
             if (SharedHelpers.IsRS2OrHigher())
@@ -754,6 +756,7 @@ namespace ModernWpf.Controls
             UpdateVisualState();
             UpdatePaneTitleMargins();
             UpdatePaneLayout();
+            UpdatePaneOverlayGroup();
         }
 
         void UpdateRepeaterItemsSource(bool forceSelectionModelUpdate)
@@ -1553,25 +1556,44 @@ namespace ModernWpf.Controls
         {
             if (!IsTopNavigationView())
             {
-                double totalAvailableHeight;
+                var totalAvailableHeight = TotalAvailableHeight();
+                double TotalAvailableHeight()
                 {
-                    totalAvailableHeight = init();
-                    double init()
+                    if (m_itemsContainerRow is { } paneContentRow)
                     {
-                        if (m_itemsContainerRow is { } paneContentRow)
+                        var itemsContainerMargin = ItemsContainerMargin();
+                        double ItemsContainerMargin()
                         {
-                            // 20px is the padding between the two item lists
+                            if (m_itemsContainer is { } itemsContainer)
+                            {
+                                var margin = itemsContainer.Margin;
+                                return margin.Top + margin.Bottom;
+                            }
+                            return 0.0;
+                        }
+                        var availableHeight = paneContentRow.ActualHeight - itemsContainerMargin;
+
+                        // The c_paneItemsSeparatorHeight is to account for the 9px separator height that we need to subtract.
+                        if (PaneFooter is { })
+                        {
+                            availableHeight -= c_paneItemsSeparatorHeight;
                             if (m_leftNavFooterContentBorder is { } paneFooter)
                             {
-                                return paneContentRow.ActualHeight - 29 - paneFooter.ActualHeight;
-                            }
-                            else
-                            {
-                                return paneContentRow.ActualHeight - 29;
+                                availableHeight -= paneFooter.ActualHeight;
                             }
                         }
-                        return 0.0;
+                        else if (IsSettingsVisible)
+                        {
+                            availableHeight -= c_paneItemsSeparatorHeight;
+                        }
+                        else if (m_footerItemsSource is { } && m_menuItemsSource is { } && m_footerItemsSource.Count * m_menuItemsSource.Count > 0)
+                        {
+                            availableHeight -= c_paneItemsSeparatorHeight;
+                        }
+
+                        return availableHeight;
                     }
+                    return 0.0;
                 }
 
                 // Only continue if we have a positive amount of space to manage.
@@ -1594,44 +1616,44 @@ namespace ModernWpf.Controls
                                     {
                                         var footersActualHeight = footerItemsRepeater.ActualHeight;
                                         var menuItemsActualHeight = menuItems.ActualHeight;
-                                        if (totalAvailableHeight > menuItemsActualHeight + footersActualHeight)
+
+                                        if (m_footerItemsSource.Count == 0 && !IsSettingsVisible)
+                                        {
+                                            VisualStateManager.GoToState(this, c_separatorCollapsedStateName, false);
+                                            return totalAvailableHeight;
+                                        }
+                                        else if (m_menuItemsSource.Count == 0)
+                                        {
+                                            footerItemsScrollViewer.MaxHeight = totalAvailableHeight;
+                                            VisualStateManager.GoToState(this, c_separatorCollapsedStateName, false);
+                                            return 0.0;
+                                        }
+                                        else if (totalAvailableHeight > menuItemsActualHeight + footersActualHeight)
                                         {
                                             // We have enough space for two so let everyone get as much as they need.
                                             footerItemsScrollViewer.MaxHeight = footersActualHeight;
-                                            if (m_visualItemsSeparator is { } separator)
-                                            {
-                                                separator.Visibility = Visibility.Collapsed;
-                                            }
+                                            VisualStateManager.GoToState(this, c_separatorCollapsedStateName, false);
                                             return totalAvailableHeight - footersActualHeight;
                                         }
                                         else if (menuItemsActualHeight <= totalAvailableHeightHalf)
                                         {
                                             // Footer items exceed over the half, so let's limit them.
                                             footerItemsScrollViewer.MaxHeight = totalAvailableHeight - menuItemsActualHeight;
-                                            if (m_visualItemsSeparator is { } separator)
-                                            {
-                                                separator.Visibility = Visibility.Visible;
-                                            }
+                                            VisualStateManager.GoToState(this, c_separatorVisibleStateName, false);
                                             return menuItemsActualHeight;
                                         }
                                         else if (footersActualHeight <= totalAvailableHeightHalf)
                                         {
                                             // Menu items exceed over the half, so let's limit them.
                                             footerItemsScrollViewer.MaxHeight = footersActualHeight;
-                                            if (m_visualItemsSeparator is { } separator)
-                                            {
-                                                separator.Visibility = Visibility.Visible;
-                                            }
+                                            VisualStateManager.GoToState(this, c_separatorVisibleStateName, false);
                                             return totalAvailableHeight - footersActualHeight;
                                         }
                                         else
                                         {
                                             // Both are more than half the height, so split evenly.
                                             footerItemsScrollViewer.MaxHeight = totalAvailableHeightHalf;
-                                            if (m_visualItemsSeparator is { } separator)
-                                            {
-                                                separator.Visibility = Visibility.Visible;
-                                            }
+                                            VisualStateManager.GoToState(this, c_separatorVisibleStateName, false);
                                             return totalAvailableHeightHalf;
                                         }
                                     }
@@ -1847,31 +1869,12 @@ namespace ModernWpf.Controls
 
         void UpdatePaneButtonsWidths()
         {
-            double newButtonWidths;
-            {
-                double init()
-                {
-                    if (DisplayMode == NavigationViewDisplayMode.Minimal)
-                    {
-                        return c_paneToggleButtonWidth;
-                    }
-                    return CompactPaneLength;
-                }
-                newButtonWidths = init();
-            }
+            var templateSettings = GetTemplateSettings();
 
-            if (m_backButton is { } backButton)
-            {
-                backButton.Width = newButtonWidths;
-            }
-            if (m_paneToggleButton is { } paneToggleButton)
-            {
-                paneToggleButton.MinWidth = newButtonWidths;
-                if (paneToggleButton.GetTemplateChild<ColumnDefinition>(c_paneToggleButtonIconGridColumnName) is { } paneToggleButtonIconColumn)
-                {
-                    paneToggleButtonIconColumn.Width = new GridLength(newButtonWidths);
-                }
-            }
+            var newButtonWidths = CompactPaneLength;
+
+            templateSettings.PaneToggleButtonWidth = newButtonWidths;
+            templateSettings.SmallerPaneToggleButtonWidth = newButtonWidths - 8;
         }
 
         void OnBackButtonClicked(object sender, RoutedEventArgs args)
@@ -1996,20 +1999,25 @@ namespace ModernWpf.Controls
             {
                 var isPaneToggleButtonVisible = IsPaneToggleButtonVisible;
                 var isTopNavigationView = IsTopNavigationView();
+                var paneTitleSize = PaneTitle?.Length ?? 0;
 
-                paneTitleHolderFrameworkElement.Visibility =
-                    (isPaneToggleButtonVisible ||
-                        isTopNavigationView ||
-                        PaneTitle.Length == 0 ||
-                        (PaneDisplayMode == NavigationViewPaneDisplayMode.LeftMinimal && !IsPaneOpen)) ?
-                    Visibility.Collapsed : Visibility.Visible;
+                m_isLeftPaneTitleEmpty = (isPaneToggleButtonVisible ||
+                    isTopNavigationView ||
+                    paneTitleSize == 0 ||
+                    (PaneDisplayMode == NavigationViewPaneDisplayMode.LeftMinimal && !IsPaneOpen));
+
+                paneTitleHolderFrameworkElement.Visibility = m_isLeftPaneTitleEmpty ? Visibility.Collapsed : Visibility.Visible;
 
                 if (m_paneTitleFrameworkElement is { } paneTitleFrameworkElement)
                 {
+                    var paneTitleTopPane = m_paneTitleOnTopPane;
+
                     var first = SetPaneTitleFrameworkElementParent(m_paneToggleButton, paneTitleFrameworkElement, isTopNavigationView || !isPaneToggleButtonVisible);
                     var second = SetPaneTitleFrameworkElementParent(m_paneTitlePresenter, paneTitleFrameworkElement, isTopNavigationView || isPaneToggleButtonVisible);
-                    var third = SetPaneTitleFrameworkElementParent(m_paneTitleOnTopPane, paneTitleFrameworkElement, !isTopNavigationView || isPaneToggleButtonVisible);
+                    var third = SetPaneTitleFrameworkElementParent(paneTitleTopPane, paneTitleFrameworkElement, !isTopNavigationView || isPaneToggleButtonVisible);
                     (first ?? second ?? third)?.Invoke();
+
+                    paneTitleTopPane.Visibility = third is { } && paneTitleSize != 0 ? Visibility.Visible : Visibility.Collapsed;
                 }
             }
         }
@@ -3547,7 +3555,7 @@ namespace ModernWpf.Controls
         void UpdateLeftNavigationOnlyVisualState(bool useTransitions)
         {
             bool isToggleButtonVisible = IsPaneToggleButtonVisible;
-            VisualStateManager.GoToState(this, isToggleButtonVisible ? "TogglePaneButtonVisible" : "TogglePaneButtonCollapsed", false /*useTransitions*/);
+            VisualStateManager.GoToState(this, isToggleButtonVisible || !m_isLeftPaneTitleEmpty ? "TogglePaneButtonVisible" : "TogglePaneButtonCollapsed", false /*useTransitions*/);
         }
 
         void InvalidateTopNavPrimaryLayout()
@@ -4181,6 +4189,10 @@ namespace ModernWpf.Controls
             {
                 SyncItemTemplates();
             }
+            else if (property == PaneFooterProperty)
+            {
+                UpdatePaneLayout();
+            }
         }
 
         void UpdateNavigationViewItemsFactory()
@@ -4280,6 +4292,8 @@ namespace ModernWpf.Controls
             UpdatePaneTabFocusNavigation();
             UpdateSettingsItemToolTip();
             UpdatePaneTitleFrameworkElementParents();
+            UpdatePaneOverlayGroup();
+            UpdatePaneButtonsWidths();
 
             if (SharedHelpers.IsThemeShadowAvailable())
             {
@@ -4297,7 +4311,6 @@ namespace ModernWpf.Controls
                     }
                 }
             }
-            UpdatePaneButtonsWidths();
         }
 
         void UpdatePaneToggleButtonVisibility()
@@ -4524,7 +4537,7 @@ namespace ModernWpf.Controls
             {
                 if (m_rootSplitView is { } splitView)
                 {
-                    double width = GetPaneToggleButtonWidth();
+                    double width = GetTemplateSettings().PaneToggleButtonWidth;
                     double togglePaneButtonWidth = width;
 
                     if (ShouldShowBackButton() && splitView.DisplayMode == SplitViewDisplayMode.Overlay)
@@ -4639,15 +4652,6 @@ namespace ModernWpf.Controls
                 paneHeaderCloseButtonColumn.Width = GridLengthHelper.FromValueAndType(paneHeaderPaddingForCloseButton, GridUnitType.Pixel);
             }
 
-            if (m_paneTitleHolderFrameworkElement is { } paneTitleHolderFrameworkElement)
-            {
-                if (paneHeaderContentBorderRowMinHeight == 0.00 && paneTitleHolderFrameworkElement.Visibility == Visibility.Visible)
-                {
-                    // Handling the case where the PaneTottleButton is collapsed and the PaneTitle's height needs to push the rest of the NavigationView's UI down.
-                    paneHeaderContentBorderRowMinHeight = paneTitleHolderFrameworkElement.ActualHeight;
-                }
-            }
-
             if (m_paneHeaderContentBorderRow is { } paneHeaderContentBorderRow)
             {
                 paneHeaderContentBorderRow.MinHeight = paneHeaderContentBorderRowMinHeight;
@@ -4655,6 +4659,11 @@ namespace ModernWpf.Controls
 
             if (m_paneContentGrid is { } paneContentGridAsUIE)
             {
+                if (paneContentGridAsUIE is Border paneContentGridAsBorder)
+                {
+                    paneContentGridAsUIE = paneContentGridAsBorder.Child;
+                }
+
                 if (paneContentGridAsUIE is Grid paneContentGrid)
                 {
                     var rowDefs = paneContentGrid.RowDefinitions;
@@ -5004,6 +5013,21 @@ namespace ModernWpf.Controls
                 shadowReceiver.Margin = (shadowReceiverMargin);
             }
             */
+        }
+
+        void UpdatePaneOverlayGroup()
+        {
+            if (m_rootSplitView is { } splitView)
+            {
+                if (IsPaneOpen && (splitView.DisplayMode == SplitViewDisplayMode.CompactOverlay || splitView.DisplayMode == SplitViewDisplayMode.Overlay))
+                {
+                    VisualStateManager.GoToState(this, "PaneOverlaying", true /*useTransitions*/);
+                }
+                else
+                {
+                    VisualStateManager.GoToState(this, "PaneNotOverlaying", true /*useTransitions*/);
+                }
+            }
         }
 
         T GetContainerForData<T>(object data) where T : class
@@ -5750,7 +5774,6 @@ namespace ModernWpf.Controls
         ColumnDefinition m_paneToggleButtonIconGridColumn;
         FrameworkElement m_paneTitleHolderFrameworkElement;
         FrameworkElement m_paneTitleFrameworkElement;
-        FrameworkElement m_visualItemsSeparator;
         Button m_paneSearchButton;
         Button m_backButton;
         Button m_closeButton;
@@ -5791,6 +5814,7 @@ namespace ModernWpf.Controls
         ColumnDefinition m_paneHeaderCloseButtonColumn;
         ColumnDefinition m_paneHeaderToggleButtonColumn;
         RowDefinition m_paneHeaderContentBorderRow;
+        FrameworkElement m_itemsContainer;
 
         NavigationViewItem m_lastItemExpandedIntoFlyout;
 
@@ -5848,6 +5872,8 @@ namespace ModernWpf.Controls
         bool m_OrientationChangedPendingAnimation = false;
 
         bool m_TabKeyPrecedesFocusChange = false;
+
+        bool m_isLeftPaneTitleEmpty = false;
 
         GettingFocusHelper m_leftNavRepeaterGettingFocusHelper;
         GettingFocusHelper m_topNavRepeaterGettingFocusHelper;

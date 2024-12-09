@@ -44,6 +44,10 @@
     <Color x:Key="SystemListLowColor">#19FFFFFF</Color>
     <Color x:Key="SystemListMediumColor">#33FFFFFF</Color>
     <Color x:Key="SystemErrorTextColor">#FFF000</Color>
+    
+    <Color x:Key="ControlAAStrokeColorDefault">#8BFFFFFF</Color>
+
+    <m:StaticResource x:Key="SystemColorHighlightColor" ResourceKey="{x:Static SystemColors.HighlightColorKey}" />
 
     <SolidColorBrush x:Key="SystemControlBackgroundAccentBrush" Color="{m:ThemeResource SystemColorButtonFaceColor}" />
     <SolidColorBrush x:Key="SystemControlBackgroundAltHighBrush" Color="{m:ThemeResource SystemColorButtonFaceColor}" />
@@ -74,8 +78,6 @@
     <SolidColorBrush x:Key="SystemControlDisabledChromeMediumLowBrush" Color="{m:ThemeResource SystemColorButtonFaceColor}" />
     <SolidColorBrush x:Key="SystemControlDisabledListMediumBrush" Color="{m:ThemeResource SystemColorGrayTextColor}" />
     <SolidColorBrush x:Key="SystemControlDisabledTransparentBrush" Color="{m:ThemeResource SystemColorGrayTextColor}" />
-    <SolidColorBrush x:Key="SystemControlFocusVisualPrimaryBrush" Color="{m:ThemeResource SystemColorButtonTextColor}" />
-    <SolidColorBrush x:Key="SystemControlFocusVisualSecondaryBrush" Color="{m:ThemeResource SystemColorButtonFaceColor}" />
     <SolidColorBrush x:Key="SystemControlRevealFocusVisualBrush" Color="{m:ThemeResource SystemAccentColor}" />
     <SolidColorBrush x:Key="SystemControlForegroundAccentBrush" Color="{m:ThemeResource SystemColorButtonTextColor}" />
     <SolidColorBrush x:Key="SystemControlForegroundAltHighBrush" Color="{m:ThemeResource SystemColorButtonTextColor}" />
@@ -146,8 +148,8 @@
     <SolidColorBrush x:Key="AcrylicInAppFillColorDefaultBrush" Color="{m:ThemeResource SystemColorWindowColor}"/>
     <SolidColorBrush x:Key="AcrylicBackgroundFillColorDefaultInverseBrush" Color="{m:ThemeResource SystemColorWindowTextColor}" />
     <SolidColorBrush x:Key="AcrylicBackgroundFillColorBaseBrush" Color="{m:ThemeResource SystemColorWindowColor}"/>
-    <SolidColorBrush x:Key="SystemControlDefaultBrighteningBrush" Color="{m:ThemeResource SystemColorWindowColor}"/>
     <m:StaticResource x:Key="SystemControlDescriptionTextForegroundBrush" ResourceKey="SystemControlPageTextBaseMediumBrush" />
+    <SolidColorBrush x:Key="SystemControlTransientBackgroundBrush" Color="{m:ThemeResource SystemColorWindowColor}"/>
 
     <!-- Acrylic Brushes -->
     <SolidColorBrush x:Key="SystemControlAcrylicElementBrush" Color="{m:ThemeResource SystemColorWindowColor}" />
@@ -165,11 +167,11 @@
     <SolidColorBrush x:Key="AccentTextFillColorTertiaryBrush" Color="{m:ThemeResource SystemColorWindowTextColor}" />
     <SolidColorBrush x:Key="AccentTextFillColorDisabledBrush" Color="{m:ThemeResource SystemColorGrayTextColor}" />
 
-    <SolidColorBrush x:Key="TextOnAccentFillColorDefaultBrush" Color="{m:ThemeResource SystemColorWindowTextColor}" />
+    <SolidColorBrush x:Key="TextOnAccentFillColorSelectedTextBrush" Color="{m:ThemeResource SystemColorWindowTextColor}" />
 
-    <SolidColorBrush x:Key="TextOnAccentAAFillColorPrimaryBrush" Color="{m:ThemeResource SystemColorWindowTextColor}" />
-    <SolidColorBrush x:Key="TextOnAccentAAFillColorSecondaryBrush" Color="{m:ThemeResource SystemColorWindowTextColor}" />
-    <SolidColorBrush x:Key="TextOnAccentAAFillColorDisabledBrush" Color="{m:ThemeResource SystemColorGrayTextColor}" />
+    <SolidColorBrush x:Key="TextOnAccentFillColorPrimaryBrush" Color="{m:ThemeResource SystemColorWindowTextColor}" />
+    <SolidColorBrush x:Key="TextOnAccentFillColorSecondaryBrush" Color="{m:ThemeResource SystemColorWindowTextColor}" />
+    <SolidColorBrush x:Key="TextOnAccentFillColorDisabledBrush" Color="{m:ThemeResource SystemColorGrayTextColor}" />
 
     <SolidColorBrush x:Key="ControlFillColorDefaultBrush" Color="{m:ThemeResource SystemColorButtonFaceColor}" />
     <SolidColorBrush x:Key="ControlFillColorSecondaryBrush" Color="{m:ThemeResource SystemColorButtonFaceColor}" />
@@ -178,15 +180,15 @@
     <SolidColorBrush x:Key="ControlFillColorTransparentBrush" Color="Transparent" />
     <SolidColorBrush x:Key="ControlFillColorInputActiveBrush" Color="{m:ThemeResource SystemColorButtonFaceColor}" />
 
-    <SolidColorBrush x:Key="ControlAAFillColorDefaultBrush" Color="{m:ThemeResource SystemColorButtonFaceColor}" />
-    <SolidColorBrush x:Key="ControlAAFillColorDisabledBrush" Color="{m:ThemeResource SystemColorButtonFaceColor}" />
+    <SolidColorBrush x:Key="ControlStrongFillColorDefaultBrush" Color="{m:ThemeResource SystemColorButtonFaceColor}" />
+    <SolidColorBrush x:Key="ControlStrongFillColorDisabledBrush" Color="{m:ThemeResource SystemColorButtonFaceColor}" />
 
     <SolidColorBrush x:Key="ControlSolidFillColorDefaultBrush" Color="{m:ThemeResource SystemColorButtonFaceColor}" />
 
-    <SolidColorBrush x:Key="GhostFillColorTransparentBrush" Color="Transparent" />
-    <SolidColorBrush x:Key="GhostFillColorSecondaryBrush" Color="{m:ThemeResource SystemColorButtonFaceColor}" />
-    <SolidColorBrush x:Key="GhostFillColorTertiaryBrush" Color="{m:ThemeResource SystemColorButtonFaceColor}" />
-    <SolidColorBrush x:Key="GhostFillColorDisabledBrush" Color="{m:ThemeResource SystemColorButtonFaceColor}" />
+    <SolidColorBrush x:Key="SubtleFillColorTransparentBrush" Color="Transparent" />
+    <SolidColorBrush x:Key="SubtleFillColorSecondaryBrush" Color="{m:ThemeResource SystemColorButtonFaceColor}" />
+    <SolidColorBrush x:Key="SubtleFillColorTertiaryBrush" Color="{m:ThemeResource SystemColorButtonFaceColor}" />
+    <SolidColorBrush x:Key="SubtleFillColorDisabledBrush" Color="{m:ThemeResource SystemColorButtonFaceColor}" />
 
     <SolidColorBrush x:Key="ControlAltFillColorTransparentBrush" Color="Transparent" />
     <SolidColorBrush x:Key="ControlAltFillColorSecondaryBrush" Color="{m:ThemeResource SystemColorButtonFaceColor}" />
@@ -199,12 +201,12 @@
     <SolidColorBrush x:Key="ControlOnImageFillColorTertiaryBrush" Color="{m:ThemeResource SystemColorButtonFaceColor}" />
     <SolidColorBrush x:Key="ControlOnImageFillColorDisabledBrush" Color="{m:ThemeResource SystemColorButtonFaceColor}" />
 
-    <SolidColorBrush x:Key="AccentFillColorDefaultBrush" Color="{m:ThemeResource SystemColorWindowColor}" />
+    <SolidColorBrush x:Key="AccentFillColorSelectedTextBackgroundBrush" Color="{m:ThemeResource SystemColorWindowColor}" />
 
-    <SolidColorBrush x:Key="AccentAAFillColorDefaultBrush" Color="{m:ThemeResource SystemColorWindowColor}" />
-    <SolidColorBrush x:Key="AccentAAFillColorSecondaryBrush" Color="{m:ThemeResource SystemColorWindowColor}" />
-    <SolidColorBrush x:Key="AccentAAFillColorTertiaryBrush" Color="{m:ThemeResource SystemColorWindowColor}" />
-    <SolidColorBrush x:Key="AccentAAFillColorDisabledBrush" Color="{m:ThemeResource SystemColorWindowColor}" />
+    <SolidColorBrush x:Key="AccentFillColorDefaultBrush" Color="{m:ThemeResource SystemColorWindowColor}" />
+    <SolidColorBrush x:Key="AccentFillColorSecondaryBrush" Color="{m:ThemeResource SystemColorWindowColor}" />
+    <SolidColorBrush x:Key="AccentFillColorTertiaryBrush" Color="{m:ThemeResource SystemColorWindowColor}" />
+    <SolidColorBrush x:Key="AccentFillColorDisabledBrush" Color="{m:ThemeResource SystemColorWindowColor}" />
 
     <SolidColorBrush x:Key="ControlStrokeColorDefaultBrush" Color="{m:ThemeResource SystemColorButtonTextColor}" />
     <SolidColorBrush x:Key="ControlStrokeColorSecondaryBrush" Color="{m:ThemeResource SystemColorButtonTextColor}" />
@@ -212,13 +214,13 @@
     <SolidColorBrush x:Key="ControlStrokeColorOnAccentSecondaryBrush" Color="{m:ThemeResource SystemColorButtonTextColor}" />
     <SolidColorBrush x:Key="ControlStrokeColorOnAccentTertiaryBrush" Color="{m:ThemeResource SystemColorButtonTextColor}" />
     <SolidColorBrush x:Key="ControlStrokeColorOnAccentDisabledBrush" Color="{m:ThemeResource SystemColorGrayTextColor}" />
-    <SolidColorBrush x:Key="ControlStrokeColorForAAFillOnImageBrush" Color="{m:ThemeResource SystemColorButtonTextColor}" />
+    <SolidColorBrush x:Key="ControlStrokeColorForStrongFillWhenOnImageBrush" Color="{m:ThemeResource SystemColorButtonTextColor}" />
 
     <SolidColorBrush x:Key="CardStrokeColorDefaultBrush" Color="{m:ThemeResource SystemColorWindowTextColor}" />
     <SolidColorBrush x:Key="CardStrokeColorDefaultSolidBrush" Color="{m:ThemeResource SystemColorWindowTextColor}" />
 
-    <SolidColorBrush x:Key="ControlAAStrokeColorDefaultBrush" Color="{m:ThemeResource SystemColorButtonTextColor}" />
-    <SolidColorBrush x:Key="ControlAAStrokeColorDisabledBrush" Color="{m:ThemeResource SystemColorButtonTextColor}" />
+    <SolidColorBrush x:Key="ControlStrongStrokeColorDefaultBrush" Color="{m:ThemeResource SystemColorButtonTextColor}" />
+    <SolidColorBrush x:Key="ControlStrongStrokeColorDisabledBrush" Color="{m:ThemeResource SystemColorButtonTextColor}" />
 
     <SolidColorBrush x:Key="SurfaceStrokeColorDefaultBrush" Color="{m:ThemeResource SystemColorWindowTextColor}" />
     <SolidColorBrush x:Key="SurfaceStrokeColorFlyoutBrush" Color="{m:ThemeResource SystemColorWindowTextColor}" />
@@ -235,8 +237,9 @@
     <SolidColorBrush x:Key="SmokeFillColorDefaultBrush" Color="{m:ThemeResource SystemColorWindowColor}" />
 
     <SolidColorBrush x:Key="LayerFillColorDefaultBrush" Color="{m:ThemeResource SystemColorWindowColor}" />
-    <SolidColorBrush x:Key="LayerFillColorSecondaryBrush" Color="{m:ThemeResource SystemColorWindowColor}" />
-    <SolidColorBrush x:Key="LayerFillColorTertiaryBrush" Color="{m:ThemeResource SystemColorWindowColor}" />
+    <SolidColorBrush x:Key="LayerFillColorAltBrush" Color="{m:ThemeResource SystemColorWindowColor}" />
+    <SolidColorBrush x:Key="LayerOnAcrylicFillColorDefaultBrush" Color="{m:ThemeResource SystemColorWindowColor}" />
+    <SolidColorBrush x:Key="LayerOnAccentAcrylicFillColorDefaultBrush" Color="{m:ThemeResource SystemColorWindowColor}"/>
 
     <SolidColorBrush x:Key="SolidBackgroundFillColorBaseBrush" Color="{m:ThemeResource SystemColorWindowColor}" />
     <SolidColorBrush x:Key="SolidBackgroundFillColorSecondaryBrush" Color="{m:ThemeResource SystemColorWindowColor}" />
@@ -254,8 +257,9 @@
     <SolidColorBrush x:Key="SystemFillColorCriticalBackgroundBrush" Color="{m:ThemeResource SystemColorWindowColor}" />
     <SolidColorBrush x:Key="SystemFillColorNeutralBackgroundBrush" Color="{m:ThemeResource SystemColorWindowColor}" />
 
+    <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{m:ThemeResource SystemColorWindowColor}" />
+
     <m:StaticResource x:Key="DefaultTextForegroundThemeBrush" ResourceKey="TextFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="ApplicationPageBackgroundThemeBrush" ResourceKey="SolidBackgroundFillColorTertiaryBrush" />
 
     <!-- Elevation border brushes-->
 
@@ -264,16 +268,104 @@
     <SolidColorBrush x:Key="AccentControlElevationBorderBrush" Color="{m:ThemeResource SystemColorWindowTextColor}" />
 
     <!-- Other -->
-
+    <SolidColorBrush x:Key="SystemColorGrayTextColorBrush" Color="{m:ThemeResource SystemColorGrayTextColor}" />
+    <SolidColorBrush x:Key="SystemColorHighlightColorBrush" Color="{m:ThemeResource SystemColorHighlightColor}" />
+    <SolidColorBrush x:Key="SystemColorHighlightTextColorBrush" Color="{m:ThemeResource SystemColorHighlightTextColor}" />
     <SolidColorBrush x:Key="SystemColorWindowTextColorBrush" Color="{m:ThemeResource SystemColorWindowTextColor}" />
     <SolidColorBrush x:Key="SystemColorWindowColorBrush" Color="{m:ThemeResource SystemColorWindowColor}" />
+    <SolidColorBrush x:Key="SystemColorButtonFaceColorBrush" Color="{m:ThemeResource SystemColorButtonFaceColor}" />
+    <SolidColorBrush x:Key="SystemColorButtonTextColorBrush" Color="{m:ThemeResource SystemColorButtonTextColor}" />
     <SolidColorBrush x:Key="SystemControlTransparentBrush" Color="Transparent" />
     <SolidColorBrush x:Key="SystemControlHighlightListAccentVeryHighBrush" Color="{m:ThemeResource SystemColorHighlightColor}" />
     <SolidColorBrush x:Key="SystemControlHighlightListAccentMediumLowBrush" Color="{m:ThemeResource SystemColorHighlightColor}" />
     <sys:Boolean x:Key="UseSystemFocusVisuals">True</sys:Boolean>
     <Thickness x:Key="TextControlBorderThemeThickness">1</Thickness>
     <Thickness x:Key="TextControlBorderThemeThicknessFocused">2</Thickness>
-    <Thickness x:Key="TextControlThemePadding">10,6,6,5</Thickness>
+    <Thickness x:Key="TextControlThemePadding">10,5,6,6</Thickness>
+    <m:StaticResource x:Key="SystemControlFocusVisualPrimaryBrush" ResourceKey="FocusStrokeColorOuterBrush"/>
+    <m:StaticResource x:Key="SystemControlFocusVisualSecondaryBrush" ResourceKey="FocusStrokeColorInnerBrush"/>
+
+    <!-- Colors copied from Default theme to match list of keys. Should not
+                 be using these keys. These are set to Red to notify that.-->
+    <Color x:Key="TextFillColorPrimary">#FF0000</Color>
+    <Color x:Key="TextFillColorSecondary">#FF0000</Color>
+    <Color x:Key="TextFillColorTertiary">#FF0000</Color>
+    <Color x:Key="TextFillColorDisabled">#FF0000</Color>
+    <Color x:Key="TextFillColorInverse">#FF0000</Color>
+    <Color x:Key="AccentTextFillColorDisabled">#FF0000</Color>
+    <Color x:Key="ControlFillColorDefault">#FF0000</Color>
+    <Color x:Key="ControlFillColorSecondary">#FF0000</Color>
+    <Color x:Key="ControlFillColorTertiary">#FF0000</Color>
+    <Color x:Key="ControlFillColorDisabled">#FF0000</Color>
+    <Color x:Key="ControlFillColorTransparent">#FF0000</Color>
+    <Color x:Key="ControlFillColorInputActive">#FF0000</Color>
+    <Color x:Key="ControlSolidFillColorDefault">#FF0000</Color>
+    <Color x:Key="SubtleFillColorTransparent">#FF0000</Color>
+    <Color x:Key="SubtleFillColorSecondary">#FF0000</Color>
+    <Color x:Key="SubtleFillColorTertiary">#FF0000</Color>
+    <Color x:Key="SubtleFillColorDisabled">#FF0000</Color>
+    <Color x:Key="ControlAltFillColorTransparent">#FF0000</Color>
+    <Color x:Key="ControlAltFillColorSecondary">#FF0000</Color>
+    <Color x:Key="ControlAltFillColorTertiary">#FF0000</Color>
+    <Color x:Key="ControlAltFillColorQuarternary">#FF0000</Color>
+    <Color x:Key="ControlAltFillColorDisabled">#FF0000</Color>
+    <Color x:Key="ControlOnImageFillColorDefault">#FF0000</Color>
+    <Color x:Key="ControlOnImageFillColorSecondary">#FF0000</Color>
+    <Color x:Key="ControlOnImageFillColorTertiary">#FF0000</Color>
+    <Color x:Key="ControlOnImageFillColorDisabled">#FF0000</Color>
+    <Color x:Key="ControlStrokeColorDefault">#FF0000</Color>
+    <Color x:Key="ControlStrokeColorSecondary">#FF0000</Color>
+    <Color x:Key="ControlStrokeColorOnAccentDefault">#FF0000</Color>
+    <Color x:Key="ControlStrokeColorOnAccentSecondary">#FF0000</Color>
+    <Color x:Key="ControlStrokeColorOnAccentTertiary">#FF0000</Color>
+    <Color x:Key="ControlStrokeColorOnAccentDisabled">#FF0000</Color>
+    <Color x:Key="CardStrokeColorDefault">#FF0000</Color>
+    <Color x:Key="CardStrokeColorDefaultSolid">#FF0000</Color>
+    <Color x:Key="SurfaceStrokeColorDefault">#FF0000</Color>
+    <Color x:Key="SurfaceStrokeColorFlyout">#FF0000</Color>
+    <Color x:Key="SurfaceStrokeColorInverse">#FF0000</Color>
+    <Color x:Key="DividerStrokeColorDefault">#FF0000</Color>
+    <Color x:Key="FocusStrokeColorOuter">#FF0000</Color>
+    <Color x:Key="FocusStrokeColorInner">#FF0000</Color>
+    <Color x:Key="CardBackgroundFillColorDefault">#FF0000</Color>
+    <Color x:Key="CardBackgroundFillColorSecondary">#FF0000</Color>
+    <Color x:Key="SmokeFillColorDefault">#FF0000</Color>
+    <Color x:Key="LayerFillColorDefault">#FF0000</Color>
+    <Color x:Key="LayerFillColorAlt">#FF0000</Color>
+    <Color x:Key="LayerOnAcrylicFillColorDefault">#FF0000</Color>
+    <Color x:Key="LayerOnAccentAcrylicFillColorDefault">#FF0000</Color>
+    <Color x:Key="LayerOnMicaBaseAltFillColorDefault">#FF0000</Color>
+    <Color x:Key="LayerOnMicaBaseAltFillColorSecondary">#FF0000</Color>
+    <Color x:Key="LayerOnMicaBaseAltFillColorTertiary">#FF0000</Color>
+    <Color x:Key="LayerOnMicaBaseAltFillColorTransparent">#FF0000</Color>
+    <Color x:Key="SolidBackgroundFillColorBase">#FF0000</Color>
+    <Color x:Key="SolidBackgroundFillColorSecondary">#FF0000</Color>
+    <Color x:Key="SolidBackgroundFillColorTertiary">#FF0000</Color>
+    <Color x:Key="SolidBackgroundFillColorQuarternary">#FF0000</Color>
+    <Color x:Key="SolidBackgroundFillColorTransparent">#FF0000</Color>
+    <Color x:Key="SolidBackgroundFillColorBaseAlt">#FF0000</Color>
+    <Color x:Key="SystemFillColorSuccess">#FF0000</Color>
+    <Color x:Key="SystemFillColorCaution">#FF0000</Color>
+    <Color x:Key="SystemFillColorCritical">#FF0000</Color>
+    <Color x:Key="SystemFillColorNeutral">#FF0000</Color>
+    <Color x:Key="SystemFillColorSolidNeutral">#FF0000</Color>
+    <Color x:Key="SystemFillColorAttentionBackground">#FF0000</Color>
+    <Color x:Key="SystemFillColorSuccessBackground">#FF0000</Color>
+    <Color x:Key="SystemFillColorCautionBackground">#FF0000</Color>
+    <Color x:Key="SystemFillColorCriticalBackground">#FF0000</Color>
+    <Color x:Key="SystemFillColorNeutralBackground">#FF0000</Color>
+    <Color x:Key="SystemFillColorSolidAttentionBackground">#FF0000</Color>
+    <Color x:Key="SystemFillColorSolidNeutralBackground">#FF0000</Color>
+    <Color x:Key="TextOnAccentFillColorSelectedText">#FF0000</Color>
+    <Color x:Key="TextOnAccentFillColorPrimary">#FF0000</Color>
+    <Color x:Key="TextOnAccentFillColorSecondary">#FF0000</Color>
+    <Color x:Key="TextOnAccentFillColorDisabled">#FF0000</Color>
+    <Color x:Key="ControlStrongFillColorDefault">#FF0000</Color>
+    <Color x:Key="ControlStrongFillColorDisabled">#FF0000</Color>
+    <Color x:Key="AccentFillColorDisabled">#FF0000</Color>
+    <Color x:Key="ControlStrokeColorForStrongFillWhenOnImage">#FF0000</Color>
+    <Color x:Key="ControlStrongStrokeColorDefault">#FF0000</Color>
+    <Color x:Key="ControlStrongStrokeColorDisabled">#FF0000</Color>
     <!--#endregion-->
 
     <!-- Background Brushes -->
@@ -354,6 +446,8 @@
 
     <!-- Resources for AppBarToggleButton -->
     <m:StaticResource x:Key="AppBarToggleButtonBackground" ResourceKey="SystemControlTransparentBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonBackgroundPointerOver" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonBackgroundPressed" ResourceKey="SubtleFillColorTertiaryBrush" />
     <m:StaticResource x:Key="AppBarToggleButtonBackgroundDisabled" ResourceKey="SystemControlTransparentBrush" />
     <m:StaticResource x:Key="AppBarToggleButtonBackgroundChecked" ResourceKey="SystemControlHighlightListAccentLowBrush" />
     <m:StaticResource x:Key="AppBarToggleButtonBackgroundCheckedPointerOver" ResourceKey="SystemControlHighlightListAccentMediumBrush" />
@@ -447,16 +541,16 @@
     <Thickness x:Key="ButtonBorderThemeThickness">1</Thickness>
     
     <m:StaticResource x:Key="ButtonBackground" ResourceKey="SystemControlBackgroundBaseLowBrush" />
-    <m:StaticResource x:Key="ButtonBackgroundPointerOver" ResourceKey="SystemControlBackgroundBaseLowBrush" />
-    <m:StaticResource x:Key="ButtonBackgroundPressed" ResourceKey="SystemControlBackgroundBaseMediumLowBrush" />
+    <m:StaticResource x:Key="ButtonBackgroundPointerOver" ResourceKey="SystemColorHighlightTextColorBrush" />
+    <m:StaticResource x:Key="ButtonBackgroundPressed" ResourceKey="SystemColorHighlightTextColorBrush" />
     <m:StaticResource x:Key="ButtonBackgroundDisabled" ResourceKey="SystemControlBackgroundBaseLowBrush" />
-    <m:StaticResource x:Key="ButtonForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <m:StaticResource x:Key="ButtonForeground" ResourceKey="SystemColorButtonTextColorBrush" />
     <m:StaticResource x:Key="ButtonForegroundPointerOver" ResourceKey="SystemControlHighlightBaseHighBrush" />
     <m:StaticResource x:Key="ButtonForegroundPressed" ResourceKey="SystemControlHighlightBaseHighBrush" />
     <m:StaticResource x:Key="ButtonForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
     <m:StaticResource x:Key="ButtonBorderBrush" ResourceKey="SystemControlForegroundTransparentBrush" />
-    <m:StaticResource x:Key="ButtonBorderBrushPointerOver" ResourceKey="SystemControlHighlightBaseMediumLowBrush" />
-    <m:StaticResource x:Key="ButtonBorderBrushPressed" ResourceKey="SystemControlHighlightTransparentBrush" />
+    <m:StaticResource x:Key="ButtonBorderBrushPointerOver" ResourceKey="SystemColorHighlightColorBrush" />
+    <m:StaticResource x:Key="ButtonBorderBrushPressed" ResourceKey="SystemColorHighlightTextColorBrush" />
     <m:StaticResource x:Key="ButtonBorderBrushDisabled" ResourceKey="SystemControlDisabledTransparentBrush" />
 
     <!-- Resources for CalendarDatePicker -->
@@ -508,92 +602,108 @@
     <m:StaticResource x:Key="CalendarViewNavigationButtonBorderBrushPointerOver" ResourceKey="SystemControlHighlightTransparentBrush" />
     <m:StaticResource x:Key="CalendarViewNavigationButtonBorderBrush" ResourceKey="SystemControlTransparentBrush" />
 
-    <!-- Resources for CheckBox -->
-    <sys:Double x:Key="CheckBoxBorderThemeThickness">1</sys:Double>
-    <sys:Double x:Key="CheckBoxCheckedStrokeThickness">1</sys:Double>
-    <m:StaticResource x:Key="CheckBoxForegroundUnchecked" ResourceKey="SystemControlForegroundBaseHighBrush" />
-    <m:StaticResource x:Key="CheckBoxForegroundUncheckedPointerOver" ResourceKey="SystemControlForegroundBaseHighBrush" />
-    <m:StaticResource x:Key="CheckBoxForegroundUncheckedPressed" ResourceKey="SystemControlForegroundBaseHighBrush" />
-    <m:StaticResource x:Key="CheckBoxForegroundUncheckedDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
-    <m:StaticResource x:Key="CheckBoxForegroundChecked" ResourceKey="SystemControlForegroundBaseHighBrush" />
-    <m:StaticResource x:Key="CheckBoxForegroundCheckedPointerOver" ResourceKey="SystemControlForegroundBaseHighBrush" />
-    <m:StaticResource x:Key="CheckBoxForegroundCheckedPressed" ResourceKey="SystemControlForegroundBaseHighBrush" />
-    <m:StaticResource x:Key="CheckBoxForegroundCheckedDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
-    <m:StaticResource x:Key="CheckBoxForegroundIndeterminate" ResourceKey="SystemControlForegroundBaseHighBrush" />
-    <m:StaticResource x:Key="CheckBoxForegroundIndeterminatePointerOver" ResourceKey="SystemControlForegroundBaseHighBrush" />
-    <m:StaticResource x:Key="CheckBoxForegroundIndeterminatePressed" ResourceKey="SystemControlForegroundBaseHighBrush" />
-    <m:StaticResource x:Key="CheckBoxForegroundIndeterminateDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
-    <m:StaticResource x:Key="CheckBoxBackgroundUnchecked" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBackgroundUncheckedPointerOver" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBackgroundUncheckedPressed" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBackgroundUncheckedDisabled" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBackgroundChecked" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBackgroundCheckedPointerOver" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBackgroundCheckedPressed" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBackgroundCheckedDisabled" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBackgroundIndeterminate" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBackgroundIndeterminatePointerOver" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBackgroundIndeterminatePressed" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBackgroundIndeterminateDisabled" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBorderBrushUnchecked" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBorderBrushUncheckedPointerOver" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBorderBrushUncheckedPressed" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBorderBrushUncheckedDisabled" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBorderBrushChecked" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBorderBrushCheckedPointerOver" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBorderBrushCheckedPressed" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBorderBrushCheckedDisabled" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBorderBrushIndeterminate" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBorderBrushIndeterminatePointerOver" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBorderBrushIndeterminatePressed" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBorderBrushIndeterminateDisabled" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeUnchecked" ResourceKey="SystemControlForegroundBaseMediumBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeUncheckedPointerOver" ResourceKey="SystemControlHighlightBaseMediumHighBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeUncheckedPressed" ResourceKey="SystemControlHighlightBaseHighBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeUncheckedDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeChecked" ResourceKey="SystemControlHighlightTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeCheckedPointerOver" ResourceKey="SystemControlHighlightBaseHighBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeCheckedPressed" ResourceKey="SystemControlHighlightTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeCheckedDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeIndeterminate" ResourceKey="SystemControlForegroundAccentBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeIndeterminatePointerOver" ResourceKey="SystemControlHighlightAccentBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeIndeterminatePressed" ResourceKey="SystemControlHighlightBaseMediumBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeIndeterminateDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillUnchecked" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillUncheckedPointerOver" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillUncheckedPressed" ResourceKey="SystemControlBackgroundBaseMediumBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillUncheckedDisabled" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillChecked" ResourceKey="SystemControlHighlightAccentBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillCheckedPointerOver" ResourceKey="SystemControlBackgroundAccentBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillCheckedPressed" ResourceKey="SystemControlHighlightBaseMediumBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillCheckedDisabled" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillIndeterminate" ResourceKey="SystemControlHighlightTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillIndeterminatePointerOver" ResourceKey="SystemControlHighlightTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillIndeterminatePressed" ResourceKey="SystemControlHighlightTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillIndeterminateDisabled" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundUnchecked" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundUncheckedPointerOver" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundUncheckedPressed" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundUncheckedDisabled" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundChecked" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundCheckedPointerOver" ResourceKey="SystemControlForegroundChromeWhiteBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundCheckedPressed" ResourceKey="SystemControlForegroundChromeWhiteBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundCheckedDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundIndeterminate" ResourceKey="SystemControlForegroundBaseMediumHighBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundIndeterminatePointerOver" ResourceKey="SystemControlForegroundBaseHighBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundIndeterminatePressed" ResourceKey="SystemControlForegroundBaseMediumBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundIndeterminateDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <!--#region CheckBox_themeresources.xaml-->
+
+    <!-- Content brushes -->
+
+    <m:StaticResource x:Key="CheckBoxForegroundUnchecked" ResourceKey="SystemColorButtonTextColorBrush" />
+    <m:StaticResource x:Key="CheckBoxForegroundUncheckedPointerOver" ResourceKey="SystemColorButtonTextColorBrush" />
+    <m:StaticResource x:Key="CheckBoxForegroundUncheckedPressed" ResourceKey="SystemColorButtonTextColorBrush" />
+    <m:StaticResource x:Key="CheckBoxForegroundUncheckedDisabled" ResourceKey="SystemColorGrayTextColorBrush" />
+
+    <m:StaticResource x:Key="CheckBoxForegroundChecked" ResourceKey="SystemColorButtonTextColorBrush" />
+    <m:StaticResource x:Key="CheckBoxForegroundCheckedPointerOver" ResourceKey="SystemColorButtonTextColorBrush" />
+    <m:StaticResource x:Key="CheckBoxForegroundCheckedPressed" ResourceKey="SystemColorButtonTextColorBrush" />
+    <m:StaticResource x:Key="CheckBoxForegroundCheckedDisabled" ResourceKey="SystemColorGrayTextColorBrush" />
+
+    <m:StaticResource x:Key="CheckBoxForegroundIndeterminate" ResourceKey="SystemColorWindowTextColorBrush" />
+    <m:StaticResource x:Key="CheckBoxForegroundIndeterminatePointerOver" ResourceKey="SystemColorWindowTextColorBrush" />
+    <m:StaticResource x:Key="CheckBoxForegroundIndeterminatePressed" ResourceKey="SystemColorWindowTextColorBrush" />
+    <m:StaticResource x:Key="CheckBoxForegroundIndeterminateDisabled" ResourceKey="SystemColorGrayTextColorBrush" />
+
+    <m:StaticResource x:Key="CheckBoxBackgroundUnchecked" ResourceKey="SystemColorWindowColorBrush" />
+    <m:StaticResource x:Key="CheckBoxBackgroundUncheckedPointerOver" ResourceKey="SystemColorWindowColorBrush" />
+    <m:StaticResource x:Key="CheckBoxBackgroundUncheckedPressed" ResourceKey="SystemColorWindowColorBrush" />
+    <m:StaticResource x:Key="CheckBoxBackgroundUncheckedDisabled" ResourceKey="SystemColorWindowColorBrush" />
+
+    <m:StaticResource x:Key="CheckBoxBackgroundChecked" ResourceKey="SystemColorWindowColorBrush" />
+    <m:StaticResource x:Key="CheckBoxBackgroundCheckedPointerOver" ResourceKey="SystemColorWindowColorBrush" />
+    <m:StaticResource x:Key="CheckBoxBackgroundCheckedPressed" ResourceKey="SystemColorWindowColorBrush" />
+    <m:StaticResource x:Key="CheckBoxBackgroundCheckedDisabled" ResourceKey="SystemColorWindowColorBrush" />
+
+    <m:StaticResource x:Key="CheckBoxBackgroundIndeterminate" ResourceKey="SystemColorWindowColorBrush" />
+    <m:StaticResource x:Key="CheckBoxBackgroundIndeterminatePointerOver" ResourceKey="SystemColorWindowColorBrush" />
+    <m:StaticResource x:Key="CheckBoxBackgroundIndeterminatePressed" ResourceKey="SystemColorWindowColorBrush" />
+    <m:StaticResource x:Key="CheckBoxBackgroundIndeterminateDisabled" ResourceKey="SystemColorWindowColorBrush" />
+
+    <m:StaticResource x:Key="CheckBoxBorderBrushUnchecked" ResourceKey="SystemColorWindowColorBrush" />
+    <m:StaticResource x:Key="CheckBoxBorderBrushUncheckedPointerOver" ResourceKey="SystemColorWindowColorBrush" />
+    <m:StaticResource x:Key="CheckBoxBorderBrushUncheckedPressed" ResourceKey="SystemColorWindowColorBrush" />
+    <m:StaticResource x:Key="CheckBoxBorderBrushUncheckedDisabled" ResourceKey="SystemColorWindowColorBrush" />
+
+    <m:StaticResource x:Key="CheckBoxBorderBrushChecked" ResourceKey="SystemColorWindowColorBrush" />
+    <m:StaticResource x:Key="CheckBoxBorderBrushCheckedPointerOver" ResourceKey="SystemColorWindowColorBrush" />
+    <m:StaticResource x:Key="CheckBoxBorderBrushCheckedPressed" ResourceKey="SystemColorWindowColorBrush" />
+    <m:StaticResource x:Key="CheckBoxBorderBrushCheckedDisabled" ResourceKey="SystemColorWindowColorBrush" />
+
+    <m:StaticResource x:Key="CheckBoxBorderBrushIndeterminate" ResourceKey="SystemColorWindowColorBrush" />
+    <m:StaticResource x:Key="CheckBoxBorderBrushIndeterminatePointerOver" ResourceKey="SystemColorWindowColorBrush" />
+    <m:StaticResource x:Key="CheckBoxBorderBrushIndeterminatePressed" ResourceKey="SystemColorWindowColorBrush" />
+    <m:StaticResource x:Key="CheckBoxBorderBrushIndeterminateDisabled" ResourceKey="SystemColorWindowColorBrush" />
+
+    <!-- Checkbox stroke brushes -->
+
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeUnchecked" ResourceKey="SystemColorButtonTextColorBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeUncheckedPointerOver" ResourceKey="SystemColorHighlightColorBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeUncheckedPressed" ResourceKey="SystemColorHighlightColorBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeUncheckedDisabled" ResourceKey="SystemColorGrayTextColorBrush" />
+
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeChecked" ResourceKey="SystemColorHighlightColorBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeCheckedPointerOver" ResourceKey="SystemColorButtonTextColorBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeCheckedPressed" ResourceKey="SystemColorButtonFaceColorBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeCheckedDisabled" ResourceKey="SystemColorGrayTextColorBrush" />
+
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeIndeterminate" ResourceKey="SystemColorHighlightColorBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeIndeterminatePointerOver" ResourceKey="SystemColorHighlightColorBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeIndeterminatePressed" ResourceKey="SystemColorHighlightColorBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeIndeterminateDisabled" ResourceKey="SystemColorGrayTextColorBrush" />
+
+    <!-- Checkbox fill brushes -->
+
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillUnchecked" ResourceKey="SystemColorButtonFaceColorBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillUncheckedPointerOver" ResourceKey="SystemColorHighlightTextColorBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillUncheckedPressed" ResourceKey="SystemColorHighlightColorBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillUncheckedDisabled" ResourceKey="SystemColorWindowColorBrush" />
+
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillChecked" ResourceKey="SystemColorHighlightColorBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillCheckedPointerOver" ResourceKey="SystemColorButtonTextColorBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillCheckedPressed" ResourceKey="SystemColorButtonFaceColorBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillCheckedDisabled" ResourceKey="SystemColorGrayTextColorBrush" />
+
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillIndeterminate" ResourceKey="SystemColorHighlightColorBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillIndeterminatePointerOver" ResourceKey="SystemColorHighlightTextColorBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillIndeterminatePressed" ResourceKey="SystemColorHighlightColorBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillIndeterminateDisabled" ResourceKey="SystemColorGrayTextColorBrush" />
+
+    <!-- Checkbox glyph brushes -->
+
+    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundUnchecked" ResourceKey="SystemColorButtonFaceColorBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundUncheckedPointerOver" ResourceKey="SystemColorHighlightColorBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundUncheckedPressed" ResourceKey="SystemColorHighlightTextColorBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundUncheckedDisabled" ResourceKey="SystemColorGrayTextColorBrush" />
+
+    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundChecked" ResourceKey="SystemColorHighlightTextColorBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundCheckedPointerOver" ResourceKey="SystemColorButtonFaceColorBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundCheckedPressed" ResourceKey="SystemColorButtonTextColorBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundCheckedDisabled" ResourceKey="SystemColorWindowColorBrush" />
+
+    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundIndeterminate" ResourceKey="SystemColorHighlightTextColorBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundIndeterminatePointerOver" ResourceKey="SystemColorHighlightColorBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundIndeterminatePressed" ResourceKey="SystemColorHighlightTextColorBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundIndeterminateDisabled" ResourceKey="SystemColorWindowColorBrush" />
+    <!--#endregion-->
 
     <!-- Resource for ComboBox -->
-    <sys:Double x:Key="ComboBoxThemeMinWidth">64</sys:Double>
-    <Thickness x:Key="ComboBoxBorderThemeThickness">1</Thickness>
-    <Thickness x:Key="ComboBoxDropdownBorderThickness">1</Thickness>
-    <Thickness x:Key="ComboBoxDropdownBorderPadding">0</Thickness>
-    <Thickness x:Key="ComboBoxDropdownContentMargin">0,4,0,4</Thickness>
-    <Thickness x:Key="ComboBoxItemThemePadding">11,5,11,7</Thickness>
-    <Thickness x:Key="ComboBoxItemThemeTouchPadding">11,11,11,13</Thickness>
-    <Thickness x:Key="ComboBoxItemThemeGameControllerPadding">11,11,11,13</Thickness>
-    <FontWeight x:Key="ComboBoxHeaderThemeFontWeight">Normal</FontWeight>
     <m:StaticResource x:Key="ComboBoxItemForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
     <m:StaticResource x:Key="ComboBoxItemForegroundPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
     <m:StaticResource x:Key="ComboBoxItemForegroundPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
@@ -634,8 +744,8 @@
     <m:StaticResource x:Key="ComboBoxForegroundPointerOver" ResourceKey="SystemControlForegroundBaseHighBrush" />
     <m:StaticResource x:Key="ComboBoxForegroundPressed" ResourceKey="SystemControlForegroundBaseHighBrush" />
     <m:StaticResource x:Key="ComboBoxForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
-    <m:StaticResource x:Key="ComboBoxForegroundFocused" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="ComboBoxForegroundFocusedPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <m:StaticResource x:Key="ComboBoxForegroundFocused" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <m:StaticResource x:Key="ComboBoxForegroundFocusedPressed" ResourceKey="SystemControlForegroundBaseHighBrush" />
     <m:StaticResource x:Key="ComboBoxHeaderForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
     <m:StaticResource x:Key="ComboBoxHeaderForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
     <m:StaticResource x:Key="ComboBoxPlaceHolderForeground" ResourceKey="SystemControlPageTextBaseMediumBrush" />
@@ -650,17 +760,18 @@
     <m:StaticResource x:Key="ComboBoxBorderBrushDisabled" ResourceKey="SystemControlDisabledBaseLowBrush" />
     <m:StaticResource x:Key="ComboBoxDropDownGlyphForeground" ResourceKey="SystemControlForegroundBaseMediumHighBrush" />
     <m:StaticResource x:Key="ComboBoxDropDownGlyphForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
-    <m:StaticResource x:Key="ComboBoxDropDownGlyphForegroundFocused" ResourceKey="SystemControlHighlightAltBaseMediumHighBrush" />
-    <m:StaticResource x:Key="ComboBoxDropDownGlyphForegroundFocusedPressed" ResourceKey="SystemControlHighlightAltBaseMediumHighBrush" />
+    <m:StaticResource x:Key="ComboBoxDropDownGlyphForegroundFocused" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <m:StaticResource x:Key="ComboBoxDropDownGlyphForegroundFocusedPressed" ResourceKey="SystemControlForegroundBaseHighBrush" />
     <m:StaticResource x:Key="ComboBoxDropDownForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
     <m:StaticResource x:Key="ComboBoxDropDownBackground" ResourceKey="SystemControlBackgroundChromeMediumLowBrush" />
     <m:StaticResource x:Key="ComboBoxDropDownBorderBrush" ResourceKey="SystemControlForegroundChromeHighBrush" />
-    
     <m:StaticResource x:Key="ComboBoxDropDownBackgroundPointerOver" ResourceKey="SystemControlPageBackgroundAltMediumBrush" />
     <m:StaticResource x:Key="ComboBoxDropDownBackgroundPointerPressed" ResourceKey="SystemControlBackgroundListMediumBrush" />
     <m:StaticResource x:Key="ComboBoxFocusedDropDownBackgroundPointerOver" ResourceKey="SystemControlPageBackgroundAltMediumBrush" />
     <m:StaticResource x:Key="ComboBoxFocusedDropDownBackgroundPointerPressed" ResourceKey="SystemControlBackgroundListMediumBrush" />
     <m:StaticResource x:Key="ComboBoxEditableDropDownGlyphForeground" ResourceKey="SystemControlForegroundBaseMediumHighBrush" />
+    <m:StaticResource x:Key="ComboBoxItemPillFillBrush" ResourceKey="SystemControlHighlightListAccentLowBrush"/>
+    <Thickness x:Key="ComboBoxDropdownBorderPadding">0</Thickness>
 
     <!-- Resources for CommandBar -->
     <sys:Double x:Key="CommandBarOverflowMinWidth">160</sys:Double>
@@ -668,6 +779,9 @@
     <sys:Double x:Key="CommandBarOverflowMaxWidth">480</sys:Double>
     <sys:Double x:Key="CommandBarOverflowMaxHeight">198</sys:Double>
     <m:StaticResource x:Key="CommandBarBackground" ResourceKey="SystemControlBackgroundChromeMediumBrush" />
+    <m:StaticResource x:Key="CommandBarBackgroundOpen" ResourceKey="SystemControlBackgroundChromeMediumBrush" />
+    <m:StaticResource x:Key="CommandBarBorderBrushOpen" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <Thickness x:Key="CommandBarBorderThicknessOpen">0</Thickness>
     <m:StaticResource x:Key="CommandBarForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
     <m:StaticResource x:Key="CommandBarHighContrastBorder" ResourceKey="SystemControlForegroundTransparentBrush" />
     <m:StaticResource x:Key="CommandBarEllipsisIconForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
@@ -682,6 +796,31 @@
     <Thickness x:Key="CommandBarOverflowPresenterBorderUpPadding">0</Thickness>
 
     <!-- Resources for CommandBarFlyout -->
+    <m:StaticResource x:Key="CommandBarFlyoutBackground" ResourceKey="SystemControlBackgroundBaseLowBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutForeground" ResourceKey="SystemControlForegroundBaseHighBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutBorderBrush" ResourceKey="SystemControlForegroundTransparentBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonBackground" ResourceKey="SystemControlForegroundTransparentBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonBackgroundPointerOver" ResourceKey="SystemControlBackgroundBaseLowBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonBackgroundPressed" ResourceKey="SystemControlBackgroundBaseMediumLowBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonBackgroundDisabled" ResourceKey="SystemControlBackgroundBaseLowBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonForeground" ResourceKey="SystemControlForegroundBaseHighBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonForegroundPointerOver" ResourceKey="SystemControlHighlightBaseHighBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonForegroundPressed" ResourceKey="SystemControlHighlightBaseHighBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonKeyboardTextLabelForeground" ResourceKey="SystemControlForegroundBaseHighBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonKeyboardTextLabelForegroundPointerOver" ResourceKey="SystemControlForegroundBaseHighBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonKeyboardTextLabelForegroundPressed" ResourceKey="SystemControlForegroundBaseHighBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonSubItemChevronForeground" ResourceKey="SystemControlForegroundBaseHighBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonBackgroundChecked" ResourceKey="SystemControlHighlightAccentBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonBackgroundCheckedPointerOver" ResourceKey="SystemControlHighlightAccentBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonBackgroundCheckedPressed" ResourceKey="SystemControlHighlightBaseMediumLowBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonBackgroundCheckedDisabled" ResourceKey="SystemControlBackgroundBaseLowBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonForegroundChecked" ResourceKey="SystemControlHighlightAltChromeWhiteBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonForegroundCheckedPointerOver" ResourceKey="SystemControlHighlightAltChromeWhiteBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonForegroundCheckedPressed" ResourceKey="SystemControlHighlightAltChromeWhiteBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonForegroundCheckedDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonBorderBrush" ResourceKey="SystemControlForegroundTransparentBrush"/>
+
     <Thickness x:Key="CommandBarFlyoutBorderThemeThickness">2</Thickness>
     <Thickness x:Key="CommandBarFlyoutBorderUpThemeThickness">1,1,1,0</Thickness>
     <Thickness x:Key="CommandBarFlyoutBorderDownThemeThickness">1,0,1,1</Thickness>
@@ -693,6 +832,7 @@
     <m:StaticResource x:Key="ContentDialogSmokeFill" ResourceKey="SystemColorWindowColorBrush" />
     <m:StaticResource x:Key="ContentDialogTopOverlay" ResourceKey="SystemControlTransparentBrush" />
     <m:StaticResource x:Key="ContentDialogBorderBrush" ResourceKey="SystemColorWindowTextColorBrush" />
+    <m:StaticResource x:Key="ContentDialogSeparatorBorderBrush" ResourceKey="SystemColorWindowTextColorBrush" />
     <Thickness x:Key="ContentDialogBorderWidth">2</Thickness>
 
     <!-- Resources for DataGrid -->
@@ -753,9 +893,9 @@
     <!-- Resources for FlipView -->
     <Thickness x:Key="FlipViewButtonBorderThemeThickness">0</Thickness>
     <m:StaticResource x:Key="FlipViewBackground" ResourceKey="SystemControlPageBackgroundListLowBrush" />
-    <m:StaticResource x:Key="FlipViewNextPreviousButtonBackground" ResourceKey="SystemControlBackgroundBaseMediumLowBrush" />
-    <m:StaticResource x:Key="FlipViewNextPreviousButtonBackgroundPointerOver" ResourceKey="SystemControlHighlightBaseMediumBrush" />
-    <m:StaticResource x:Key="FlipViewNextPreviousButtonBackgroundPressed" ResourceKey="SystemControlHighlightBaseMediumHighBrush" />
+    <m:StaticResource x:Key="FlipViewNextPreviousButtonBackground" ResourceKey="AcrylicInAppFillColorDefaultBrush" />
+    <m:StaticResource x:Key="FlipViewNextPreviousButtonBackgroundPointerOver" ResourceKey="AcrylicInAppFillColorDefaultBrush" />
+    <m:StaticResource x:Key="FlipViewNextPreviousButtonBackgroundPressed" ResourceKey="AcrylicInAppFillColorDefaultBrush" />
     <m:StaticResource x:Key="FlipViewNextPreviousArrowForeground" ResourceKey="SystemControlForegroundAltMediumHighBrush" />
     <m:StaticResource x:Key="FlipViewNextPreviousArrowForegroundPointerOver" ResourceKey="SystemControlHighlightAltAltMediumHighBrush" />
     <m:StaticResource x:Key="FlipViewNextPreviousArrowForegroundPressed" ResourceKey="SystemControlHighlightAltAltMediumHighBrush" />
@@ -775,6 +915,11 @@
     <Thickness x:Key="FlyoutContentThemePadding">12,11,12,12</Thickness>
     <m:StaticResource x:Key="FlyoutPresenterBackground" ResourceKey="SystemColorWindowColorBrush" />
     <m:StaticResource x:Key="FlyoutBorderThemeBrush" ResourceKey="SystemColorWindowTextColorBrush" />
+
+    <!-- Resources for Hyperlink -->
+    <SolidColorBrush x:Key="HyperlinkForeground" Color="{m:ThemeResource SystemColorHotlightColor}"/>
+    <SolidColorBrush x:Key="HyperlinkForegroundPointerOver" Color="{m:ThemeResource SystemColorWindowTextColor}"/>
+    <SolidColorBrush x:Key="HyperlinkForegroundPressed" Color="{m:ThemeResource SystemColorHighlightColor}"/>
 
     <!-- Resources for HyperlinkButton -->
     <m:StaticResource x:Key="HyperlinkButtonForeground" ResourceKey="SystemControlHyperlinkTextBrush" />
@@ -823,32 +968,52 @@
     <sys:Double x:Key="ListViewItemReorderTargetThemeScale">0.95</sys:Double>
     <sys:Double x:Key="ListViewItemReorderHintThemeOffset">10.0</sys:Double>
     <sys:Double x:Key="ListViewItemSelectedBorderThemeThickness">4</sys:Double>
-    <m:StaticResource x:Key="ListViewItemBorderBackground" ResourceKey="SystemControlHighlightListAccentLowBrush" />
-    <m:StaticResource x:Key="ListViewItemBackground" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="ListViewItemBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowBrush" />
-    <m:StaticResource x:Key="ListViewItemBackgroundPressed" ResourceKey="SystemControlHighlightListMediumBrush" />
-    <m:StaticResource x:Key="ListViewItemBackgroundSelected" ResourceKey="SystemControlHighlightListAccentMediumLowBrush" />
-    <m:StaticResource x:Key="ListViewItemBackgroundSelectedPointerOver" ResourceKey="SystemControlHighlightListAccentMediumBrush" />
-    <m:StaticResource x:Key="ListViewItemBackgroundSelectedPressed" ResourceKey="SystemControlHighlightListAccentVeryHighBrush" />
-    <m:StaticResource x:Key="ListViewItemForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
-    <m:StaticResource x:Key="ListViewItemForegroundPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="ListViewItemForegroundPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="ListViewItemForegroundSelected" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="ListViewItemForegroundSelectedPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="ListViewItemForegroundSelectedPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="ListViewItemFocusVisualPrimaryBrush" ResourceKey="SystemControlFocusVisualPrimaryBrush" />
-    <m:StaticResource x:Key="ListViewItemFocusVisualSecondaryBrush" ResourceKey="SystemControlFocusVisualSecondaryBrush" />
-    <m:StaticResource x:Key="ListViewItemFocusBorderBrush" ResourceKey="SystemControlForegroundAltHighBrush" />
-    <m:StaticResource x:Key="ListViewItemFocusSecondaryBorderBrush" ResourceKey="SystemControlForegroundBaseHighBrush" />
-    <m:StaticResource x:Key="ListViewItemCheckBrush" ResourceKey="SystemControlForegroundBaseMediumHighBrush" />
-    <m:StaticResource x:Key="ListViewItemCheckBoxBrush" ResourceKey="SystemControlForegroundBaseMediumHighBrush" />
-    <m:StaticResource x:Key="ListViewItemDragBackground" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="ListViewItemDragForeground" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
-    <m:StaticResource x:Key="ListViewItemPlaceholderBackground" ResourceKey="SystemControlDisabledChromeDisabledHighBrush" />
-    <m:StaticResource x:Key="ListViewItemMultiArrangeOverlayTextBorder" ResourceKey="SystemControlBackgroundChromeWhiteBrush" />
-    <m:StaticResource x:Key="ListViewItemMultiArrangeOverlayTextBackground" ResourceKey="SystemControlBackgroundAccentBrush" />
+    <SolidColorBrush x:Key="ListViewItemBorderBackground" Color="{m:ThemeResource SystemColorButtonFaceColor}" />
+    <SolidColorBrush x:Key="ListViewItemBackground" Color="{m:ThemeResource SystemColorWindowColor}" />
+    <SolidColorBrush x:Key="ListViewItemBackgroundPointerOver" Color="{m:ThemeResource SystemColorHighlightColor}" />
+    <SolidColorBrush x:Key="ListViewItemBackgroundPressed" Color="{m:ThemeResource SystemColorHighlightColor}" />
+    <SolidColorBrush x:Key="ListViewItemBackgroundSelected" Color="{m:ThemeResource SystemColorHighlightColor}" />
+    <SolidColorBrush x:Key="ListViewItemBackgroundSelectedPointerOver" Color="{m:ThemeResource SystemColorHighlightColor}" />
+    <SolidColorBrush x:Key="ListViewItemBackgroundSelectedPressed" Color="{m:ThemeResource SystemColorHighlightColor}" />
+    <SolidColorBrush x:Key="ListViewItemForeground" Color="{m:ThemeResource SystemColorButtonTextColor}" />
+    <SolidColorBrush x:Key="ListViewItemForegroundPointerOver" Color="{m:ThemeResource SystemColorHighlightTextColor}" />
+    <SolidColorBrush x:Key="ListViewItemForegroundPressed" Color="{m:ThemeResource SystemColorHighlightTextColor}" />
+    <SolidColorBrush x:Key="ListViewItemForegroundSelected" Color="{m:ThemeResource SystemColorHighlightTextColor}" />
+    <SolidColorBrush x:Key="ListViewItemForegroundSelectedPointerOver" Color="{m:ThemeResource SystemColorHighlightTextColor}" />
+    <SolidColorBrush x:Key="ListViewItemForegroundSelectedPressed" Color="{m:ThemeResource SystemColorHighlightTextColor}" />
+    <SolidColorBrush x:Key="ListViewItemFocusVisualPrimaryBrush" Color="{m:ThemeResource SystemColorWindowTextColor}" />
+    <SolidColorBrush x:Key="ListViewItemFocusVisualSecondaryBrush" Color="{m:ThemeResource SystemColorWindowColor}" />
+    <SolidColorBrush x:Key="ListViewItemFocusBorderBrush" Color="{m:ThemeResource SystemColorWindowTextColor}" />
+    <SolidColorBrush x:Key="ListViewItemFocusSecondaryBorderBrush" Color="{m:ThemeResource SystemColorWindowTextColor}" />
+    <SolidColorBrush x:Key="ListViewItemCheckBrush" Color="{m:ThemeResource SystemColorWindowTextColor}" />
+    <SolidColorBrush x:Key="ListViewItemCheckBoxBrush" Color="{m:ThemeResource SystemColorButtonFaceColor}" />
+    <SolidColorBrush x:Key="ListViewItemDragBackground" Color="Transparent" />
+    <SolidColorBrush x:Key="ListViewItemDragForeground" Color="{m:ThemeResource SystemColorWindowTextColor}" />
+    <SolidColorBrush x:Key="ListViewItemPlaceholderBackground" Color="{m:ThemeResource SystemColorButtonFaceColor}" />
+    <SolidColorBrush x:Key="ListViewItemMultiArrangeOverlayTextBorder" Color="{m:ThemeResource SystemColorWindowTextColor}" />
+    <SolidColorBrush x:Key="ListViewItemMultiArrangeOverlayTextBackground" Color="{m:ThemeResource SystemColorWindowColor}" />
     <sys:Boolean x:Key="ListViewItemSelectionCheckMarkVisualEnabled">True</sys:Boolean>
     <!--<ListViewItemPresenterCheckMode x:Key="ListViewItemCheckMode">Inline</ListViewItemPresenterCheckMode>-->
+
+    <!-- Resources for GridViewItem -->
+    <m:StaticResource x:Key="GridViewItemBackground" ResourceKey="SystemControlTransparentBrush" />
+    <m:StaticResource x:Key="GridViewItemBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowBrush" />
+    <m:StaticResource x:Key="GridViewItemBackgroundPressed" ResourceKey="SystemControlHighlightListMediumBrush" />
+    <m:StaticResource x:Key="GridViewItemBackgroundSelected" ResourceKey="SystemControlHighlightAccentBrush" />
+    <m:StaticResource x:Key="GridViewItemBackgroundSelectedPointerOver" ResourceKey="SystemControlHighlightListAccentMediumBrush" />
+    <m:StaticResource x:Key="GridViewItemBackgroundSelectedPressed" ResourceKey="SystemControlHighlightListAccentHighBrush" />
+    <m:StaticResource x:Key="GridViewItemForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <m:StaticResource x:Key="GridViewItemForegroundPointerOver" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <m:StaticResource x:Key="GridViewItemForegroundSelected" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <m:StaticResource x:Key="GridViewItemFocusVisualPrimaryBrush" ResourceKey="SystemControlFocusVisualPrimaryBrush" />
+    <m:StaticResource x:Key="GridViewItemFocusVisualSecondaryBrush" ResourceKey="SystemControlFocusVisualSecondaryBrush" />
+    <m:StaticResource x:Key="GridViewItemFocusBorderBrush" ResourceKey="SystemControlForegroundAltHighBrush" />
+    <m:StaticResource x:Key="GridViewItemFocusSecondaryBorderBrush" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <m:StaticResource x:Key="GridViewItemCheckBrush" ResourceKey="SystemControlForegroundBaseMediumHighBrush" />
+    <m:StaticResource x:Key="GridViewItemCheckBoxBrush" ResourceKey="SystemControlBackgroundChromeMediumBrush" />
+    <m:StaticResource x:Key="GridViewItemDragBackground" ResourceKey="SystemControlTransparentBrush" />
+    <m:StaticResource x:Key="GridViewItemDragForeground" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
+    <m:StaticResource x:Key="GridViewItemPlaceholderBackground" ResourceKey="SystemControlDisabledChromeDisabledHighBrush" />
 
     <!-- Resources for LoopingSelector -->
     <m:StaticResource x:Key="LoopingSelectorButtonBackground" ResourceKey="SystemControlBackgroundChromeMediumBrush" />
@@ -874,24 +1039,22 @@
 
     <!-- Resources for MenuFlyout -->
     <sys:Double x:Key="MenuFlyoutSeparatorThemeHeight">1</sys:Double>
-    <sys:Double x:Key="MenuFlyoutThemeMinHeight">32</sys:Double>
-    <Thickness x:Key="MenuFlyoutPresenterBorderThemeThickness">1</Thickness>
-    <Thickness x:Key="MenuFlyoutPresenterThemePadding">0,0</Thickness>
-    <Thickness x:Key="MenuFlyoutItemChevronMargin">24,0,0,0</Thickness>
+    <Thickness x:Key="MenuFlyoutPresenterBorderThemeThickness">2</Thickness>
+    <Thickness x:Key="MenuFlyoutItemBorderThickness">0</Thickness>
+    <Thickness x:Key="MenuFlyoutSubItemBorderThickness">0</Thickness>
     <Thickness x:Key="MenuFlyoutItemThemePadding">11,9,11,10</Thickness>
     <Thickness x:Key="MenuFlyoutItemThemePaddingNarrow">11,4,11,7</Thickness>
-    <Thickness x:Key="MenuFlyoutItemPlaceholderThemeThickness">28,0,0,0</Thickness>
     <Thickness x:Key="MenuFlyoutItemDoublePlaceholderThemeThickness">56,0,0,0</Thickness>
-    <Thickness x:Key="MenuFlyoutSeparatorThemePadding">12,4,12,4</Thickness>
-    <m:StaticResource x:Key="MenuFlyoutSeparatorBackground" ResourceKey="SystemControlForegroundBaseHighBrush" />
-    <m:StaticResource x:Key="MenuFlyoutPresenterBackground" ResourceKey="SystemControlBackgroundBaseHighBrush" />
-    <m:StaticResource x:Key="MenuFlyoutPresenterBorderBrush" ResourceKey="SystemControlTransientBorderBrush" />
+    <m:StaticResource x:Key="MenuFlyoutSeparatorBackground" ResourceKey="SystemColorWindowTextColorBrush" />
+    <m:StaticResource x:Key="MenuFlyoutPresenterBackground" ResourceKey="SystemColorWindowColorBrush" />
+    <m:StaticResource x:Key="MenuFlyoutPresenterBorderBrush" ResourceKey="SystemColorWindowTextColorBrush" />
     <!-- Resources for Windows.UI.Xaml.Controls.MenuFlyoutItem -->
     <m:StaticResource x:Key="MenuFlyoutItemBackground" ResourceKey="SystemControlTransparentBrush" />
     <m:StaticResource x:Key="MenuFlyoutItemBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowBrush" />
     <m:StaticResource x:Key="MenuFlyoutItemBackgroundPressed" ResourceKey="SystemControlHighlightListMediumBrush" />
     <m:StaticResource x:Key="MenuFlyoutItemBackgroundDisabled" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="MenuFlyoutItemForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <m:StaticResource x:Key="MenuFlyoutItemBackgroundBrush" ResourceKey="SystemControlTransparentBrush" />
+    <m:StaticResource x:Key="MenuFlyoutItemForeground" ResourceKey="SystemColorWindowTextColorBrush" />
     <m:StaticResource x:Key="MenuFlyoutItemForegroundPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
     <m:StaticResource x:Key="MenuFlyoutItemForegroundPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
     <m:StaticResource x:Key="MenuFlyoutItemForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
@@ -938,12 +1101,13 @@
     <m:StaticResource x:Key="MenuFlyoutSubItemBackgroundPressed" ResourceKey="SystemControlHighlightListAccentHighBrush" />
     <m:StaticResource x:Key="MenuFlyoutSubItemBackgroundSubMenuOpened" ResourceKey="SystemControlHighlightListLowBrush" />
     <m:StaticResource x:Key="MenuFlyoutSubItemBackgroundDisabled" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="MenuFlyoutSubItemForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <m:StaticResource x:Key="MenuFlyoutSubItemBackgroundBrush" ResourceKey="SystemControlTransparentBrush" />
+    <m:StaticResource x:Key="MenuFlyoutSubItemForeground" ResourceKey="SystemColorWindowTextColorBrush" />
     <m:StaticResource x:Key="MenuFlyoutSubItemForegroundPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
     <m:StaticResource x:Key="MenuFlyoutSubItemForegroundPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
     <m:StaticResource x:Key="MenuFlyoutSubItemForegroundSubMenuOpened" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
     <m:StaticResource x:Key="MenuFlyoutSubItemForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
-    <m:StaticResource x:Key="MenuFlyoutSubItemChevron" ResourceKey="SystemControlForegroundBaseMediumHighBrush" />
+    <m:StaticResource x:Key="MenuFlyoutSubItemChevron" ResourceKey="SystemColorWindowTextColorBrush" />
     <m:StaticResource x:Key="MenuFlyoutSubItemChevronPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
     <m:StaticResource x:Key="MenuFlyoutSubItemChevronPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
     <m:StaticResource x:Key="MenuFlyoutSubItemChevronSubMenuOpened" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
@@ -961,8 +1125,9 @@
 
     <!-- Resources for NavigationView -->
     <m:StaticResource x:Key="NavigationViewDefaultPaneBackground" ResourceKey="AcrylicInAppFillColorDefaultBrush" />
-    <SolidColorBrush x:Key="NavigationViewExpandedPaneBackground" Color="{m:ThemeResource SystemColorWindowColor}" />
+    <m:StaticResource x:Key="NavigationViewExpandedPaneBackground" ResourceKey="SystemColorWindowColorBrush" />
     <m:StaticResource x:Key="NavigationViewTopPaneBackground" ResourceKey="AcrylicInAppFillColorDefaultBrush" />
+    <SolidColorBrush x:Key="NavigationViewContentBackground" Color="{StaticResource SystemChromeMediumColor}" />
 
     <m:StaticResource x:Key="NavigationViewItemBackground" ResourceKey="SystemControlBackgroundBaseLowBrush" />
     <m:StaticResource x:Key="NavigationViewItemBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowRevealBackgroundBrush" />
@@ -1005,20 +1170,18 @@
 
     <m:StaticResource x:Key="NavigationViewItemSeparatorForeground" ResourceKey="SystemControlForegroundBaseLowBrush" />
 
-    <SolidColorBrush x:Key="NavigationViewSelectionIndicatorForeground" Color="{m:ThemeResource SystemColorHighlightTextColor}" />
+    <m:StaticResource x:Key="NavigationViewSelectionIndicatorForeground" ResourceKey="SystemColorHighlightTextColorBrush" />
 
     <m:StaticResource x:Key="TopNavigationViewItemForeground" ResourceKey="NavigationViewItemForeground" />
     <m:StaticResource x:Key="TopNavigationViewItemForegroundPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
     <m:StaticResource x:Key="TopNavigationViewItemForegroundPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="TopNavigationViewItemForegroundSelected" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
     <m:StaticResource x:Key="TopNavigationViewItemForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <m:StaticResource x:Key="TopNavigationViewItemForegroundSelected" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <m:StaticResource x:Key="TopNavigationViewItemForegroundSelectedPointerOver" ResourceKey="NavigationViewItemForeground" />
+    <m:StaticResource x:Key="TopNavigationViewItemForegroundSelectedPressed" ResourceKey="NavigationViewItemForeground" />
     <m:StaticResource x:Key="TopNavigationViewItemBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowRevealBackgroundBrush" />
     <m:StaticResource x:Key="TopNavigationViewItemBackgroundPressed" ResourceKey="SystemControlHighlightListMediumRevealBackgroundBrush" />
     <m:StaticResource x:Key="TopNavigationViewItemBackgroundSelected" ResourceKey="SystemControlHighlightListLowRevealBackgroundBrush" />
-
-    <m:StaticResource x:Key="TopNavigationViewItemRevealBackgroundFocused" ResourceKey="SystemControlHighlightAccentBrush" />
-    <m:StaticResource x:Key="TopNavigationViewItemRevealIconForegroundFocused" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
-    <m:StaticResource x:Key="TopNavigationViewItemRevealContentForegroundFocused" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
 
     <m:StaticResource x:Key="TopNavigationViewItemSeparatorForeground" ResourceKey="SystemControlForegroundBaseLowBrush" />
 
@@ -1044,11 +1207,12 @@
     <Thickness x:Key="NumberBoxPopupSpinButtonBorderThickness">2</Thickness>
 
     <!-- Resources for PersonPicture -->
-    <SolidColorBrush x:Key="PersonPictureForegroundThemeBrush" Color="{StaticResource SystemAltHighColor}" />
+    <m:StaticResource x:Key="PersonPictureForegroundThemeBrush" ResourceKey="SystemControlForegroundBaseHighBrush" />
     <SolidColorBrush x:Key="PersonPictureEllipseBadgeForegroundThemeBrush" Color="{StaticResource SystemBaseHighColor}" />
     <SolidColorBrush x:Key="PersonPictureEllipseBadgeFillThemeBrush" Color="{StaticResource SystemChromeDisabledHighColor}" />
     <SolidColorBrush x:Key="PersonPictureEllipseBadgeStrokeThemeBrush" Color="{StaticResource SystemListMediumColor}" />
-    <SolidColorBrush x:Key="PersonPictureEllipseFillThemeBrush" Color="{StaticResource SystemBaseMediumColor}" />
+    <m:StaticResource x:Key="PersonPictureEllipseFillThemeBrush" ResourceKey="SystemColorHighlightTextColorBrush" />
+    <m:StaticResource x:Key="PersonPictureEllipseFillStrokeBrush" ResourceKey="CardStrokeColorDefaultBrush" />
     <sys:Double x:Key="PersonPictureEllipseBadgeStrokeOpacity">0.8</sys:Double>
     <sys:Double x:Key="PersonPictureEllipseBadgeImageSourceStrokeOpacity">1.0</sys:Double>
     <sys:Double x:Key="PersonPictureEllipseStrokeThickness">0</sys:Double>
@@ -1108,10 +1272,12 @@
     <sys:Double x:Key="ProgressBarIndicatorPauseOpacity">1</sys:Double>
     <sys:Double x:Key="ProgressBarThemeMinHeight">4</sys:Double>
     <Thickness x:Key="ProgressBarBorderThemeThickness">1</Thickness>
-    <Color x:Key="SystemControlErrorBackgroundColor">#33FFFFFF</Color>
-    <m:StaticResource x:Key="ProgressBarForeground" ResourceKey="SystemControlHighlightAccentBrush" />
-    <m:StaticResource x:Key="ProgressBarBackground" ResourceKey="SystemControlBackgroundBaseLowBrush" />
-    <m:StaticResource x:Key="ProgressBarBorderBrush" ResourceKey="SystemControlForegroundBaseHighBrush" />
+
+    <m:StaticResource x:Key="ProgressBarForeground" ResourceKey="SystemColorHighlightColorBrush" />
+    <m:StaticResource x:Key="ProgressBarBackground" ResourceKey="SystemColorWindowColorBrush" />
+    <m:StaticResource x:Key="ProgressBarBorderBrush" ResourceKey="SystemColorWindowTextColorBrush" />
+    <m:StaticResource x:Key="ProgressBarPausedForegroundColor" ResourceKey="{x:Static SystemColors.WindowTextColorKey}" />
+    <m:StaticResource x:Key="ProgressBarErrorForegroundColor" ResourceKey="{x:Static SystemColors.HotTrackColorKey}" />
 
     <!-- Resources for ProgressRing -->
     <m:StaticResource x:Key="ProgressRingForegroundThemeBrush" ResourceKey="SystemControlHighlightAccentBrush" />
@@ -1131,23 +1297,23 @@
     <m:StaticResource x:Key="RadioButtonBorderBrushPointerOver" ResourceKey="SystemControlTransparentBrush" />
     <m:StaticResource x:Key="RadioButtonBorderBrushPressed" ResourceKey="SystemControlTransparentBrush" />
     <m:StaticResource x:Key="RadioButtonBorderBrushDisabled" ResourceKey="SystemControlTransparentBrush" />
-    
+
     <m:StaticResource x:Key="RadioButtonOuterEllipseStroke" ResourceKey="SystemControlForegroundBaseMediumBrush" />
-    <m:StaticResource x:Key="RadioButtonOuterEllipseStrokePointerOver" ResourceKey="SystemControlHighlightBaseMediumHighBrush" />
-    <m:StaticResource x:Key="RadioButtonOuterEllipseStrokePressed" ResourceKey="SystemControlHighlightBaseHighBrush" />
-    <m:StaticResource x:Key="RadioButtonOuterEllipseStrokeDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
-    <m:StaticResource x:Key="RadioButtonOuterEllipseFill" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="RadioButtonOuterEllipseFillPointerOver" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="RadioButtonOuterEllipseFillPressed" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="RadioButtonOuterEllipseFillDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <m:StaticResource x:Key="RadioButtonOuterEllipseStrokePointerOver" ResourceKey="SystemColorHighlightColorBrush" />
+    <m:StaticResource x:Key="RadioButtonOuterEllipseStrokePressed" ResourceKey="SystemColorHighlightTextColorBrush" />
+    <m:StaticResource x:Key="RadioButtonOuterEllipseStrokeDisabled" ResourceKey="SystemColorGrayTextColorBrush" />
+    <m:StaticResource x:Key="RadioButtonOuterEllipseFill" ResourceKey="SystemColorButtonFaceColorBrush" />
+    <m:StaticResource x:Key="RadioButtonOuterEllipseFillPointerOver" ResourceKey="SystemColorHighlightTextColorBrush" />
+    <m:StaticResource x:Key="RadioButtonOuterEllipseFillPressed" ResourceKey="SystemColorHighlightTextColorBrush" />
+    <m:StaticResource x:Key="RadioButtonOuterEllipseFillDisabled" ResourceKey="SystemColorButtonFaceColorBrush" />
     <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedStroke" ResourceKey="SystemControlHighlightAccentBrush" />
-    <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedStrokePointerOver" ResourceKey="SystemControlHighlightAccentBrush" />
-    <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedStrokePressed" ResourceKey="SystemControlHighlightBaseMediumBrush" />
-    <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedStrokeDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedStrokePointerOver" ResourceKey="SystemColorButtonTextColorBrush" />
+    <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedStrokePressed" ResourceKey="SystemColorButtonFaceColorBrush" />
+    <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedStrokeDisabled" ResourceKey="SystemColorGrayTextColorBrush" />
     <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedFill" ResourceKey="SystemControlHighlightAltTransparentBrush" />
-    <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedFillPointerOver" ResourceKey="SystemControlHighlightTransparentBrush" />
-    <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedFillPressed" ResourceKey="SystemControlHighlightTransparentBrush" />
-    <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedFillDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedFillPointerOver" ResourceKey="SystemColorButtonFaceColorBrush" />
+    <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedFillPressed" ResourceKey="SystemColorButtonFaceColorBrush" />
+    <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedFillDisabled" ResourceKey="SystemColorButtonFaceColorBrush" />
     <m:StaticResource x:Key="RadioButtonCheckGlyphFill" ResourceKey="SystemControlHighlightBaseMediumHighBrush" />
     <m:StaticResource x:Key="RadioButtonCheckGlyphFillPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
     <m:StaticResource x:Key="RadioButtonCheckGlyphFillPressed" ResourceKey="SystemControlHighlightAltBaseMediumBrush" />
@@ -1157,8 +1323,8 @@
     <m:StaticResource x:Key="RadioButtonCheckGlyphStrokePressed" ResourceKey="SystemControlTransparentBrush" />
     <m:StaticResource x:Key="RadioButtonCheckGlyphStrokeDisabled" ResourceKey="SystemControlTransparentBrush" />
     <m:StaticResource x:Key="RadioButtonCheckGlyphStrokeChecked" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="RadioButtonCheckGlyphStrokeCheckedPointerOver" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="RadioButtonCheckGlyphStrokeCheckedPressed" ResourceKey="SystemControlTransparentBrush" />
+    <m:StaticResource x:Key="RadioButtonCheckGlyphStrokeCheckedPointerOver" ResourceKey="SystemColorButtonTextColorBrush" />
+    <m:StaticResource x:Key="RadioButtonCheckGlyphStrokeCheckedPressed" ResourceKey="SystemColorButtonTextColorBrush" />
     <m:StaticResource x:Key="RadioButtonCheckGlyphStrokeCheckedDisabled" ResourceKey="SystemControlTransparentBrush" />
 
     <!-- Resources for RadioButtons -->
@@ -1223,6 +1389,7 @@
     <m:StaticResource x:Key="ScrollBarThumbFillPointerOver" ResourceKey="SystemControlHighlightBaseMediumLowBrush" />
     <m:StaticResource x:Key="ScrollBarThumbFillPressed" ResourceKey="SystemControlHighlightBaseMediumBrush" />
     <m:StaticResource x:Key="ScrollBarThumbFillDisabled" ResourceKey="SystemControlDisabledBaseHighBrush" />
+    <m:StaticResource x:Key="ScrollBarThumbBorderBrush" ResourceKey="SystemControlTransparentBrush" />
     <m:StaticResource x:Key="ScrollBarTrackFill" ResourceKey="SystemControlPageBackgroundChromeLowBrush" />
     <m:StaticResource x:Key="ScrollBarTrackFillPointerOver" ResourceKey="SystemControlPageBackgroundChromeLowBrush" />
     <m:StaticResource x:Key="ScrollBarTrackFillDisabled" ResourceKey="SystemControlDisabledTransparentBrush" />
@@ -1236,7 +1403,7 @@
     <m:StaticResource x:Key="ScrollBarPanningThumbBackgroundDisabled" ResourceKey="SystemControlDisabledChromeHighBrush" />
 
     <!-- Resource for ScrollViewer -->
-    <m:StaticResource x:Key="ScrollViewerScrollBarSeparatorBackground" ResourceKey="SystemControlPageBackgroundChromeLowBrush" />
+    <m:StaticResource x:Key="ScrollViewerScrollBarSeparatorBackground" ResourceKey="SystemControlTransparentBrush" />
 
     <!-- Resources for Slider -->
     <sys:Double x:Key="SliderOutsideTickBarThemeHeight">4</sys:Double>
@@ -1270,34 +1437,36 @@
 
     <!-- Resources for SplitButton -->
     <m:StaticResource x:Key="SplitButtonBackground" ResourceKey="SystemControlBackgroundBaseLowBrush" />
-    <m:StaticResource x:Key="SplitButtonBackgroundPointerOver" ResourceKey="SystemControlBackgroundBaseLowBrush" />
-    <m:StaticResource x:Key="SplitButtonBackgroundPressed" ResourceKey="SystemControlBackgroundBaseMediumLowBrush" />
+    <m:StaticResource x:Key="SplitButtonBackgroundPointerOver" ResourceKey="SystemColorHighlightTextColorBrush" />
+    <m:StaticResource x:Key="SplitButtonBackgroundPressed" ResourceKey="SystemColorHighlightTextColorBrush" />
     <m:StaticResource x:Key="SplitButtonBackgroundDisabled" ResourceKey="SystemControlBackgroundBaseLowBrush" />
     <m:StaticResource x:Key="SplitButtonBackgroundChecked" ResourceKey="SystemControlHighlightAccentBrush" />
-    <m:StaticResource x:Key="SplitButtonBackgroundCheckedPointerOver" ResourceKey="SystemControlHighlightAccentBrush" />
-    <m:StaticResource x:Key="SplitButtonBackgroundCheckedPressed" ResourceKey="SystemControlHighlightBaseMediumLowBrush" />
+    <m:StaticResource x:Key="SplitButtonBackgroundCheckedPointerOver" ResourceKey="SystemColorButtonTextColorBrush" />
+    <m:StaticResource x:Key="SplitButtonBackgroundCheckedPressed" ResourceKey="SystemColorButtonTextColorBrush" />
     <m:StaticResource x:Key="SplitButtonBackgroundCheckedDisabled" ResourceKey="SystemControlBackgroundBaseLowBrush" />
-    <m:StaticResource x:Key="SplitButtonForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
-    <m:StaticResource x:Key="SplitButtonForegroundPointerOver" ResourceKey="SystemControlHighlightBaseHighBrush" />
+    <m:StaticResource x:Key="SplitButtonForeground" ResourceKey="SystemColorButtonTextColorBrush" />
+    <m:StaticResource x:Key="SplitButtonForegroundPointerOver" ResourceKey="SystemColorHighlightColorBrush" />
     <m:StaticResource x:Key="SplitButtonForegroundPressed" ResourceKey="SystemControlHighlightBaseHighBrush" />
     <m:StaticResource x:Key="SplitButtonForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
     <m:StaticResource x:Key="SplitButtonForegroundChecked" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
-    <m:StaticResource x:Key="SplitButtonForegroundCheckedPointerOver" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
-    <m:StaticResource x:Key="SplitButtonForegroundCheckedPressed" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
+    <m:StaticResource x:Key="SplitButtonForegroundCheckedPointerOver" ResourceKey="SystemColorButtonFaceColorBrush" />
+    <m:StaticResource x:Key="SplitButtonForegroundCheckedPressed" ResourceKey="SystemColorButtonTextColorBrush" />
     <m:StaticResource x:Key="SplitButtonForegroundCheckedDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
-    <m:StaticResource x:Key="SplitButtonForegroundSecondary" ResourceKey="SystemControlHighlightBaseHighBrush" />
-    <m:StaticResource x:Key="SplitButtonForegroundSecondaryPressed" ResourceKey="SystemControlHighlightBaseHighBrush" />
+    <m:StaticResource x:Key="SplitButtonForegroundSecondary" ResourceKey="SystemColorButtonTextColorBrush" />
+    <m:StaticResource x:Key="SplitButtonForegroundSecondaryPressed" ResourceKey="SystemColorHighlightColorBrush" />
     <m:StaticResource x:Key="SplitButtonBorderBrush" ResourceKey="SystemControlForegroundTransparentBrush" />
     <m:StaticResource x:Key="SplitButtonBorderBrushPointerOver" ResourceKey="SystemControlHighlightBaseMediumLowBrush" />
-    <m:StaticResource x:Key="SplitButtonBorderBrushPressed" ResourceKey="SystemControlHighlightTransparentBrush" />
+    <m:StaticResource x:Key="SplitButtonBorderBrushPressed" ResourceKey="SystemColorHighlightTextColorBrush" />
     <m:StaticResource x:Key="SplitButtonBorderBrushDisabled" ResourceKey="SystemControlDisabledTransparentBrush" />
     <m:StaticResource x:Key="SplitButtonBorderBrushDivider" ResourceKey="SystemControlForegroundTransparentBrush" />
     <m:StaticResource x:Key="SplitButtonBorderBrushChecked" ResourceKey="SystemControlHighlightAltTransparentBrush" />
-    <m:StaticResource x:Key="SplitButtonBorderBrushCheckedPointerOver" ResourceKey="SystemControlHighlightBaseMediumLowBrush" />
-    <m:StaticResource x:Key="SplitButtonBorderBrushCheckedPressed" ResourceKey="SystemControlHighlightAltTransparentBrush" />
+    <m:StaticResource x:Key="SplitButtonBorderBrushCheckedPointerOver" ResourceKey="SystemColorButtonTextColorBrush" />
+    <m:StaticResource x:Key="SplitButtonBorderBrushCheckedPressed" ResourceKey="SystemColorButtonFaceColorBrush" />
     <m:StaticResource x:Key="SplitButtonBorderBrushCheckedDisabled" ResourceKey="SystemControlDisabledTransparentBrush" />
     <m:StaticResource x:Key="SplitButtonBorderBrushCheckedDivider" ResourceKey="SystemControlHighlightAltTransparentBrush" />
     <Thickness x:Key="SplitButtonBorderThemeThickness">1</Thickness>
+
+    <m:StaticResource x:Key="SplitButtonInAppBarUnfocusedPointerOver" ResourceKey="SubtleFillColorTertiaryBrush" />
 
     <!-- Resources for SplitView -->
     <sys:Double x:Key="SplitViewOpenPaneThemeLength">320</sys:Double>
@@ -1391,12 +1560,12 @@
     <!-- Resources for ToggleButton -->
     <Thickness x:Key="ToggleButtonBorderThemeThickness">1</Thickness>
     <m:StaticResource x:Key="ToggleButtonBackground" ResourceKey="SystemControlBackgroundBaseLowBrush" />
-    <m:StaticResource x:Key="ToggleButtonBackgroundPointerOver" ResourceKey="SystemControlBackgroundBaseLowBrush" />
-    <m:StaticResource x:Key="ToggleButtonBackgroundPressed" ResourceKey="SystemControlBackgroundBaseMediumLowBrush" />
+    <m:StaticResource x:Key="ToggleButtonBackgroundPointerOver" ResourceKey="SystemColorHighlightTextColorBrush" />
+    <m:StaticResource x:Key="ToggleButtonBackgroundPressed" ResourceKey="SystemColorHighlightTextColorBrush" />
     <m:StaticResource x:Key="ToggleButtonBackgroundDisabled" ResourceKey="SystemControlBackgroundBaseLowBrush" />
     <m:StaticResource x:Key="ToggleButtonBackgroundChecked" ResourceKey="SystemControlHighlightAccentBrush" />
-    <m:StaticResource x:Key="ToggleButtonBackgroundCheckedPointerOver" ResourceKey="SystemControlHighlightAccentBrush" />
-    <m:StaticResource x:Key="ToggleButtonBackgroundCheckedPressed" ResourceKey="SystemControlHighlightBaseMediumLowBrush" />
+    <m:StaticResource x:Key="ToggleButtonBackgroundCheckedPointerOver" ResourceKey="SystemColorButtonTextColorBrush" />
+    <m:StaticResource x:Key="ToggleButtonBackgroundCheckedPressed" ResourceKey="SystemColorHighlightTextColorBrush" />
     <m:StaticResource x:Key="ToggleButtonBackgroundCheckedDisabled" ResourceKey="SystemControlBackgroundBaseLowBrush" />
     <m:StaticResource x:Key="ToggleButtonBackgroundIndeterminate" ResourceKey="SystemControlBackgroundBaseLowBrush" />
     <m:StaticResource x:Key="ToggleButtonBackgroundIndeterminatePointerOver" ResourceKey="SystemControlBackgroundBaseLowBrush" />
@@ -1407,8 +1576,8 @@
     <m:StaticResource x:Key="ToggleButtonForegroundPressed" ResourceKey="SystemControlHighlightBaseHighBrush" />
     <m:StaticResource x:Key="ToggleButtonForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
     <m:StaticResource x:Key="ToggleButtonForegroundChecked" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
-    <m:StaticResource x:Key="ToggleButtonForegroundCheckedPointerOver" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
-    <m:StaticResource x:Key="ToggleButtonForegroundCheckedPressed" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
+    <m:StaticResource x:Key="ToggleButtonForegroundCheckedPointerOver" ResourceKey="SystemColorButtonFaceColorBrush" />
+    <m:StaticResource x:Key="ToggleButtonForegroundCheckedPressed" ResourceKey="SystemColorHighlightColorBrush" />
     <m:StaticResource x:Key="ToggleButtonForegroundCheckedDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
     <m:StaticResource x:Key="ToggleButtonForegroundIndeterminate" ResourceKey="SystemControlForegroundBaseHighBrush" />
     <m:StaticResource x:Key="ToggleButtonForegroundIndeterminatePointerOver" ResourceKey="SystemControlHighlightBaseHighBrush" />
@@ -1416,11 +1585,11 @@
     <m:StaticResource x:Key="ToggleButtonForegroundIndeterminateDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
     <m:StaticResource x:Key="ToggleButtonBorderBrush" ResourceKey="SystemControlForegroundTransparentBrush" />
     <m:StaticResource x:Key="ToggleButtonBorderBrushPointerOver" ResourceKey="SystemControlHighlightBaseMediumLowBrush" />
-    <m:StaticResource x:Key="ToggleButtonBorderBrushPressed" ResourceKey="SystemControlHighlightTransparentBrush" />
+    <m:StaticResource x:Key="ToggleButtonBorderBrushPressed" ResourceKey="SystemColorHighlightTextColorBrush" />
     <m:StaticResource x:Key="ToggleButtonBorderBrushDisabled" ResourceKey="SystemControlDisabledTransparentBrush" />
     <m:StaticResource x:Key="ToggleButtonBorderBrushChecked" ResourceKey="SystemControlHighlightAltTransparentBrush" />
-    <m:StaticResource x:Key="ToggleButtonBorderBrushCheckedPointerOver" ResourceKey="SystemControlHighlightBaseMediumLowBrush" />
-    <m:StaticResource x:Key="ToggleButtonBorderBrushCheckedPressed" ResourceKey="SystemControlTransparentBrush" />
+    <m:StaticResource x:Key="ToggleButtonBorderBrushCheckedPointerOver" ResourceKey="SystemColorButtonTextColorBrush" />
+    <m:StaticResource x:Key="ToggleButtonBorderBrushCheckedPressed" ResourceKey="SystemColorHighlightTextColorBrush" />
     <m:StaticResource x:Key="ToggleButtonBorderBrushCheckedDisabled" ResourceKey="SystemControlDisabledTransparentBrush" />
     <m:StaticResource x:Key="ToggleButtonBorderBrushIndeterminate" ResourceKey="SystemControlForegroundTransparentBrush" />
     <m:StaticResource x:Key="ToggleButtonBorderBrushIndeterminatePointerOver" ResourceKey="SystemControlHighlightBaseMediumLowBrush" />
@@ -1438,38 +1607,38 @@
     <m:StaticResource x:Key="ToggleSwitchContainerBackgroundPointerOver" ResourceKey="SystemControlTransparentBrush" />
     <m:StaticResource x:Key="ToggleSwitchContainerBackgroundPressed" ResourceKey="SystemControlTransparentBrush" />
     <m:StaticResource x:Key="ToggleSwitchContainerBackgroundDisabled" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="ToggleSwitchFillOff" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="ToggleSwitchFillOffPointerOver" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="ToggleSwitchFillOffPressed" ResourceKey="SystemControlHighlightBaseMediumLowBrush" />
-    <m:StaticResource x:Key="ToggleSwitchFillOffDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <m:StaticResource x:Key="ToggleSwitchFillOff" ResourceKey="SystemColorButtonFaceColorBrush" />
+    <m:StaticResource x:Key="ToggleSwitchFillOffPointerOver" ResourceKey="SystemColorHighlightTextColorBrush" />
+    <m:StaticResource x:Key="ToggleSwitchFillOffPressed" ResourceKey="SystemColorHighlightTextColorBrush" />
+    <m:StaticResource x:Key="ToggleSwitchFillOffDisabled" ResourceKey="SystemColorButtonFaceColorBrush" />
     <m:StaticResource x:Key="ToggleSwitchStrokeOff" ResourceKey="SystemControlForegroundBaseMediumBrush" />
-    <m:StaticResource x:Key="ToggleSwitchStrokeOffPointerOver" ResourceKey="SystemControlHighlightBaseMediumHighBrush" />
-    <m:StaticResource x:Key="ToggleSwitchStrokeOffPressed" ResourceKey="SystemControlForegroundBaseHighBrush" />
-    <m:StaticResource x:Key="ToggleSwitchStrokeOffDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <m:StaticResource x:Key="ToggleSwitchStrokeOffPointerOver" ResourceKey="SystemColorHighlightColor" />
+    <m:StaticResource x:Key="ToggleSwitchStrokeOffPressed" ResourceKey="SystemBaseHighColor" />
+    <m:StaticResource x:Key="ToggleSwitchStrokeOffDisabled" ResourceKey="SystemBaseMediumLowColor" />
     <m:StaticResource x:Key="ToggleSwitchFillOn" ResourceKey="SystemControlHighlightAccentBrush" />
-    <m:StaticResource x:Key="ToggleSwitchFillOnPointerOver" ResourceKey="SystemControlHighlightAltListAccentHighBrush" />
+    <m:StaticResource x:Key="ToggleSwitchFillOnPointerOver" ResourceKey="SystemColorButtonFaceColorBrush" />
     <m:StaticResource x:Key="ToggleSwitchFillOnPressed" ResourceKey="SystemControlHighlightBaseMediumBrush" />
     <m:StaticResource x:Key="ToggleSwitchFillOnDisabled" ResourceKey="SystemControlDisabledBaseLowBrush" />
     <m:StaticResource x:Key="ToggleSwitchStrokeOn" ResourceKey="SystemControlHighlightBaseHighBrush" />
-    <m:StaticResource x:Key="ToggleSwitchStrokeOnPointerOver" ResourceKey="SystemControlHighlightListAccentHighBrush" />
+    <m:StaticResource x:Key="ToggleSwitchStrokeOnPointerOver" ResourceKey="SystemColorButtonTextColorBrush" />
     <m:StaticResource x:Key="ToggleSwitchStrokeOnPressed" ResourceKey="SystemControlHighlightBaseMediumBrush" />
     <m:StaticResource x:Key="ToggleSwitchStrokeOnDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
     <m:StaticResource x:Key="ToggleSwitchKnobFillOff" ResourceKey="SystemControlForegroundBaseHighBrush" />
-    <m:StaticResource x:Key="ToggleSwitchKnobFillOffPointerOver" ResourceKey="SystemControlHighlightBaseHighBrush" />
-    <m:StaticResource x:Key="ToggleSwitchKnobFillOffPressed" ResourceKey="SystemControlHighlightBaseHighBrush" />
-    <m:StaticResource x:Key="ToggleSwitchKnobFillOffDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <m:StaticResource x:Key="ToggleSwitchKnobFillOffPointerOver" ResourceKey="SystemColorHighlightColorBrush" />
+    <m:StaticResource x:Key="ToggleSwitchKnobFillOffPressed" ResourceKey="SystemColorHighlightColorBrush" />
+    <m:StaticResource x:Key="ToggleSwitchKnobFillOffDisabled" ResourceKey="SystemColorGrayTextColorBrush" />
     <m:StaticResource x:Key="ToggleSwitchKnobFillOn" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
-    <m:StaticResource x:Key="ToggleSwitchKnobFillOnPointerOver" ResourceKey="SystemControlHighlightChromeWhiteBrush" />
-    <m:StaticResource x:Key="ToggleSwitchKnobFillOnPressed" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
-    <m:StaticResource x:Key="ToggleSwitchKnobFillOnDisabled" ResourceKey="SystemControlPageBackgroundBaseLowBrush" />
+    <m:StaticResource x:Key="ToggleSwitchKnobFillOnPointerOver" ResourceKey="SystemColorButtonTextColorBrush" />
+    <m:StaticResource x:Key="ToggleSwitchKnobFillOnPressed" ResourceKey="SystemChromeWhiteColor" />
+    <m:StaticResource x:Key="ToggleSwitchKnobFillOnDisabled" ResourceKey="SystemBaseLowColor" />
+    <m:StaticResource x:Key="ToggleSwitchKnobStrokeOn" ResourceKey="SystemControlTransparentBrush" />
 
     <!-- Resources for ToolTip -->
     <sys:Double x:Key="ToolTipContentThemeFontSize">12</sys:Double>
     <Thickness x:Key="ToolTipBorderThemeThickness">1</Thickness>
-    <Thickness x:Key="ToolTipBorderThemePadding">8,5,8,7</Thickness>
-    <m:StaticResource x:Key="ToolTipForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
-    <m:StaticResource x:Key="ToolTipBackground" ResourceKey="SystemControlBackgroundChromeMediumLowBrush" />
-    <m:StaticResource x:Key="ToolTipBorderBrush" ResourceKey="SystemControlTransientBorderBrush" />
+    <m:StaticResource x:Key="ToolTipForegroundBrush" ResourceKey="SystemColorWindowTextColorBrush" />
+    <m:StaticResource x:Key="ToolTipBackgroundBrush" ResourceKey="SystemColorWindowColorBrush" />
+    <m:StaticResource x:Key="ToolTipBorderBrush" ResourceKey="SystemColorWindowTextColorBrush" />
 
     <!-- Resources for TreeView -->
     <m:StaticResource x:Key="TreeViewItemBackground" ResourceKey="SystemControlTransparentRevealBackgroundBrush" />
@@ -1533,6 +1702,26 @@
     <m:StaticResource x:Key="TextControlButtonForegroundPointerOver" ResourceKey="SystemControlHighlightAccentBrush" />
     <m:StaticResource x:Key="TextControlButtonForegroundPressed" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
 
+    <LinearGradientBrush x:Key="TextControlElevationBorderBrush" MappingMode="Absolute" StartPoint="0,0" EndPoint="0,2">
+        <LinearGradientBrush.RelativeTransform>
+            <ScaleTransform ScaleY="-1" CenterY="0.5"/>
+        </LinearGradientBrush.RelativeTransform>
+        <LinearGradientBrush.GradientStops>
+            <GradientStop Offset="0.5" Color="{StaticResource ControlAAStrokeColorDefault}"/>
+            <GradientStop Offset="1.0" Color="{StaticResource ControlStrokeColorDefault}"/>
+        </LinearGradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="TextControlElevationBorderFocusedBrush" MappingMode="Absolute" StartPoint="0,0" EndPoint="0,2">
+        <LinearGradientBrush.RelativeTransform>
+            <ScaleTransform ScaleY="-1" CenterY="0.5"/>
+        </LinearGradientBrush.RelativeTransform>
+        <LinearGradientBrush.GradientStops>
+            <GradientStop Offset="1.0" Color="{DynamicResource SystemAccentColorLight2}"/>
+            <GradientStop Offset="1.0" Color="{StaticResource ControlStrokeColorDefault}"/>
+        </LinearGradientBrush.GradientStops>
+    </LinearGradientBrush>
+
     <!-- Resources for Window -->
     <SolidColorBrush x:Key="WindowBorder" Color="{m:ThemeResource SystemColorActiveCaptionColor}" />
     <SolidColorBrush x:Key="WindowBorderInactive" Color="{m:ThemeResource SystemColorInactiveCaptionTextColor}" />
@@ -1552,10 +1741,12 @@
                     <Border
                         BorderBrush="{StaticResource SystemControlFocusVisualPrimaryBrush}"
                         BorderThickness="2"
+                        CornerRadius="{TemplateBinding primitives:ControlHelper.CornerRadius}"
                         SnapsToDevicePixels="True">
                         <Border
                             BorderBrush="{StaticResource SystemControlFocusVisualSecondaryBrush}"
-                            BorderThickness="1" />
+                            BorderThickness="1"
+                            CornerRadius="{TemplateBinding primitives:ControlHelper.CornerRadius}" />
                     </Border>
                 </ControlTemplate>
             </Setter.Value>

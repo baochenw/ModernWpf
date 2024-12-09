@@ -10,8 +10,11 @@
         <ResourceDictionary Source="/ModernWpf;component/Styles/Button.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Thickness x:Key="AutoSuggestBoxTopHeaderMargin">0,0,0,4</Thickness>
-    <Thickness x:Key="AutoSuggestBoxInnerButtonMargin">0,4,0,4</Thickness>
+    <Thickness x:Key="AutoSuggestBoxTopHeaderMargin">0,0,0,8</Thickness>
+    <Thickness x:Key="AutoSuggestBoxInnerButtonMargin">1,3</Thickness>
+    <Thickness x:Key="AutoSuggestBoxDeleteButtonMargin">0,4</Thickness>
+    <Thickness x:Key="AutoSuggestBoxQueryButtonPadding">3,2</Thickness>
+    <sys:Double x:Key="AutoSuggestBoxLeftButtonMargin">3</sys:Double>
     <sys:Double x:Key="AutoSuggestBoxRightButtonMargin">4</sys:Double>
 
     <Style TargetType="TextBox" x:Key="AutoSuggestBoxTextBoxStyle">
@@ -64,18 +67,18 @@
                                         </ControlTemplate.Resources>
                                         <Border
                                             x:Name="ButtonLayoutGrid"
-                                            Margin="{DynamicResource AutoSuggestBoxInnerButtonMargin}"
                                             BorderBrush="{DynamicResource TextControlButtonBorderBrush}"
                                             BorderThickness="{TemplateBinding BorderThickness}"
                                             Background="{DynamicResource TextControlButtonBackground}"
-                                            CornerRadius="{TemplateBinding primitives:ControlHelper.CornerRadius}">
+                                            Margin="{StaticResource AutoSuggestBoxDeleteButtonMargin}"
+                                            CornerRadius="{DynamicResource ControlCornerRadius}">
                                             <local:FontIconFallback
                                                 x:Name="GlyphElement"
                                                 Foreground="{DynamicResource TextControlButtonForeground}"
                                                 VerticalAlignment="Center"
                                                 HorizontalAlignment="Center"
                                                 FontStyle="Normal"
-                                                FontSize="12"
+                                                FontSize="{DynamicResource AutoSuggestBoxIconFontSize}"
                                                 Data="{StaticResource Cancel}"
                                                 FontFamily="{DynamicResource SymbolThemeFontFamily}" />
                                         </Border>
@@ -216,28 +219,30 @@
                         <Button
                             x:Name="DeleteButton"
                             Grid.Row="1"
+                            primitives:ControlHelper.CornerRadius="{TemplateBinding primitives:ControlHelper.CornerRadius}"
                             Style="{StaticResource DeleteButtonStyle}"
                             BorderThickness="{TemplateBinding BorderThickness}"
-                            primitives:ControlHelper.CornerRadius="{TemplateBinding primitives:ControlHelper.CornerRadius}"
                             Padding="{DynamicResource HelperButtonThemePadding}"
                             Focusable="False"
                             Grid.Column="1"
                             Visibility="Collapsed"
                             FontSize="{TemplateBinding FontSize}"
-                            Width="30"
+                            Width="32"
                             VerticalAlignment="Stretch"
                             primitives:TextBoxHelper.IsDeleteButton="True" />
                         <Button
                             x:Name="QueryButton"
                             Grid.Row="1"
+                            Grid.Column="2"
                             primitives:ControlHelper.CornerRadius="{TemplateBinding primitives:ControlHelper.CornerRadius}"
                             Style="{StaticResource QueryButtonStyle}"
                             BorderThickness="{TemplateBinding BorderThickness}"
+                            Margin="2,0,0,0"
                             Padding="{DynamicResource HelperButtonThemePadding}"
                             Focusable="False"
-                            Grid.Column="2"
                             FontSize="{TemplateBinding FontSize}"
-                            Width="30"
+                            Width="32"
+                            Height="28"
                             VerticalAlignment="Stretch" />
                         <ContentPresenter
                             x:Name="DescriptionPresenter"

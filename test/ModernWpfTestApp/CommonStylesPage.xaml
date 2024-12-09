@@ -282,6 +282,14 @@
                                 ui:ControlHelper.Header="RichEditBox"
                                 HorizontalAlignment="Right"
                                 VerticalAlignment="Top" />
+                            <StackPanel Orientation="Horizontal" Grid.Row="7">
+                                <TextBlock Margin="2,0,2,0">
+                                    <Run>Pre-hyperlink</Run>
+                                    <Hyperlink NavigateUri="http://www.bing.com">Bing</Hyperlink>
+                                    <Run>Post-hyperlink</Run>
+                                </TextBlock>
+                                <HyperlinkButton Margin="2,0,2,0" Content="Microsoft.com HyperlinkButton" NavigateUri="http://www.microsoft.com"/>
+                            </StackPanel>
                         </Grid>
                     </StackPanel>
                 </Border>
@@ -380,6 +388,14 @@
                                 Grid.Row="6"
                                 ui:ControlHelper.Header="RichEditBox"
                                 VerticalAlignment="Top" />
+                            <StackPanel Orientation="Horizontal" Grid.Row="7">
+                                <TextBlock Margin="2,0,2,0">
+                                    <Run>Pre-hyperlink</Run>
+                                    <Hyperlink NavigateUri="http://www.bing.com">Bing</Hyperlink>
+                                    <Run>Post-hyperlink</Run>
+                                </TextBlock>
+                                <HyperlinkButton Margin="2,0,2,0" Content="Microsoft.com HyperlinkButton" NavigateUri="http://www.microsoft.com"/>
+                            </StackPanel>
                         </Grid>
                     </StackPanel>
                 </Border>
@@ -395,17 +411,36 @@
                             Style="{StaticResource DefaultRadioButtonStyle}"
                             Content="I am a RadioButton with DefaultRadioButtonStyle set" />
 
-                        <ButtonEx Content="Test flyout">
+                        <ButtonEx Content="Test flyout with text and button" Margin="0,24,0,0">
                             <ButtonEx.Flyout>
                                 <Flyout>
                                     <StackPanel>
-                                        <TextBlock Style="{DynamicResource BaseTextBlockStyle}" Text="All items will be removed. Do you want to continue?" Margin="0,0,0,12" />
+                                        <TextBlock Text="All items will be removed. Do you want to continue?" Margin="0,0,0,12" />
                                         <Button Content="Yes, empty my cart" />
                                     </StackPanel>
                                 </Flyout>
                             </ButtonEx.Flyout>
                         </ButtonEx>
-                        
+
+                        <ButtonEx Content="Test flyout with button and long text" Margin="0,24,0,0">
+                            <ButtonEx.Flyout>
+                                <Flyout>
+                                    <StackPanel Width="300">
+                                        <Button Content="Yes, empty my cart" Margin="0,0,0,12"/>
+                                        <TextBlock TextWrapping="Wrap" Text="The giant panda, also known as the panda bear or simply the panda, is a bear native to south central China. It is characterised by large, black patches around its eyes, over the ears, and across its round body. The name giant panda is sometimes used to distinguish it from the red panda, a neighboring musteloid. Though it belongs to the order Carnivora, the giant panda is a folivore, with bamboo shoots and leaves making up more than 99% of its diet.[7] Giant pandas in the wild will occasionally eat other grasses, wild tubers, or even meat in the form of birds, rodents, or carrion. In captivity, they may receive honey, eggs, fish, yams, shrub leaves, oranges, or bananas along with specially prepared food."/>
+                                    </StackPanel>
+                                </Flyout>
+                            </ButtonEx.Flyout>
+                        </ButtonEx>
+
+                        <ButtonEx Content="Test flyout with short text" Margin="0,24,0,0">
+                            <ButtonEx.Flyout>
+                                <Flyout>
+                                    <TextBlock Text="OK"/>
+                                </Flyout>
+                            </ButtonEx.Flyout>
+                        </ButtonEx>
+
                     </StackPanel>
                 </Border>
                 <Border Style="{DynamicResource CompactBorderStyle}">
@@ -430,6 +465,81 @@
                         </Button>
                     </StackPanel>
                 </Border>
+            </StackPanel>
+            <StackPanel Style="{DynamicResource CompactPanelStyle}">
+                <TextBlock  Text="ListViewItem/GridViewItem testing area" Style="{DynamicResource StandardGroupHeader}"/>
+                <StackPanel Orientation='Horizontal' Background="{DynamicResource ApplicationPageBackgroundThemeBrush}">
+                    <StackPanel>
+                        <StackPanel Orientation='Horizontal'>
+                            <TextBlock Text='ListView - SelectionMode=' VerticalAlignment='Center' Margin='2'/>
+                            <ComboBox x:Name='cmbListViewSelectionMode' SelectedIndex='2' SelectionChanged="CmbListViewSelectionMode_SelectionChanged">
+                                <ComboBoxItem>None</ComboBoxItem>
+                                <ComboBoxItem>Single</ComboBoxItem>
+                                <ComboBoxItem>Multiple</ComboBoxItem>
+                                <ComboBoxItem>Extended</ComboBoxItem>
+                            </ComboBox>
+                        </StackPanel>
+                        <CheckBox x:Name='chkListViewIsEnabled' Content='IsEnabled?' IsChecked='True' Margin='2' Checked="ChkListViewIsEnabled_Checked" Unchecked="ChkListViewIsEnabled_Unchecked"/>
+                        <ui:ListView x:Name='listView1' AllowDrop='True' SelectionMode='Multiple' Width='300' HorizontalAlignment='Left' Margin='2'>
+                            <ui:ListViewItem x:Name='listViewItem1' Content='List Item 1'/>
+                            <ui:ListViewItem x:Name='listViewItem2' Content='List Item 2'/>
+                            <ui:ListViewItem x:Name='listViewItem3' Content='List Item 3' IsSelected='true'/>
+                        </ui:ListView>
+                    </StackPanel>
+                    <StackPanel>
+                        <StackPanel Orientation='Horizontal'>
+                            <TextBlock Text='GridView - SelectionMode=' VerticalAlignment='Center' Margin='2'/>
+                            <ComboBox x:Name='cmbGridViewSelectionMode' SelectedIndex='2' SelectionChanged="CmbGridViewSelectionMode_SelectionChanged">
+                                <ComboBoxItem>None</ComboBoxItem>
+                                <ComboBoxItem>Single</ComboBoxItem>
+                                <ComboBoxItem>Multiple</ComboBoxItem>
+                                <ComboBoxItem>Extended</ComboBoxItem>
+                            </ComboBox>
+                        </StackPanel>
+                        <CheckBox x:Name='chkGridViewIsEnabled' Content='IsEnabled?' IsChecked='True' Margin='2' Checked="ChkGridViewIsEnabled_Checked" Unchecked="ChkGridViewIsEnabled_Unchecked"/>
+                        <ui:GridView x:Name='gridView1' AllowDrop='True' SelectionMode='Multiple' Width='300' HorizontalAlignment='Left' Margin='2'>
+                            <ui:GridViewItem x:Name='gridViewItem1' Content='Item 1' MinWidth='120' MinHeight='60'/>
+                            <ui:GridViewItem x:Name='gridViewItem2' Content='Item 2' MinWidth='120' MinHeight='60'/>
+                            <ui:GridViewItem x:Name='gridViewItem3' Content='Item 3' MinWidth='120' MinHeight='60' IsSelected='true'/>
+                        </ui:GridView>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation='Horizontal' Background="{DynamicResource ApplicationPageBackgroundThemeBrush}">
+                    <StackPanel>
+                        <TextBlock Text='ListView - SelectionMode=Extended:' Margin='2'/>
+                        <ui:ListView x:Name='listView2' AllowDrop='True' SelectionMode='Extended' Width='300' HorizontalAlignment='Left' Margin='2'>
+                            <ui:ListViewItem x:Name='listViewItem4' Content='List Item 4' Height='5'/>
+                            <ui:ListViewItem x:Name='listViewItem5' Content='List Item 5' Height='70'/>
+                            <ui:ListViewItem x:Name='listViewItem6' Content='List Item 6' Height='90' IsSelected='true'/>
+                        </ui:ListView>
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBlock Text='GridView - SelectionMode=Extended:' Margin='2'/>
+                        <ui:GridView x:Name='gridView2' AllowDrop='True' SelectionMode='Extended' Width='300' HorizontalAlignment='Left' Margin='2'>
+                            <ui:GridViewItem x:Name='gridViewItem4' Content='Item 4' MinWidth='120' MinHeight='60'/>
+                            <ui:GridViewItem x:Name='gridViewItem5' Content='Item 5' MinWidth='120' MinHeight='60'/>
+                            <ui:GridViewItem x:Name='gridViewItem6' Content='Item 6' MinWidth='120' MinHeight='60' IsSelected='true'/>
+                        </ui:GridView>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation='Horizontal' Background="{DynamicResource ApplicationPageBackgroundThemeBrush}">
+                    <StackPanel>
+                        <TextBlock Text='ListView - SelectionMode=Single:' Margin='2'/>
+                        <ListView x:Name='listView3' AllowDrop='True' SelectionMode='Single' Width='300' HorizontalAlignment='Left' Margin='2'>
+                            <ListViewItem x:Name='listViewItem7' Content='List Item 7'/>
+                            <ListViewItem x:Name='listViewItem8' Content='List Item 8'/>
+                            <ListViewItem x:Name='listViewItem9' Content='List Item 9' IsSelected='true'/>
+                        </ListView>
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBlock Text='GridView - SelectionMode=Single:' Margin='2'/>
+                        <ui:GridView x:Name='gridView3' AllowDrop='True' SelectionMode='Single' Width='300' HorizontalAlignment='Left' Margin='2'>
+                            <ui:GridViewItem x:Name='gridViewItem7' Content='Item 7' MinWidth='120' MinHeight='60'/>
+                            <ui:GridViewItem x:Name='gridViewItem8' Content='Item 8' MinWidth='120' MinHeight='60'/>
+                            <ui:GridViewItem x:Name='gridViewItem9' Content='Item 9' MinWidth='120' MinHeight='60' IsSelected='true'/>
+                        </ui:GridView>
+                    </StackPanel>
+                </StackPanel>
             </StackPanel>
             <StackPanel>
                 <TextBlock

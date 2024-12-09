@@ -131,5 +131,63 @@ namespace ModernWpf.Controls
             get => (string)GetValue(GlyphProperty);
             set => SetValue(GlyphProperty, value);
         }
+
+        protected override IconElement CreateIconElementCore()
+        {
+            FontIcon fontIcon = new();
+
+            fontIcon.Glyph = Glyph;
+            fontIcon.FontSize = FontSize;
+            if (Foreground is Brush newForeground)
+            {
+                fontIcon.Foreground = newForeground;
+            }
+
+            if (FontFamily != null)
+            {
+                fontIcon.FontFamily = FontFamily;
+            }
+
+            fontIcon.FontWeight = FontWeight;
+            fontIcon.FontStyle = FontStyle;
+            //fontIcon.IsTextScaleFactorEnabled(IsTextScaleFactorEnabled());
+            //fontIcon.MirroredWhenRightToLeft(MirroredWhenRightToLeft());
+
+            return fontIcon;
+        }
+
+        protected override DependencyProperty GetIconElementPropertyCore(DependencyProperty sourceProperty)
+        {
+            if (sourceProperty == FontFamilyProperty)
+            {
+                return FontIcon.FontFamilyProperty;
+            }
+            else if (sourceProperty == FontSizeProperty)
+            {
+                return FontIcon.FontSizeProperty;
+            }
+            else if (sourceProperty == FontStyleProperty)
+            {
+                return FontIcon.FontStyleProperty;
+            }
+            else if (sourceProperty == FontWeightProperty)
+            {
+                return FontIcon.FontWeightProperty;
+            }
+            else if (sourceProperty == GlyphProperty)
+            {
+                return FontIcon.GlyphProperty;
+            }
+            //else if (sourceProperty == IsTextScaleFactorEnabledProperty)
+            //{
+            //    return FontIcon.IsTextScaleFactorEnabledProperty;
+            //}
+            //else if (sourceProperty == MirroredWhenRightToLeftProperty)
+            //{
+            //    return FontIcon.MirroredWhenRightToLeftProperty;
+            //}
+
+            return base.GetIconElementPropertyCore(sourceProperty);
+        }
     }
 }

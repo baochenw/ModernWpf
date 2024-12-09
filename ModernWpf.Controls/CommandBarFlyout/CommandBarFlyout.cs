@@ -128,9 +128,23 @@ namespace ModernWpf.Controls
             {
                 InternalPopup.SuppressFadeAnimation = true;
 
-                if (ShowMode == FlyoutShowMode.Standard)
+                if (m_commandBar is { } commandBar)
                 {
-                    m_commandBar.IsOpen = true;
+                    if (ShowMode == FlyoutShowMode.Standard)
+                    {
+                        m_commandBar.IsOpen = true;
+                    }
+
+                    // When CommandBarFlyout is in AlwaysOpen state, don't show the overflow button
+                    if (AlwaysExpanded)
+                    {
+                        commandBar.IsOpen = true;
+                        commandBar.OverflowButtonVisibility = CommandBarOverflowButtonVisibility.Collapsed;
+                    }
+                    else
+                    {
+                        commandBar.OverflowButtonVisibility = CommandBarOverflowButtonVisibility.Auto;
+                    }
                 }
             };
 
@@ -183,6 +197,8 @@ namespace ModernWpf.Controls
             };
         }
 
+        public bool AlwaysExpanded { get; set; }
+
         public ObservableCollection<ICommandBarElement> PrimaryCommands { get; }
 
         public ObservableCollection<ICommandBarElement> SecondaryCommands { get; }
@@ -192,11 +208,6 @@ namespace ModernWpf.Controls
         protected override Control CreatePresenter()
         {
             var commandBar = new CommandBarFlyoutCommandBar();
-
-            commandBar.Opened += delegate
-            {
-                SetCurrentValue(ShowModeProperty, FlyoutShowMode.Standard);
-            };
 
             SharedHelpers.CopyList(PrimaryCommands, commandBar.PrimaryCommands);
             SharedHelpers.CopyList(SecondaryCommands, commandBar.SecondaryCommands);
@@ -217,6 +228,13 @@ namespace ModernWpf.Controls
                 Content = commandBar,
                 CornerRadius = new CornerRadius(0),
                 IsDefaultShadowEnabled = false
+            };
+
+            m_presenter = presenter;
+
+            commandBar.Opened += delegate
+            {
+                SetCurrentValue(ShowModeProperty, FlyoutShowMode.Standard);
             };
 
             commandBar.SetOwningFlyout(this);
@@ -254,6 +272,11 @@ namespace ModernWpf.Controls
             }
         }
 
+        internal FlyoutPresenter GetPresenter()
+        {
+            return m_presenter;
+        }
+
         private static void RevokeAndRemove(IDictionary<ICommandBarElement, RoutedEventHandlerRevoker> map, ICommandBarElement element)
         {
             if (map.TryGetValue(element, out var revoker))
@@ -280,6 +303,8 @@ namespace ModernWpf.Controls
             new Dictionary<ICommandBarElement, RoutedEventHandlerRevoker>();
         Dictionary<ICommandBarElement, RoutedEventHandlerRevoker> m_secondaryToggleButtonUncheckedRevokerByElementMap =
             new Dictionary<ICommandBarElement, RoutedEventHandlerRevoker>();
+
+        FlyoutPresenter m_presenter;
 
         bool m_isClosingAfterCloseAnimation;
     }

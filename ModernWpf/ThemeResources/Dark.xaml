@@ -74,8 +74,6 @@
     <SolidColorBrush x:Key="SystemControlDisabledChromeMediumLowBrush" Color="{m:StaticColor SystemChromeMediumLowColor}" />
     <SolidColorBrush x:Key="SystemControlDisabledListMediumBrush" Color="{m:StaticColor SystemListMediumColor}" />
     <SolidColorBrush x:Key="SystemControlDisabledTransparentBrush" Color="Transparent" />
-    <SolidColorBrush x:Key="SystemControlFocusVisualPrimaryBrush" Color="{m:StaticColor SystemBaseHighColor}" />
-    <SolidColorBrush x:Key="SystemControlFocusVisualSecondaryBrush" Color="{m:StaticColor SystemAltMediumColor}" />
     <SolidColorBrush x:Key="SystemControlRevealFocusVisualBrush" Color="{m:DynamicColor SystemAccentColor}" />
     <SolidColorBrush x:Key="SystemControlForegroundAccentBrush" Color="{m:DynamicColor SystemAccentColor}" />
     <SolidColorBrush x:Key="SystemControlForegroundAltHighBrush" Color="{m:StaticColor SystemAltHighColor}" />
@@ -146,8 +144,8 @@
     <SolidColorBrush x:Key="AcrylicInAppFillColorDefaultBrush" Color="{StaticResource SystemChromeMediumLowColor}" />
     <SolidColorBrush x:Key="AcrylicBackgroundFillColorDefaultInverseBrush" Color="#F2F2F2" />
     <SolidColorBrush x:Key="AcrylicBackgroundFillColorBaseBrush" Color="{StaticResource SystemChromeMediumLowColor}" />
-    <SolidColorBrush x:Key="SystemControlDefaultBrighteningBrush" Color="#FFFFFF" Opacity="0.0419"/>
     <m:StaticResource x:Key="SystemControlDescriptionTextForegroundBrush" ResourceKey="SystemControlPageTextBaseMediumBrush" />
+    <m:StaticResource x:Key="SystemControlTransientBackgroundBrush" ResourceKey="SystemControlBackgroundChromeMediumLowBrush" />
 
     <!-- Acrylic Brushes -->
     <SolidColorBrush x:Key="SystemControlAcrylicElementBrush" Color="{m:StaticColor SystemChromeMediumColor}" />
@@ -227,28 +225,26 @@
 
     <Color x:Key="ControlSolidFillColorDefault">#454545</Color>
 
-    <Color x:Key="GhostFillColorTransparent">#00FFFFFF</Color>
-    <Color x:Key="GhostFillColorSecondary">#08FFFFFF</Color>
-    <Color x:Key="GhostFillColorTertiary">#0FFFFFFF</Color>
-    <Color x:Key="GhostFillColorDisabled">#00FFFFFF</Color>
+    <Color x:Key="SubtleFillColorTransparent">#00FFFFFF</Color>
+    <Color x:Key="SubtleFillColorSecondary">#0FFFFFFF</Color>
+    <Color x:Key="SubtleFillColorTertiary">#0AFFFFFF</Color>
+    <Color x:Key="SubtleFillColorDisabled">#00FFFFFF</Color>
 
     <Color x:Key="ControlAltFillColorTransparent">#00FFFFFF</Color>
     <Color x:Key="ControlAltFillColorSecondary">#19000000</Color>
     <Color x:Key="ControlAltFillColorTertiary">#0BFFFFFF</Color>
-    <Color x:Key="ControlAltFillColorQuarternary">#12000000</Color>
+    <Color x:Key="ControlAltFillColorQuarternary">#12FFFFFF</Color>
     <Color x:Key="ControlAltFillColorDisabled">#00FFFFFF</Color>
 
     <Color x:Key="ControlOnImageFillColorDefault">#B31C1C1C</Color>
     <Color x:Key="ControlOnImageFillColorSecondary">#1A1A1A</Color>
     <Color x:Key="ControlOnImageFillColorTertiary">#131313</Color>
-    <Color x:Key="ControlOnImageFillColorDisabled">#131313</Color>
-
-    <Color x:Key="AccentFillColorDefault">#0078D4</Color>
+    <Color x:Key="ControlOnImageFillColorDisabled">#1E1E1E</Color>
 
     <Color x:Key="AccentAAFillColorDisabled">#28FFFFFF</Color>
 
-    <Color x:Key="ControlStrokeColorDefault">#14FFFFFF</Color>
-    <Color x:Key="ControlStrokeColorSecondary">#4C000000</Color>
+    <Color x:Key="ControlStrokeColorDefault">#12FFFFFF</Color>
+    <Color x:Key="ControlStrokeColorSecondary">#18FFFFFF</Color>
     <Color x:Key="ControlStrokeColorOnAccentDefault">#14FFFFFF</Color>
     <Color x:Key="ControlStrokeColorOnAccentSecondary">#23000000</Color>
     <Color x:Key="ControlStrokeColorOnAccentTertiary">#37000000</Color>
@@ -265,7 +261,7 @@
     <Color x:Key="SurfaceStrokeColorFlyout">#33000000</Color>
     <Color x:Key="SurfaceStrokeColorInverse">#0F000000</Color>
 
-    <Color x:Key="DividerStrokeColorDefault">#33000000</Color>
+    <Color x:Key="DividerStrokeColorDefault">#15FFFFFF</Color>
 
     <Color x:Key="FocusStrokeColorOuter">#FFFFFF</Color>
     <Color x:Key="FocusStrokeColorInner">#B3000000</Color>
@@ -273,18 +269,18 @@
     <Color x:Key="CardBackgroundFillColorDefault">#0DFFFFFF</Color>
     <Color x:Key="CardBackgroundFillColorSecondary">#08FFFFFF</Color>
 
-    <Color x:Key="SmokeFillColorDefault">#4C000000</Color>
+    <Color x:Key="SmokeFillColorDefault">#4D000000</Color>
 
-    <Color x:Key="LayerFillColorDefault">#09FFFFFF</Color>
-    <Color x:Key="LayerFillColorSecondary">#0DFFFFFF</Color>
-    <Color x:Key="LayerFillColorTertiary">#05FFFFFF</Color>
+    <Color x:Key="LayerFillColorDefault">#4C3A3A3A</Color>
+    <Color x:Key="LayerFillColorAlt">#0DFFFFFF</Color>
+    <Color x:Key="LayerOnAcrylicFillColorDefault">#09FFFFFF</Color>
+    <Color x:Key="LayerOnAccentAcrylicFillColorDefault">#09FFFFFF</Color>
 
     <Color x:Key="SolidBackgroundFillColorBase">#202020</Color>
     <Color x:Key="SolidBackgroundFillColorSecondary">#1C1C1C</Color>
     <Color x:Key="SolidBackgroundFillColorTertiary">#282828</Color>
     <Color x:Key="SolidBackgroundFillColorQuarternary">#2C2C2C</Color>
 
-    <Color x:Key="SystemFillColorAttention">#0070CB</Color>
     <Color x:Key="SystemFillColorSuccess">#6CCB5F</Color>
     <Color x:Key="SystemFillColorCaution">#FCE100</Color>
     <Color x:Key="SystemFillColorCritical">#FF99A4</Color>
@@ -308,11 +304,11 @@
     <SolidColorBrush x:Key="AccentTextFillColorTertiaryBrush" Color="{m:DynamicColor SystemAccentColorLight2}" />
     <SolidColorBrush x:Key="AccentTextFillColorDisabledBrush" Color="{StaticResource AccentTextFillColorDisabled}" />
 
-    <SolidColorBrush x:Key="TextOnAccentFillColorDefaultBrush" Color="{StaticResource TextOnAccentFillColorDefault}" />
+    <SolidColorBrush x:Key="TextOnAccentFillColorSelectedTextBrush" Color="{StaticResource TextOnAccentFillColorDefault}" />
 
-    <SolidColorBrush x:Key="TextOnAccentAAFillColorPrimaryBrush" Color="{StaticResource TextOnAccentAAFillColorPrimary}" />
-    <SolidColorBrush x:Key="TextOnAccentAAFillColorSecondaryBrush" Color="{StaticResource TextOnAccentAAFillColorSecondary}" />
-    <SolidColorBrush x:Key="TextOnAccentAAFillColorDisabledBrush" Color="{StaticResource TextOnAccentAAFillColorDisabled}" />
+    <SolidColorBrush x:Key="TextOnAccentFillColorPrimaryBrush" Color="{StaticResource TextOnAccentAAFillColorPrimary}" />
+    <SolidColorBrush x:Key="TextOnAccentFillColorSecondaryBrush" Color="{StaticResource TextOnAccentAAFillColorSecondary}" />
+    <SolidColorBrush x:Key="TextOnAccentFillColorDisabledBrush" Color="{StaticResource TextOnAccentAAFillColorDisabled}" />
 
     <SolidColorBrush x:Key="ControlFillColorDefaultBrush" Color="{StaticResource ControlFillColorDefault}" />
     <SolidColorBrush x:Key="ControlFillColorSecondaryBrush" Color="{StaticResource ControlFillColorSecondary}" />
@@ -321,15 +317,15 @@
     <SolidColorBrush x:Key="ControlFillColorTransparentBrush" Color="{StaticResource ControlFillColorTransparent}" />
     <SolidColorBrush x:Key="ControlFillColorInputActiveBrush" Color="{StaticResource ControlFillColorInputActive}" />
 
-    <SolidColorBrush x:Key="ControlAAFillColorDefaultBrush" Color="{StaticResource ControlAAFillColorDefault}" />
-    <SolidColorBrush x:Key="ControlAAFillColorDisabledBrush" Color="{StaticResource ControlAAFillColorDisabled}" />
+    <SolidColorBrush x:Key="ControlStrongFillColorDefaultBrush" Color="{StaticResource ControlAAFillColorDefault}" />
+    <SolidColorBrush x:Key="ControlStrongFillColorDisabledBrush" Color="{StaticResource ControlAAFillColorDisabled}" />
 
     <SolidColorBrush x:Key="ControlSolidFillColorDefaultBrush" Color="{StaticResource ControlSolidFillColorDefault}" />
 
-    <SolidColorBrush x:Key="GhostFillColorTransparentBrush" Color="{StaticResource GhostFillColorTransparent}" />
-    <SolidColorBrush x:Key="GhostFillColorSecondaryBrush" Color="{StaticResource GhostFillColorSecondary}" />
-    <SolidColorBrush x:Key="GhostFillColorTertiaryBrush" Color="{StaticResource GhostFillColorTertiary}" />
-    <SolidColorBrush x:Key="GhostFillColorDisabledBrush" Color="{StaticResource GhostFillColorDisabled}" />
+    <SolidColorBrush x:Key="SubtleFillColorTransparentBrush" Color="{StaticResource SubtleFillColorTransparent}" />
+    <SolidColorBrush x:Key="SubtleFillColorSecondaryBrush" Color="{StaticResource SubtleFillColorSecondary}" />
+    <SolidColorBrush x:Key="SubtleFillColorTertiaryBrush" Color="{StaticResource SubtleFillColorTertiary}" />
+    <SolidColorBrush x:Key="SubtleFillColorDisabledBrush" Color="{StaticResource SubtleFillColorDisabled}" />
 
     <SolidColorBrush x:Key="ControlAltFillColorTransparentBrush" Color="{StaticResource ControlAltFillColorTransparent}" />
     <SolidColorBrush x:Key="ControlAltFillColorSecondaryBrush" Color="{StaticResource ControlAltFillColorSecondary}" />
@@ -342,12 +338,12 @@
     <SolidColorBrush x:Key="ControlOnImageFillColorTertiaryBrush" Color="{StaticResource ControlOnImageFillColorTertiary}" />
     <SolidColorBrush x:Key="ControlOnImageFillColorDisabledBrush" Color="{StaticResource ControlOnImageFillColorDisabled}" />
 
-    <SolidColorBrush x:Key="AccentFillColorDefaultBrush" Color="{m:DynamicColor SystemAccentColor}" />
+    <SolidColorBrush x:Key="AccentFillColorSelectedTextBackgroundBrush" Color="{m:DynamicColor SystemAccentColor}" />
 
-    <SolidColorBrush x:Key="AccentAAFillColorDefaultBrush" Color="{m:DynamicColor SystemAccentColorLight2}" />
-    <SolidColorBrush x:Key="AccentAAFillColorSecondaryBrush" Color="{m:DynamicColor SystemAccentColorLight3}" />
-    <SolidColorBrush x:Key="AccentAAFillColorTertiaryBrush" Color="{m:DynamicColor SystemAccentColorLight1}" />
-    <SolidColorBrush x:Key="AccentAAFillColorDisabledBrush" Color="{StaticResource AccentAAFillColorDisabled}" />
+    <SolidColorBrush x:Key="AccentFillColorDefaultBrush" Color="{m:DynamicColor SystemAccentColorLight2}" />
+    <SolidColorBrush x:Key="AccentFillColorSecondaryBrush" Color="{m:DynamicColor SystemAccentColorLight2}" Opacity="0.9" />
+    <SolidColorBrush x:Key="AccentFillColorTertiaryBrush" Color="{m:DynamicColor SystemAccentColorLight2}" Opacity="0.8" />
+    <SolidColorBrush x:Key="AccentFillColorDisabledBrush" Color="{StaticResource AccentAAFillColorDisabled}" />
 
     <SolidColorBrush x:Key="ControlStrokeColorDefaultBrush" Color="{StaticResource ControlStrokeColorDefault}" />
     <SolidColorBrush x:Key="ControlStrokeColorSecondaryBrush" Color="{StaticResource ControlStrokeColorSecondary}" />
@@ -355,13 +351,13 @@
     <SolidColorBrush x:Key="ControlStrokeColorOnAccentSecondaryBrush" Color="{StaticResource ControlStrokeColorOnAccentSecondary}" />
     <SolidColorBrush x:Key="ControlStrokeColorOnAccentTertiaryBrush" Color="{StaticResource ControlStrokeColorOnAccentTertiary}" />
     <SolidColorBrush x:Key="ControlStrokeColorOnAccentDisabledBrush" Color="{StaticResource ControlStrokeColorOnAccentDisabled}" />
-    <SolidColorBrush x:Key="ControlStrokeColorForAAFillOnImageBrush" Color="{StaticResource ControlStrokeColorForAAFillOnImage}" />
+    <SolidColorBrush x:Key="ControlStrokeColorForStrongFillWhenOnImageBrush" Color="{StaticResource ControlStrokeColorForAAFillOnImage}" />
 
     <SolidColorBrush x:Key="CardStrokeColorDefaultBrush" Color="{StaticResource CardStrokeColorDefault}" />
     <SolidColorBrush x:Key="CardStrokeColorDefaultSolidBrush" Color="{StaticResource CardStrokeColorDefaultSolid}" />
 
-    <SolidColorBrush x:Key="ControlAAStrokeColorDefaultBrush" Color="{StaticResource ControlAAStrokeColorDefault}" />
-    <SolidColorBrush x:Key="ControlAAStrokeColorDisabledBrush" Color="{StaticResource ControlAAStrokeColorDisabled}" />
+    <SolidColorBrush x:Key="ControlStrongStrokeColorDefaultBrush" Color="{StaticResource ControlAAStrokeColorDefault}" />
+    <SolidColorBrush x:Key="ControlStrongStrokeColorDisabledBrush" Color="{StaticResource ControlAAStrokeColorDisabled}" />
 
     <SolidColorBrush x:Key="SurfaceStrokeColorDefaultBrush" Color="{StaticResource SurfaceStrokeColorDefault}" />
     <SolidColorBrush x:Key="SurfaceStrokeColorFlyoutBrush" Color="{StaticResource SurfaceStrokeColorFlyout}" />
@@ -378,15 +374,16 @@
     <SolidColorBrush x:Key="SmokeFillColorDefaultBrush" Color="{StaticResource SmokeFillColorDefault}" />
 
     <SolidColorBrush x:Key="LayerFillColorDefaultBrush" Color="{StaticResource LayerFillColorDefault}" />
-    <SolidColorBrush x:Key="LayerFillColorSecondaryBrush" Color="{StaticResource LayerFillColorSecondary}" />
-    <SolidColorBrush x:Key="LayerFillColorTertiaryBrush" Color="{StaticResource LayerFillColorTertiary}" />
+    <SolidColorBrush x:Key="LayerFillColorAltBrush" Color="{StaticResource LayerFillColorAlt}" />
+    <SolidColorBrush x:Key="LayerOnAcrylicFillColorDefaultBrush" Color="{StaticResource LayerOnAcrylicFillColorDefault}" />
+    <SolidColorBrush x:Key="LayerOnAccentAcrylicFillColorDefaultBrush" Color="{StaticResource LayerOnAccentAcrylicFillColorDefault}" />
 
     <SolidColorBrush x:Key="SolidBackgroundFillColorBaseBrush" Color="{StaticResource SolidBackgroundFillColorBase}" />
     <SolidColorBrush x:Key="SolidBackgroundFillColorSecondaryBrush" Color="{StaticResource SolidBackgroundFillColorSecondary}" />
     <SolidColorBrush x:Key="SolidBackgroundFillColorTertiaryBrush" Color="{StaticResource SolidBackgroundFillColorTertiary}" />
     <SolidColorBrush x:Key="SolidBackgroundFillColorQuarternaryBrush" Color="{StaticResource SolidBackgroundFillColorQuarternary}" />
 
-    <SolidColorBrush x:Key="SystemFillColorAttentionBrush" Color="{StaticResource SystemFillColorAttention}" />
+    <SolidColorBrush x:Key="SystemFillColorAttentionBrush" Color="{m:DynamicColor SystemAccentColorLight2}" />
     <SolidColorBrush x:Key="SystemFillColorSuccessBrush" Color="{StaticResource SystemFillColorSuccess}" />
     <SolidColorBrush x:Key="SystemFillColorCautionBrush" Color="{StaticResource SystemFillColorCaution}" />
     <SolidColorBrush x:Key="SystemFillColorCriticalBrush" Color="{StaticResource SystemFillColorCritical}" />
@@ -398,24 +395,21 @@
     <SolidColorBrush x:Key="SystemFillColorNeutralBackgroundBrush" Color="{StaticResource SystemFillColorNeutralBackground}" />
 
     <m:StaticResource x:Key="DefaultTextForegroundThemeBrush" ResourceKey="TextFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="ApplicationPageBackgroundThemeBrush" ResourceKey="SolidBackgroundFillColorTertiaryBrush" />
+    <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{StaticResource SolidBackgroundFillColorBase}" />
 
     <!-- Elevation border brushes-->
 
     <LinearGradientBrush x:Key="ControlElevationBorderBrush" MappingMode="Absolute" StartPoint="0,0" EndPoint="0,3">
-        <LinearGradientBrush.RelativeTransform>
-            <ScaleTransform ScaleY="-1" CenterY="0.5"/>
-        </LinearGradientBrush.RelativeTransform>
         <LinearGradientBrush.GradientStops>
-            <GradientStop Offset="0" Color="{StaticResource ControlStrokeColorSecondary}"/>
+            <GradientStop Offset="0.33" Color="{StaticResource ControlStrokeColorSecondary}"/>
             <GradientStop Offset="1.0" Color="{StaticResource ControlStrokeColorDefault}"/>
         </LinearGradientBrush.GradientStops>
     </LinearGradientBrush>
 
     <LinearGradientBrush x:Key="CircleElevationBorderBrush" MappingMode="RelativeToBoundingBox" StartPoint="0,0" EndPoint="0,1">
         <LinearGradientBrush.GradientStops>
-            <GradientStop Offset="0.50" Color="{StaticResource ControlStrokeColorDefault}"/>
             <GradientStop Offset="0.70" Color="{StaticResource ControlStrokeColorSecondary}"/>
+            <GradientStop Offset="0.50" Color="{StaticResource ControlStrokeColorDefault}"/>
         </LinearGradientBrush.GradientStops>
     </LinearGradientBrush>
 
@@ -424,7 +418,7 @@
             <ScaleTransform ScaleY="-1" CenterY="0.5"/>
         </LinearGradientBrush.RelativeTransform>
         <LinearGradientBrush.GradientStops>
-            <GradientStop Offset="0" Color="{StaticResource ControlStrokeColorOnAccentSecondary}"/>
+            <GradientStop Offset="0.33" Color="{StaticResource ControlStrokeColorOnAccentSecondary}"/>
             <GradientStop Offset="1.0" Color="{StaticResource ControlStrokeColorOnAccentDefault}"/>
         </LinearGradientBrush.GradientStops>
     </LinearGradientBrush>
@@ -437,7 +431,9 @@
     <sys:Boolean x:Key="UseSystemFocusVisuals">True</sys:Boolean>
     <Thickness x:Key="TextControlBorderThemeThickness">1</Thickness>
     <Thickness x:Key="TextControlBorderThemeThicknessFocused">1,1,1,2</Thickness>
-    <Thickness x:Key="TextControlThemePadding">10,6,6,5</Thickness>
+    <Thickness x:Key="TextControlThemePadding">10,5,6,6</Thickness>
+    <m:StaticResource x:Key="SystemControlFocusVisualPrimaryBrush" ResourceKey="FocusStrokeColorOuterBrush"/>
+    <m:StaticResource x:Key="SystemControlFocusVisualSecondaryBrush" ResourceKey="FocusStrokeColorInnerBrush"/>
     <!--#endregion-->
     
     <!-- Resources for AppBarButton -->
@@ -445,82 +441,84 @@
     <sys:Double x:Key="AppBarExpandButtonThemeWidth">48</sys:Double>
     <sys:Double x:Key="AppBarExpandButtonCircleDiameter">3</sys:Double>
 
-    <m:StaticResource x:Key="AppBarButtonBackground" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="AppBarButtonBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowBrush" />
-    <m:StaticResource x:Key="AppBarButtonBackgroundPressed" ResourceKey="SystemControlHighlightListMediumBrush" />
-    <m:StaticResource x:Key="AppBarButtonBackgroundDisabled" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="AppBarButtonForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
-    <m:StaticResource x:Key="AppBarButtonForegroundPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="AppBarButtonForegroundPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="AppBarButtonForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
-    <m:StaticResource x:Key="AppBarButtonBorderBrush" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="AppBarButtonBorderBrushPointerOver" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="AppBarButtonBorderBrushPressed" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="AppBarButtonBorderBrushDisabled" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="AppBarButtonKeyboardAcceleratorTextForeground" ResourceKey="SystemControlForegroundBaseMediumBrush" />
-    <m:StaticResource x:Key="AppBarButtonKeyboardAcceleratorTextForegroundPointerOver" ResourceKey="SystemControlHighlightAltBaseMediumBrush" />
-    <m:StaticResource x:Key="AppBarButtonKeyboardAcceleratorTextForegroundPressed" ResourceKey="SystemControlHighlightAltBaseMediumBrush" />
-    <m:StaticResource x:Key="AppBarButtonKeyboardAcceleratorTextForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
-    <m:StaticResource x:Key="AppBarButtonBackgroundSubMenuOpened" ResourceKey="SystemControlHighlightListAccentLowBrush" />
-    <m:StaticResource x:Key="AppBarButtonForegroundSubMenuOpened" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="AppBarButtonKeyboardAcceleratorTextForegroundSubMenuOpened" ResourceKey="SystemControlHighlightAltBaseMediumBrush" />
-    <m:StaticResource x:Key="AppBarButtonBorderBrushSubMenuOpened" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="AppBarButtonSubItemChevronForeground" ResourceKey="SystemControlForegroundBaseMediumHighBrush" />
-    <m:StaticResource x:Key="AppBarButtonSubItemChevronForegroundPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="AppBarButtonSubItemChevronForegroundPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="AppBarButtonSubItemChevronForegroundSubMenuOpened" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="AppBarButtonSubItemChevronForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <m:StaticResource x:Key="AppBarButtonBackground" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="AppBarButtonBackgroundPointerOver" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="AppBarButtonBackgroundPressed" ResourceKey="SubtleFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="AppBarButtonBackgroundDisabled" ResourceKey="SubtleFillColorDisabledBrush" />
+    <m:StaticResource x:Key="AppBarButtonForeground" ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="AppBarButtonForegroundPointerOver" ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="AppBarButtonForegroundPressed" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="AppBarButtonForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
+    <m:StaticResource x:Key="AppBarButtonBorderBrush" ResourceKey="ControlFillColorTransparentBrush" />
+    <m:StaticResource x:Key="AppBarButtonBorderBrushPointerOver" ResourceKey="ControlFillColorTransparentBrush" />
+    <m:StaticResource x:Key="AppBarButtonBorderBrushPressed" ResourceKey="ControlFillColorTransparentBrush" />
+    <m:StaticResource x:Key="AppBarButtonBorderBrushDisabled" ResourceKey="ControlFillColorTransparentBrush" />
+    <m:StaticResource x:Key="AppBarButtonKeyboardAcceleratorTextForeground" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="AppBarButtonKeyboardAcceleratorTextForegroundPointerOver" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="AppBarButtonKeyboardAcceleratorTextForegroundPressed" ResourceKey="TextFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="AppBarButtonKeyboardAcceleratorTextForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
+    <m:StaticResource x:Key="AppBarButtonBackgroundSubMenuOpened" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="AppBarButtonForegroundSubMenuOpened" ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="AppBarButtonKeyboardAcceleratorTextForegroundSubMenuOpened" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="AppBarButtonBorderBrushSubMenuOpened" ResourceKey="ControlFillColorTransparentBrush" />
+    <m:StaticResource x:Key="AppBarButtonSubItemChevronForeground" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="AppBarButtonSubItemChevronForegroundPointerOver" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="AppBarButtonSubItemChevronForegroundPressed" ResourceKey="TextFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="AppBarButtonSubItemChevronForegroundSubMenuOpened" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="AppBarButtonSubItemChevronForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
 
     <!-- Resources for AppBarToggleButton -->
-    <m:StaticResource x:Key="AppBarToggleButtonBackground" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonBackgroundDisabled" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonBackgroundChecked" ResourceKey="SystemControlHighlightListAccentLowBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonBackgroundCheckedPointerOver" ResourceKey="SystemControlHighlightListAccentMediumBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonBackgroundCheckedPressed" ResourceKey="SystemControlHighlightListAccentHighBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonBackgroundCheckedDisabled" ResourceKey="SystemControlDisabledAccentBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonBackgroundHighLightOverlay" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonBackgroundHighLightOverlayPointerOver" ResourceKey="SystemControlHighlightListLowBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonBackgroundHighLightOverlayPressed" ResourceKey="SystemControlHighlightListMediumBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonBackgroundHighLightOverlayCheckedPointerOver" ResourceKey="SystemControlHighlightListLowBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonBackgroundHighLightOverlayCheckedPressed" ResourceKey="SystemControlHighlightListMediumBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonForegroundPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonForegroundPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonForegroundChecked" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonForegroundCheckedPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonForegroundCheckedPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonForegroundCheckedDisabled" ResourceKey="SystemControlBackgroundBaseMediumLowBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonBorderBrush" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonBorderBrushPointerOver" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonBorderBrushPressed" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonBorderBrushDisabled" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonBorderBrushChecked" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonBorderBrushCheckedPointerOver" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonBorderBrushCheckedPressed" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonBorderBrushCheckedDisabled" ResourceKey="SystemControlTransparentBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonCheckGlyphForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonCheckGlyphForegroundPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonCheckGlyphForegroundPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonCheckGlyphForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonCheckGlyphForegroundChecked" ResourceKey="SystemControlForegroundBaseHighBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonCheckGlyphForegroundCheckedPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonCheckGlyphForegroundCheckedPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonCheckGlyphForegroundCheckedDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonOverflowLabelForegroundPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonOverflowLabelForegroundPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonOverflowLabelForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonOverflowLabelForegroundCheckedPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonOverflowLabelForegroundCheckedPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonOverflowLabelForegroundCheckedDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonKeyboardAcceleratorTextForeground" ResourceKey="SystemControlForegroundBaseMediumBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonKeyboardAcceleratorTextForegroundPointerOver" ResourceKey="SystemControlHighlightAltBaseMediumBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonKeyboardAcceleratorTextForegroundPressed" ResourceKey="SystemControlHighlightAltBaseMediumBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonKeyboardAcceleratorTextForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonKeyboardAcceleratorTextForegroundChecked" ResourceKey="SystemControlForegroundBaseMediumBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonKeyboardAcceleratorTextForegroundCheckedPointerOver" ResourceKey="SystemControlHighlightAltBaseMediumBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonKeyboardAcceleratorTextForegroundCheckedPressed" ResourceKey="SystemControlHighlightAltBaseMediumBrush" />
-    <m:StaticResource x:Key="AppBarToggleButtonKeyboardAcceleratorTextForegroundCheckedDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonBackground" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonBackgroundPointerOver" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonBackgroundPressed" ResourceKey="SubtleFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonBackgroundDisabled" ResourceKey="SubtleFillColorDisabledBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonBackgroundChecked" ResourceKey="AccentFillColorDefaultBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonBackgroundCheckedPointerOver" ResourceKey="AccentFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonBackgroundCheckedPressed" ResourceKey="AccentFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonBackgroundCheckedDisabled" ResourceKey="AccentFillColorDisabledBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonBackgroundHighLightOverlay" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonBackgroundHighLightOverlayPointerOver" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonBackgroundHighLightOverlayPressed" ResourceKey="SubtleFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonBackgroundHighLightOverlayCheckedPointerOver" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonBackgroundHighLightOverlayCheckedPressed" ResourceKey="SubtleFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonForeground" ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonForegroundPointerOver" ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonForegroundPressed" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonForegroundChecked" ResourceKey="TextOnAccentFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonForegroundCheckedPointerOver" ResourceKey="TextOnAccentFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonForegroundCheckedPressed" ResourceKey="TextOnAccentFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonForegroundCheckedDisabled" ResourceKey="TextOnAccentAAFillColorDisabled" />
+    <m:StaticResource x:Key="AppBarToggleButtonBorderBrush" ResourceKey="ControlFillColorTransparentBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonBorderBrushPointerOver" ResourceKey="ControlFillColorTransparentBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonBorderBrushPressed" ResourceKey="ControlFillColorTransparentBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonBorderBrushDisabled" ResourceKey="ControlFillColorTransparentBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonBorderBrushChecked" ResourceKey="AccentControlElevationBorderBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonBorderBrushCheckedPointerOver" ResourceKey="AccentControlElevationBorderBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonBorderBrushCheckedPressed" ResourceKey="ControlFillColorTransparentBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonBorderBrushCheckedDisabled" ResourceKey="ControlFillColorTransparentBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonCheckGlyphForeground" ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonCheckGlyphForegroundPointerOver" ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonCheckGlyphForegroundPressed" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonCheckGlyphForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonCheckGlyphForegroundChecked" ResourceKey="TextOnAccentFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonCheckGlyphForegroundCheckedPointerOver" ResourceKey="TextOnAccentFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonCheckGlyphForegroundCheckedPressed" ResourceKey="TextOnAccentFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonCheckGlyphForegroundCheckedDisabled" ResourceKey="TextOnAccentAAFillColorDisabled" />
+    <m:StaticResource x:Key="AppBarToggleButtonOverflowLabelForegroundPointerOver" ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonOverflowLabelForegroundPressed" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonOverflowLabelForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonOverflowLabelForegroundCheckedPointerOver" ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonOverflowLabelForegroundCheckedPressed" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonOverflowLabelForegroundCheckedDisabled" ResourceKey="TextFillColorDisabledBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonKeyboardAcceleratorTextForeground" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonKeyboardAcceleratorTextForegroundPointerOver" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonKeyboardAcceleratorTextForegroundPressed" ResourceKey="TextFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonKeyboardAcceleratorTextForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonKeyboardAcceleratorTextForegroundChecked" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonKeyboardAcceleratorTextForegroundCheckedPointerOver" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonKeyboardAcceleratorTextForegroundCheckedPressed" ResourceKey="TextFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="AppBarToggleButtonKeyboardAcceleratorTextForegroundCheckedDisabled" ResourceKey="TextFillColorDisabledBrush" />
 
     <m:StaticResource x:Key="AppBarEllipsisButtonBackground" ResourceKey="SystemControlTransparentBrush" />
     <m:StaticResource x:Key="AppBarEllipsisButtonBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowBrush" />
@@ -535,7 +533,7 @@
     <m:StaticResource x:Key="AppBarEllipsisButtonBorderBrushPressed" ResourceKey="SystemControlTransparentBrush" />
     <m:StaticResource x:Key="AppBarEllipsisButtonBorderBrushDisabled" ResourceKey="SystemControlTransparentBrush" />
 
-    <m:StaticResource x:Key="AppBarSeparatorForeground" ResourceKey="SystemControlForegroundBaseMediumLowBrush" />
+    <m:StaticResource x:Key="AppBarSeparatorForeground" ResourceKey="DividerStrokeColorDefaultBrush" />
 
     <!-- Resources for AutoSuggestBox -->
     <sys:Double x:Key="AutoSuggestListMaxHeight">374</sys:Double>
@@ -545,19 +543,19 @@
     <Thickness x:Key="AutoSuggestListPadding">-1,0,-1,0</Thickness>
     <Thickness x:Key="AutoSuggestListViewItemMargin">12,11,0,13</Thickness>
     <m:StaticResource x:Key="AutoSuggestBoxSuggestionsListBackground" ResourceKey="SystemControlBackgroundChromeMediumLowBrush" />
-    <m:StaticResource x:Key="AutoSuggestBoxSuggestionsListBorderBrush" ResourceKey="SurfaceStrokeColorDefaultBrush" />
+    <m:StaticResource x:Key="AutoSuggestBoxSuggestionsListBorderBrush" ResourceKey="SurfaceStrokeColorFlyoutBrush" />
     <m:StaticResource x:Key="AutoSuggestBoxLightDismissOverlayBackground" ResourceKey="SystemControlPageBackgroundMediumAltMediumBrush" />
     <sys:Double x:Key="AutoSuggestBoxIconFontSize">12</sys:Double>
 
     <!-- Resources for Button -->
-    <m:StaticResource x:Key="AccentButtonBackground" ResourceKey="AccentAAFillColorDefaultBrush" />
-    <m:StaticResource x:Key="AccentButtonBackgroundPointerOver" ResourceKey="AccentAAFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="AccentButtonBackgroundPressed" ResourceKey="AccentAAFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="AccentButtonBackgroundDisabled" ResourceKey="AccentAAFillColorDisabledBrush" />
-    <m:StaticResource x:Key="AccentButtonForeground" ResourceKey="TextOnAccentAAFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="AccentButtonForegroundPointerOver" ResourceKey="TextOnAccentAAFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="AccentButtonForegroundPressed" ResourceKey="TextOnAccentAAFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="AccentButtonForegroundDisabled" ResourceKey="TextOnAccentAAFillColorDisabledBrush" />
+    <m:StaticResource x:Key="AccentButtonBackground" ResourceKey="AccentFillColorDefaultBrush" />
+    <m:StaticResource x:Key="AccentButtonBackgroundPointerOver" ResourceKey="AccentFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="AccentButtonBackgroundPressed" ResourceKey="AccentFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="AccentButtonBackgroundDisabled" ResourceKey="AccentFillColorDisabledBrush" />
+    <m:StaticResource x:Key="AccentButtonForeground" ResourceKey="TextOnAccentFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="AccentButtonForegroundPointerOver" ResourceKey="TextOnAccentFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="AccentButtonForegroundPressed" ResourceKey="TextOnAccentFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="AccentButtonForegroundDisabled" ResourceKey="TextOnAccentFillColorDisabledBrush" />
     <m:StaticResource x:Key="AccentButtonBorderBrush" ResourceKey="AccentControlElevationBorderBrush" />
     <m:StaticResource x:Key="AccentButtonBorderBrushPointerOver" ResourceKey="AccentControlElevationBorderBrush" />
     <m:StaticResource x:Key="AccentButtonBorderBrushPressed" ResourceKey="ControlFillColorTransparentBrush" />
@@ -584,29 +582,29 @@
     <m:StaticResource x:Key="CalendarDatePickerForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
     <m:StaticResource x:Key="CalendarDatePickerCalendarGlyphForeground" ResourceKey="TextFillColorSecondaryBrush" />
     <m:StaticResource x:Key="CalendarDatePickerCalendarGlyphForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
-    <m:StaticResource x:Key="CalendarDatePickerTextForeground" ResourceKey="ControlAltFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="CalendarDatePickerTextForeground" ResourceKey="TextFillColorSecondaryBrush" />
     <m:StaticResource x:Key="CalendarDatePickerTextForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
     <m:StaticResource x:Key="CalendarDatePickerTextForegroundSelected" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="CalendarDatePickerHeaderForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
     <m:StaticResource x:Key="CalendarDatePickerBackground" ResourceKey="ControlFillColorDefaultBrush" />
-    <m:StaticResource x:Key="CalendarDatePickerBackgroundPointerOver" ResourceKey="GhostFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="CalendarDatePickerBackgroundPointerOver" ResourceKey="ControlFillColorSecondaryBrush" />
     <m:StaticResource x:Key="CalendarDatePickerBackgroundPressed" ResourceKey="ControlFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="CalendarDatePickerBackgroundDisabled" ResourceKey="ControlFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="CalendarDatePickerBackgroundFocused" ResourceKey="GhostFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="CalendarDatePickerBorderBrush" ResourceKey="ControlAltFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="CalendarDatePickerBorderBrushPointerOver" ResourceKey="ControlAAStrokeColorDefaultBrush" />
+    <m:StaticResource x:Key="CalendarDatePickerBackgroundDisabled" ResourceKey="ControlFillColorDisabledBrush" />
+    <m:StaticResource x:Key="CalendarDatePickerBackgroundFocused" ResourceKey="ControlFillColorDefaultBrush" />
+    <m:StaticResource x:Key="CalendarDatePickerBorderBrush" ResourceKey="ControlElevationBorderBrush" />
+    <m:StaticResource x:Key="CalendarDatePickerBorderBrushPointerOver" ResourceKey="ControlElevationBorderBrush" />
     <m:StaticResource x:Key="CalendarDatePickerBorderBrushPressed" ResourceKey="ControlStrokeColorDefaultBrush" />
-    <m:StaticResource x:Key="CalendarDatePickerBorderBrushDisabled" ResourceKey="AccentAAFillColorDisabledBrush" />
+    <m:StaticResource x:Key="CalendarDatePickerBorderBrushDisabled" ResourceKey="ControlStrokeColorDefaultBrush" />
     <m:StaticResource x:Key="CalendarDatePickerLightDismissOverlayBackground" ResourceKey="SystemControlPageBackgroundMediumAltMediumBrush" />
 
     <!-- Resources for CalendarView -->
-    <m:StaticResource x:Key="CalendarViewFocusBorderBrush" ResourceKey="AccentAAFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="CalendarViewSelectedHoverBorderBrush" ResourceKey="AccentAAFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="CalendarViewSelectedPressedBorderBrush" ResourceKey="GhostFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="CalendarViewSelectedBorderBrush" ResourceKey="AccentAAFillColorDefaultBrush" />
+    <m:StaticResource x:Key="CalendarViewFocusBorderBrush" ResourceKey="AccentFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="CalendarViewSelectedHoverBorderBrush" ResourceKey="AccentFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="CalendarViewSelectedPressedBorderBrush" ResourceKey="SubtleFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="CalendarViewSelectedBorderBrush" ResourceKey="AccentFillColorDefaultBrush" />
     <m:StaticResource x:Key="CalendarViewHoverBorderBrush" ResourceKey="ControlStrokeColorDefaultBrush" />
     <m:StaticResource x:Key="CalendarViewPressedBorderBrush" ResourceKey="ControlStrokeColorDefaultBrush" />
-    <m:StaticResource x:Key="CalendarViewTodayForeground" ResourceKey="TextOnAccentAAFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="CalendarViewTodayForeground" ResourceKey="TextOnAccentFillColorPrimaryBrush" />
     <m:StaticResource x:Key="CalendarViewBlackoutForeground" ResourceKey="TextFillColorDisabledBrush" />
     <m:StaticResource x:Key="CalendarViewSelectedForeground" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="CalendarViewPressedForeground" ResourceKey="TextFillColorPrimaryBrush" />
@@ -618,140 +616,155 @@
     <m:StaticResource x:Key="CalendarViewBackground" ResourceKey="ControlFillColorInputActiveBrush" />
     <m:StaticResource x:Key="CalendarViewBorderBrush" ResourceKey="ControlStrokeColorDefaultBrush" />
     <m:StaticResource x:Key="CalendarViewWeekDayForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
-    <m:StaticResource x:Key="CalendarViewNavigationButtonBackground" ResourceKey="GhostFillColorTransparentBrush" />
+    <m:StaticResource x:Key="CalendarViewNavigationButtonBackground" ResourceKey="SubtleFillColorTransparentBrush" />
     <m:StaticResource x:Key="CalendarViewNavigationButtonForegroundPointerOver" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="CalendarViewNavigationButtonForegroundPressed" ResourceKey="ControlAltFillColorTertiaryBrush" />
     <m:StaticResource x:Key="CalendarViewNavigationButtonForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
     <m:StaticResource x:Key="CalendarViewCalendarItemRevealBackground" ResourceKey="SystemControlTransparentRevealBackgroundBrush" />
     <m:StaticResource x:Key="CalendarViewCalendarItemRevealBorderBrush" ResourceKey="SystemControlTransparentRevealBorderBrush" />
     <m:StaticResource x:Key="CalendarViewNavigationButtonBorderBrushPointerOver" ResourceKey="ControlStrokeColorDefaultBrush" />
-    <m:StaticResource x:Key="CalendarViewNavigationButtonBorderBrush" ResourceKey="GhostFillColorTransparentBrush" />
+    <m:StaticResource x:Key="CalendarViewNavigationButtonBorderBrush" ResourceKey="SubtleFillColorTransparentBrush" />
 
-    <!-- Resources for CheckBox -->
-    <sys:Double x:Key="CheckBoxBorderThemeThickness">1</sys:Double>
-    <sys:Double x:Key="CheckBoxCheckedStrokeThickness">0</sys:Double>
+    <!--#region CheckBox_themeresources.xaml-->
+
+    <!-- Content brushes -->
+
     <m:StaticResource x:Key="CheckBoxForegroundUnchecked" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="CheckBoxForegroundUncheckedPointerOver" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="CheckBoxForegroundUncheckedPressed" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="CheckBoxForegroundUncheckedDisabled" ResourceKey="TextFillColorDisabledBrush" />
+
     <m:StaticResource x:Key="CheckBoxForegroundChecked" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="CheckBoxForegroundCheckedPointerOver" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="CheckBoxForegroundCheckedPressed" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="CheckBoxForegroundCheckedDisabled" ResourceKey="TextFillColorDisabledBrush" />
+
     <m:StaticResource x:Key="CheckBoxForegroundIndeterminate" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="CheckBoxForegroundIndeterminatePointerOver" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="CheckBoxForegroundIndeterminatePressed" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="CheckBoxForegroundIndeterminateDisabled" ResourceKey="TextFillColorDisabledBrush" />
-    <m:StaticResource x:Key="CheckBoxBackgroundUnchecked" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBackgroundUncheckedPointerOver" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBackgroundUncheckedPressed" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBackgroundUncheckedDisabled" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBackgroundChecked" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBackgroundCheckedPointerOver" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBackgroundCheckedPressed" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBackgroundCheckedDisabled" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBackgroundIndeterminate" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBackgroundIndeterminatePointerOver" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBackgroundIndeterminatePressed" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBackgroundIndeterminateDisabled" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBorderBrushUnchecked" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBorderBrushUncheckedPointerOver" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBorderBrushUncheckedPressed" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBorderBrushUncheckedDisabled" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBorderBrushChecked" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBorderBrushCheckedPointerOver" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBorderBrushCheckedPressed" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBorderBrushCheckedDisabled" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBorderBrushIndeterminate" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBorderBrushIndeterminatePointerOver" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBorderBrushIndeterminatePressed" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxBorderBrushIndeterminateDisabled" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeUnchecked" ResourceKey="ControlAltFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeUncheckedPointerOver" ResourceKey="ControlAAStrokeColorDefaultBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeUncheckedPressed" ResourceKey="TextFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeUncheckedDisabled" ResourceKey="TextFillColorDisabledBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeChecked" ResourceKey="ControlStrokeColorDefaultBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeCheckedPointerOver" ResourceKey="SystemAccentColorDark1Brush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeCheckedPressed" ResourceKey="SystemAccentColorLight1Brush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeCheckedDisabled" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeIndeterminate" ResourceKey="AccentAAFillColorDefaultBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeIndeterminatePointerOver" ResourceKey="SystemAccentColorLight1Brush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeIndeterminatePressed" ResourceKey="SystemAccentColorDark1Brush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeIndeterminateDisabled" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillUnchecked" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillUncheckedPointerOver" ResourceKey="GhostFillColorTransparentBrush" />
+
+    <m:StaticResource x:Key="CheckBoxBackgroundUnchecked" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="CheckBoxBackgroundUncheckedPointerOver" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="CheckBoxBackgroundUncheckedPressed" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="CheckBoxBackgroundUncheckedDisabled" ResourceKey="SubtleFillColorTransparentBrush" />
+
+    <m:StaticResource x:Key="CheckBoxBackgroundChecked" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="CheckBoxBackgroundCheckedPointerOver" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="CheckBoxBackgroundCheckedPressed" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="CheckBoxBackgroundCheckedDisabled" ResourceKey="SubtleFillColorTransparentBrush" />
+
+    <m:StaticResource x:Key="CheckBoxBackgroundIndeterminate" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="CheckBoxBackgroundIndeterminatePointerOver" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="CheckBoxBackgroundIndeterminatePressed" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="CheckBoxBackgroundIndeterminateDisabled" ResourceKey="SubtleFillColorTransparentBrush" />
+
+    <m:StaticResource x:Key="CheckBoxBorderBrushUnchecked" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="CheckBoxBorderBrushUncheckedPointerOver" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="CheckBoxBorderBrushUncheckedPressed" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="CheckBoxBorderBrushUncheckedDisabled" ResourceKey="SubtleFillColorTransparentBrush" />
+
+    <m:StaticResource x:Key="CheckBoxBorderBrushChecked" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="CheckBoxBorderBrushCheckedPointerOver" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="CheckBoxBorderBrushCheckedPressed" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="CheckBoxBorderBrushCheckedDisabled" ResourceKey="SubtleFillColorTransparentBrush" />
+
+    <m:StaticResource x:Key="CheckBoxBorderBrushIndeterminate" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="CheckBoxBorderBrushIndeterminatePointerOver" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="CheckBoxBorderBrushIndeterminatePressed" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="CheckBoxBorderBrushIndeterminateDisabled" ResourceKey="SubtleFillColorTransparentBrush" />
+
+    <!-- Checkbox stroke brushes -->
+
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeUnchecked" ResourceKey="ControlStrongStrokeColorDefaultBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeUncheckedPointerOver" ResourceKey="ControlStrongStrokeColorDefaultBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeUncheckedPressed" ResourceKey="ControlStrongStrokeColorDisabledBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeUncheckedDisabled" ResourceKey="ControlStrongStrokeColorDisabledBrush" />
+
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeChecked" ResourceKey="AccentFillColorDefaultBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeCheckedPointerOver" ResourceKey="AccentFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeCheckedPressed" ResourceKey="AccentFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeCheckedDisabled" ResourceKey="ControlStrongStrokeColorDisabledBrush" />
+
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeIndeterminate" ResourceKey="AccentFillColorDefaultBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeIndeterminatePointerOver" ResourceKey="AccentFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeIndeterminatePressed" ResourceKey="AccentFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundStrokeIndeterminateDisabled" ResourceKey="ControlStrongStrokeColorDisabledBrush" />
+
+    <!-- Checkbox fill brushes -->
+
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillUnchecked" ResourceKey="ControlAltFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillUncheckedPointerOver" ResourceKey="ControlAltFillColorTertiaryBrush" />
     <m:StaticResource x:Key="CheckBoxCheckBackgroundFillUncheckedPressed" ResourceKey="ControlAltFillColorQuarternaryBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillUncheckedDisabled" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillChecked" ResourceKey="AccentAAFillColorDefaultBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillCheckedPointerOver" ResourceKey="SystemAccentColorLight1Brush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillCheckedPressed" ResourceKey="SystemAccentColorDark1Brush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillCheckedDisabled" ResourceKey="ControlAltFillColorQuarternaryBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillIndeterminate" ResourceKey="AccentAAFillColorDefaultBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillIndeterminatePointerOver" ResourceKey="SystemAccentColorLight1Brush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillIndeterminatePressed" ResourceKey="SystemAccentColorDark1Brush" />
-    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillIndeterminateDisabled" ResourceKey="ControlAltFillColorQuarternaryBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundUnchecked" ResourceKey="TextOnAccentAAFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundUncheckedPointerOver" ResourceKey="TextOnAccentAAFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundUncheckedPressed" ResourceKey="TextOnAccentAAFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundUncheckedDisabled" ResourceKey="TextOnAccentAAFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundChecked" ResourceKey="TextOnAccentAAFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundCheckedPointerOver" ResourceKey="TextOnAccentAAFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundCheckedPressed" ResourceKey="TextOnAccentAAFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundCheckedDisabled" ResourceKey="TextOnAccentAAFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundIndeterminate" ResourceKey="TextOnAccentAAFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundIndeterminatePointerOver" ResourceKey="TextOnAccentAAFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundIndeterminatePressed" ResourceKey="TextOnAccentAAFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundIndeterminateDisabled" ResourceKey="TextOnAccentAAFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillUncheckedDisabled" ResourceKey="ControlAltFillColorDisabledBrush" />
+
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillChecked" ResourceKey="AccentFillColorDefaultBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillCheckedPointerOver" ResourceKey="AccentFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillCheckedPressed" ResourceKey="AccentFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillCheckedDisabled" ResourceKey="AccentFillColorDisabledBrush" />
+
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillIndeterminate" ResourceKey="AccentFillColorDefaultBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillIndeterminatePointerOver" ResourceKey="AccentFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillIndeterminatePressed" ResourceKey="AccentFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckBackgroundFillIndeterminateDisabled" ResourceKey="AccentFillColorDisabledBrush" />
+
+    <!-- Checkbox glyph brushes -->
+
+    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundUnchecked" ResourceKey="TextOnAccentFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundUncheckedPointerOver" ResourceKey="TextOnAccentFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundUncheckedPressed" ResourceKey="TextOnAccentFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundUncheckedDisabled" ResourceKey="TextOnAccentFillColorDisabledBrush" />
+
+    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundChecked" ResourceKey="TextOnAccentFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundCheckedPointerOver" ResourceKey="TextOnAccentFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundCheckedPressed" ResourceKey="TextOnAccentFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundCheckedDisabled" ResourceKey="TextOnAccentFillColorDisabledBrush" />
+
+    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundIndeterminate" ResourceKey="TextOnAccentFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundIndeterminatePointerOver" ResourceKey="TextOnAccentFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundIndeterminatePressed" ResourceKey="TextOnAccentFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="CheckBoxCheckGlyphForegroundIndeterminateDisabled" ResourceKey="TextOnAccentFillColorDisabledBrush" />
+    <!--#endregion-->
 
     <!-- Resource for ComboBox -->
-    <sys:Double x:Key="ComboBoxThemeMinWidth">64</sys:Double>
-    <Thickness x:Key="ComboBoxBorderThemeThickness">1</Thickness>
-    <Thickness x:Key="ComboBoxDropdownBorderThickness">1</Thickness>
-    <Thickness x:Key="ComboBoxDropdownBorderPadding">0</Thickness>
-    <Thickness x:Key="ComboBoxDropdownContentMargin">0,4,0,4</Thickness>
-    <Thickness x:Key="ComboBoxItemThemePadding">11,5,11,7</Thickness>
-    <Thickness x:Key="ComboBoxItemThemeTouchPadding">11,11,11,13</Thickness>
-    <Thickness x:Key="ComboBoxItemThemeGameControllerPadding">11,11,11,13</Thickness>
-    <FontWeight x:Key="ComboBoxHeaderThemeFontWeight">Normal</FontWeight>
     <m:StaticResource x:Key="ComboBoxItemForeground" ResourceKey="TextFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="ComboBoxItemForegroundPressed" ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="ComboBoxItemForegroundPressed" ResourceKey="TextFillColorSecondaryBrush" />
     <m:StaticResource x:Key="ComboBoxItemForegroundPointerOver" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="ComboBoxItemForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
     <m:StaticResource x:Key="ComboBoxItemForegroundSelected" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="ComboBoxItemForegroundSelectedUnfocused" ResourceKey="TextFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="ComboBoxItemForegroundSelectedPressed" ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="ComboBoxItemForegroundSelectedPressed" ResourceKey="TextFillColorSecondaryBrush" />
     <m:StaticResource x:Key="ComboBoxItemForegroundSelectedPointerOver" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="ComboBoxItemForegroundSelectedDisabled" ResourceKey="TextFillColorDisabledBrush" />
-    <m:StaticResource x:Key="ComboBoxItemBackground" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ComboBoxItemBackgroundPressed" ResourceKey="GhostFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="ComboBoxItemBackgroundPointerOver" ResourceKey="GhostFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="ComboBoxItemBackgroundDisabled" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ComboBoxItemBackgroundSelected" ResourceKey="GhostFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="ComboBoxItemBackgroundSelectedUnfocused" ResourceKey="GhostFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="ComboBoxItemBackgroundSelectedPressed" ResourceKey="GhostFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="ComboBoxItemBackgroundSelectedPointerOver" ResourceKey="AccentAAFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="ComboBoxItemBackgroundSelectedDisabled" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ComboBoxItemBorderBrush" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ComboBoxItemBorderBrushPressed" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ComboBoxItemBorderBrushPointerOver" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ComboBoxItemBorderBrushDisabled" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ComboBoxItemBorderBrushSelected" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ComboBoxItemBorderBrushSelectedUnfocused" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ComboBoxItemBorderBrushSelectedPressed" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ComboBoxItemBorderBrushSelectedPointerOver" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ComboBoxItemBorderBrushSelectedDisabled" ResourceKey="GhostFillColorTransparentBrush" />
-
+    <m:StaticResource x:Key="ComboBoxItemBackground" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="ComboBoxItemBackgroundPressed" ResourceKey="SubtleFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="ComboBoxItemBackgroundPointerOver" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="ComboBoxItemBackgroundDisabled" ResourceKey="SubtleFillColorDisabledBrush" />
+    <m:StaticResource x:Key="ComboBoxItemBackgroundSelected" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="ComboBoxItemBackgroundSelectedUnfocused" ResourceKey="SubtleFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="ComboBoxItemBackgroundSelectedPressed" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="ComboBoxItemBackgroundSelectedPointerOver" ResourceKey="SubtleFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="ComboBoxItemBackgroundSelectedDisabled" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="ComboBoxItemBorderBrush" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="ComboBoxItemBorderBrushPressed" ResourceKey="SubtleFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="ComboBoxItemBorderBrushPointerOver" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="ComboBoxItemBorderBrushDisabled" ResourceKey="SubtleFillColorDisabledBrush" />
+    <m:StaticResource x:Key="ComboBoxItemBorderBrushSelected" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="ComboBoxItemBorderBrushSelectedUnfocused" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="ComboBoxItemBorderBrushSelectedPressed" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="ComboBoxItemBorderBrushSelectedPointerOver" ResourceKey="SubtleFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="ComboBoxItemBorderBrushSelectedDisabled" ResourceKey="SubtleFillColorSecondaryBrush" />
     <m:StaticResource x:Key="ComboBoxBackground" ResourceKey="ControlFillColorDefaultBrush" />
-    <m:StaticResource x:Key="ComboBoxBackgroundPointerOver" ResourceKey="GhostFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="ComboBoxBackgroundPressed" ResourceKey="GhostFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="ComboBoxBackgroundDisabled" ResourceKey="ControlFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="ComboBoxBackgroundUnfocused" ResourceKey="GhostFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="ComboBoxBackgroundFocused" ResourceKey="ComboBoxBackgroundUnfocused" />
-    <m:StaticResource x:Key="ComboBoxBackgroundBorderBrushFocused" ResourceKey="ControlStrokeColorDefaultBrush" />
+    <m:StaticResource x:Key="ComboBoxBackgroundPointerOver" ResourceKey="ControlFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="ComboBoxBackgroundPressed" ResourceKey="ControlFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="ComboBoxBackgroundDisabled" ResourceKey="ControlFillColorDisabledBrush" />
+    <m:StaticResource x:Key="ComboBoxBackgroundUnfocused" ResourceKey="ControlFillColorDefaultBrush" />
+    <m:StaticResource x:Key="ComboBoxBackgroundFocused" ResourceKey="ControlFillColorDefaultBrush" />
+    <m:StaticResource x:Key="ComboBoxBackgroundBorderBrushFocused" ResourceKey="FocusStrokeColorOuterBrush" />
     <m:StaticResource x:Key="ComboBoxBackgroundBorderBrushUnfocused" ResourceKey="ControlStrokeColorDefaultBrush" />
     <m:StaticResource x:Key="ComboBoxForeground" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="ComboBoxForegroundPointerOver" ResourceKey="TextFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="ComboBoxForegroundPressed" ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="ComboBoxForegroundPressed" ResourceKey="TextFillColorSecondaryBrush" />
     <m:StaticResource x:Key="ComboBoxForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
     <m:StaticResource x:Key="ComboBoxForegroundFocused" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="ComboBoxForegroundFocusedPressed" ResourceKey="TextFillColorPrimaryBrush" />
@@ -759,37 +772,41 @@
     <m:StaticResource x:Key="ComboBoxHeaderForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
     <m:StaticResource x:Key="ComboBoxPlaceHolderForeground" ResourceKey="TextFillColorSecondaryBrush" />
     <m:StaticResource x:Key="ComboBoxPlaceHolderForegroundPointerOver" ResourceKey="TextFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="ComboBoxPlaceHolderForegroundPressed" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="ComboBoxPlaceHolderForegroundPressed" ResourceKey="TextFillColorTertiaryBrush" />
     <m:StaticResource x:Key="ComboBoxPlaceHolderForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
     <m:StaticResource x:Key="ComboBoxPlaceHolderForegroundFocused" ResourceKey="TextFillColorSecondaryBrush" />
     <m:StaticResource x:Key="ComboBoxPlaceHolderForegroundFocusedPressed" ResourceKey="TextFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="ComboBoxBorderBrush" ResourceKey="ControlAltFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="ComboBoxBorderBrushPointerOver" ResourceKey="ControlAAStrokeColorDefaultBrush" />
+    <m:StaticResource x:Key="ComboBoxBorderBrush" ResourceKey="ControlElevationBorderBrush" />
+    <m:StaticResource x:Key="ComboBoxBorderBrushPointerOver" ResourceKey="ControlElevationBorderBrush" />
     <m:StaticResource x:Key="ComboBoxBorderBrushPressed" ResourceKey="ControlStrokeColorDefaultBrush" />
-    <m:StaticResource x:Key="ComboBoxBorderBrushDisabled" ResourceKey="AccentAAFillColorDisabledBrush" />
+    <m:StaticResource x:Key="ComboBoxBorderBrushDisabled" ResourceKey="ControlStrokeColorDefaultBrush" />
     <m:StaticResource x:Key="ComboBoxDropDownGlyphForeground" ResourceKey="TextFillColorSecondaryBrush" />
     <m:StaticResource x:Key="ComboBoxDropDownGlyphForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
-    <m:StaticResource x:Key="ComboBoxDropDownGlyphForegroundFocused" ResourceKey="SystemControlHighlightAltBaseMediumHighBrush" />
+    <m:StaticResource x:Key="ComboBoxDropDownGlyphForegroundFocused" ResourceKey="TextFillColorSecondaryBrush" />
     <m:StaticResource x:Key="ComboBoxDropDownGlyphForegroundFocusedPressed" ResourceKey="SystemControlHighlightAltBaseMediumHighBrush" />
     <m:StaticResource x:Key="ComboBoxDropDownForeground" ResourceKey="TextFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="ComboBoxDropDownBackground" ResourceKey="AcrylicBackgroundFillColorDefaultBrush" />
+    <m:StaticResource x:Key="ComboBoxDropDownBackground" ResourceKey="SystemControlBackgroundChromeMediumLowBrush" />
     <m:StaticResource x:Key="ComboBoxDropDownBorderBrush" ResourceKey="SurfaceStrokeColorDefaultBrush" />
-
-    <m:StaticResource x:Key="ComboBoxDropDownBackgroundPointerOver" ResourceKey="GhostFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="ComboBoxDropDownBackgroundPointerPressed" ResourceKey="GhostFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="ComboBoxDropDownBackgroundPointerOver" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="ComboBoxDropDownBackgroundPointerPressed" ResourceKey="SubtleFillColorTertiaryBrush" />
     <m:StaticResource x:Key="ComboBoxFocusedDropDownBackgroundPointerOver" ResourceKey="ControlFillColorTertiaryBrush" />
     <m:StaticResource x:Key="ComboBoxFocusedDropDownBackgroundPointerPressed" ResourceKey="ControlAltFillColorQuarternaryBrush" />
     <m:StaticResource x:Key="ComboBoxEditableDropDownGlyphForeground" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="ComboBoxItemPillFillBrush" ResourceKey="AccentFillColorDefaultBrush"/>
+    <Thickness x:Key="ComboBoxDropdownBorderPadding">0</Thickness>
 
     <!-- Resources for CommandBar -->
     <sys:Double x:Key="CommandBarOverflowMinWidth">160</sys:Double>
     <sys:Double x:Key="CommandBarOverflowTouchMinWidth">240</sys:Double>
     <sys:Double x:Key="CommandBarOverflowMaxWidth">480</sys:Double>
     <sys:Double x:Key="CommandBarOverflowMaxHeight">198</sys:Double>
-    <m:StaticResource x:Key="CommandBarBackground" ResourceKey="SystemControlBackgroundChromeMediumBrush" />
-    <m:StaticResource x:Key="CommandBarForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
-    <m:StaticResource x:Key="CommandBarHighContrastBorder" ResourceKey="SystemControlForegroundTransparentBrush" />
-    <m:StaticResource x:Key="CommandBarEllipsisIconForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <m:StaticResource x:Key="CommandBarBackground" ResourceKey="ControlFillColorTransparentBrush" />
+    <m:StaticResource x:Key="CommandBarBackgroundOpen" ResourceKey="AcrylicInAppFillColorDefaultBrush" />
+    <m:StaticResource x:Key="CommandBarBorderBrushOpen" ResourceKey="CardStrokeColorDefaultSolidBrush" />
+    <Thickness x:Key="CommandBarBorderThicknessOpen">1</Thickness>
+    <m:StaticResource x:Key="CommandBarForeground" ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="CommandBarHighContrastBorder" ResourceKey="ControlFillColorTransparentBrush" />
+    <m:StaticResource x:Key="CommandBarEllipsisIconForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
     <m:StaticResource x:Key="CommandBarOverflowPresenterBackground" ResourceKey="AcrylicBackgroundFillColorDefaultBrush" />
     <m:StaticResource x:Key="CommandBarOverflowPresenterBorderBrush" ResourceKey="SystemControlTransientBorderBrush" />
     <m:StaticResource x:Key="CommandBarLightDismissOverlayBackground" ResourceKey="SystemControlPageBackgroundMediumAltMediumBrush" />
@@ -801,6 +818,31 @@
     <Thickness x:Key="CommandBarOverflowPresenterBorderUpPadding">0</Thickness>
 
     <!-- Resources for CommandBarFlyout -->
+    <m:StaticResource x:Key="CommandBarFlyoutBackground" ResourceKey="SystemControlTransientBackgroundBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutForeground" ResourceKey="TextFillColorPrimaryBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutBorderBrush" ResourceKey="ControlStrokeColorDefaultBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonBackground" ResourceKey="SubtleFillColorTransparentBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonBackgroundPointerOver" ResourceKey="SubtleFillColorSecondaryBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonBackgroundPressed" ResourceKey="SubtleFillColorTertiaryBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonBackgroundDisabled" ResourceKey="SubtleFillColorDisabledBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonForeground" ResourceKey="TextFillColorPrimaryBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonForegroundPointerOver" ResourceKey="TextFillColorPrimaryBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonForegroundPressed" ResourceKey="TextFillColorSecondaryBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonForegroundDisabled" ResourceKey="TextFillColorDisabledBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonKeyboardTextLabelForeground" ResourceKey="TextFillColorSecondaryBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonKeyboardTextLabelForegroundPointerOver" ResourceKey="TextFillColorSecondaryBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonKeyboardTextLabelForegroundPressed" ResourceKey="TextFillColorTertiaryBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonSubItemChevronForeground" ResourceKey="TextFillColorSecondaryBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonBackgroundChecked" ResourceKey="AccentFillColorDefaultBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonBackgroundCheckedPointerOver" ResourceKey="AccentFillColorSecondaryBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonBackgroundCheckedPressed" ResourceKey="AccentFillColorTertiaryBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonBackgroundCheckedDisabled" ResourceKey="AccentFillColorDisabledBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonForegroundChecked" ResourceKey="TextOnAccentFillColorPrimaryBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonForegroundCheckedPointerOver" ResourceKey="TextOnAccentFillColorPrimaryBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonForegroundCheckedPressed" ResourceKey="TextOnAccentFillColorSecondaryBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonForegroundCheckedDisabled" ResourceKey="TextOnAccentFillColorDisabledBrush"/>
+    <m:StaticResource x:Key="CommandBarFlyoutAppBarButtonBorderBrush" ResourceKey="SubtleFillColorTransparentBrush"/>
+
     <Thickness x:Key="CommandBarFlyoutBorderThemeThickness">1</Thickness>
     <Thickness x:Key="CommandBarFlyoutBorderUpThemeThickness">1,1,1,0</Thickness>
     <Thickness x:Key="CommandBarFlyoutBorderDownThemeThickness">1,0,1,1</Thickness>
@@ -810,8 +852,9 @@
     <m:StaticResource x:Key="ContentDialogForeground" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="ContentDialogBackground" ResourceKey="SolidBackgroundFillColorBaseBrush" />
     <m:StaticResource x:Key="ContentDialogSmokeFill" ResourceKey="SmokeFillColorDefaultBrush" />
-    <m:StaticResource x:Key="ContentDialogTopOverlay" ResourceKey="SolidBackgroundFillColorQuarternaryBrush" />
-    <m:StaticResource x:Key="ContentDialogBorderBrush" ResourceKey="ControlElevationBorderBrush" />
+    <m:StaticResource x:Key="ContentDialogTopOverlay" ResourceKey="LayerFillColorAltBrush" />
+    <m:StaticResource x:Key="ContentDialogBorderBrush" ResourceKey="SurfaceStrokeColorDefaultBrush" />
+    <m:StaticResource x:Key="ContentDialogSeparatorBorderBrush" ResourceKey="CardStrokeColorDefaultBrush" />
     <Thickness x:Key="ContentDialogBorderWidth">1</Thickness>
 
     <!-- Resources for DataGrid -->
@@ -860,9 +903,9 @@
     <Thickness x:Key="DateTimeFlyoutBorderPadding">0</Thickness>
     <Thickness x:Key="DateTimeFlyoutButtonBorderThickness">0</Thickness>
 
-    <m:StaticResource x:Key="DateTimePickerFlyoutButtonBackground" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="DateTimePickerFlyoutButtonBackgroundPointerOver" ResourceKey="GhostFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="DateTimePickerFlyoutButtonBackgroundPressed" ResourceKey="GhostFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="DateTimePickerFlyoutButtonBackground" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="DateTimePickerFlyoutButtonBackgroundPointerOver" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="DateTimePickerFlyoutButtonBackgroundPressed" ResourceKey="SubtleFillColorTertiaryBrush" />
     <m:StaticResource x:Key="DateTimePickerFlyoutButtonBorderBrush" ResourceKey="ControlStrokeColorDefaultBrush" />
     <m:StaticResource x:Key="DateTimePickerFlyoutButtonBorderBrushPointerOver" ResourceKey="ControlStrokeColorDefaultBrush" />
     <m:StaticResource x:Key="DateTimePickerFlyoutButtonBorderBrushPressed" ResourceKey="ControlStrokeColorDefaultBrush" />
@@ -872,16 +915,16 @@
     <!-- Resources for FlipView -->
     <Thickness x:Key="FlipViewButtonBorderThemeThickness">0</Thickness>
     <m:StaticResource x:Key="FlipViewBackground" ResourceKey="SolidBackgroundFillColorBaseBrush" />
-    <m:StaticResource x:Key="FlipViewNextPreviousButtonBackground" ResourceKey="ControlAltFillColorQuarternaryBrush" />
-    <m:StaticResource x:Key="FlipViewNextPreviousButtonBackgroundPointerOver" ResourceKey="ControlStrokeColorDefaultBrush" />
-    <m:StaticResource x:Key="FlipViewNextPreviousButtonBackgroundPressed" ResourceKey="ControlAAStrokeColorDefaultBrush" />
-    <m:StaticResource x:Key="FlipViewNextPreviousArrowForeground" ResourceKey="ControlAAFillColorDefaultBrush" />
+    <m:StaticResource x:Key="FlipViewNextPreviousButtonBackground" ResourceKey="AcrylicInAppFillColorDefaultBrush" />
+    <m:StaticResource x:Key="FlipViewNextPreviousButtonBackgroundPointerOver" ResourceKey="AcrylicInAppFillColorDefaultBrush" />
+    <m:StaticResource x:Key="FlipViewNextPreviousButtonBackgroundPressed" ResourceKey="AcrylicInAppFillColorDefaultBrush" />
+    <m:StaticResource x:Key="FlipViewNextPreviousArrowForeground" ResourceKey="ControlStrongFillColorDefaultBrush" />
     <m:StaticResource x:Key="FlipViewNextPreviousArrowForegroundPointerOver" ResourceKey="TextFillColorSecondaryBrush" />
     <m:StaticResource x:Key="FlipViewNextPreviousArrowForegroundPressed" ResourceKey="TextFillColorSecondaryBrush" />
     <m:StaticResource x:Key="FlipViewNextPreviousButtonBorderBrush" ResourceKey="ControlStrokeColorDefaultBrush" />
     <m:StaticResource x:Key="FlipViewNextPreviousButtonBorderBrushPointerOver" ResourceKey="ControlStrokeColorDefaultBrush" />
     <m:StaticResource x:Key="FlipViewNextPreviousButtonBorderBrushPressed" ResourceKey="ControlStrokeColorDefaultBrush" />
-    <m:StaticResource x:Key="FlipViewItemBackground" ResourceKey="GhostFillColorTransparentBrush" />
+    <m:StaticResource x:Key="FlipViewItemBackground" ResourceKey="SubtleFillColorTransparentBrush" />
 
     <!-- Resources for FlyoutPresenter -->
     <sys:Double x:Key="FlyoutThemeMaxHeight">758</sys:Double>
@@ -893,21 +936,26 @@
     <Thickness x:Key="FlyoutBorderThemePadding">0</Thickness>
     <Thickness x:Key="FlyoutContentThemePadding">12,11,12,12</Thickness>
     <m:StaticResource x:Key="FlyoutPresenterBackground" ResourceKey="AcrylicBackgroundFillColorDefaultBrush" />
-    <m:StaticResource x:Key="FlyoutBorderThemeBrush" ResourceKey="SurfaceStrokeColorDefaultBrush" />
+    <m:StaticResource x:Key="FlyoutBorderThemeBrush" ResourceKey="SurfaceStrokeColorFlyoutBrush" />
+
+    <!-- Resources for Hyperlink -->
+    <m:StaticResource x:Key="HyperlinkForeground" ResourceKey="AccentTextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="HyperlinkForegroundPointerOver" ResourceKey="AccentTextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="HyperlinkForegroundPressed" ResourceKey="AccentTextFillColorTertiaryBrush" />
 
     <!-- Resources for HyperlinkButton -->
     <m:StaticResource x:Key="HyperlinkButtonForeground" ResourceKey="AccentTextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="HyperlinkButtonForegroundPointerOver" ResourceKey="AccentTextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="HyperlinkButtonForegroundPressed" ResourceKey="AccentTextFillColorTertiaryBrush" />
     <m:StaticResource x:Key="HyperlinkButtonForegroundDisabled" ResourceKey="AccentTextFillColorDisabledBrush" />
-    <m:StaticResource x:Key="HyperlinkButtonBackground" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="HyperlinkButtonBackgroundPointerOver" ResourceKey="GhostFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="HyperlinkButtonBackgroundPressed" ResourceKey="GhostFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="HyperlinkButtonBackgroundDisabled" ResourceKey="GhostFillColorDisabledBrush" />
-    <m:StaticResource x:Key="HyperlinkButtonBorderBrush" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="HyperlinkButtonBorderBrushPointerOver" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="HyperlinkButtonBorderBrushPressed" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="HyperlinkButtonBorderBrushDisabled" ResourceKey="GhostFillColorTransparentBrush" />
+    <m:StaticResource x:Key="HyperlinkButtonBackground" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="HyperlinkButtonBackgroundPointerOver" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="HyperlinkButtonBackgroundPressed" ResourceKey="SubtleFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="HyperlinkButtonBackgroundDisabled" ResourceKey="SubtleFillColorDisabledBrush" />
+    <m:StaticResource x:Key="HyperlinkButtonBorderBrush" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="HyperlinkButtonBorderBrushPointerOver" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="HyperlinkButtonBorderBrushPressed" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="HyperlinkButtonBorderBrushDisabled" ResourceKey="SubtleFillColorTransparentBrush" />
     <Thickness x:Key="HyperlinkButtonBorderThemeThickness">1</Thickness>
 
     <!-- Resources for ListBox -->
@@ -917,8 +965,8 @@
     <m:StaticResource x:Key="ListBoxBorder" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="ListBoxItemForeground" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="ListBoxItemForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
-    <m:StaticResource x:Key="ListBoxItemBackgroundPointerOver" ResourceKey="GhostFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="ListBoxItemBackgroundPressed" ResourceKey="GhostFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="ListBoxItemBackgroundPointerOver" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="ListBoxItemBackgroundPressed" ResourceKey="SubtleFillColorTertiaryBrush" />
     <m:StaticResource x:Key="ListBoxItemBackgroundSelected" ResourceKey="SystemControlHighlightListAccentLowBrush" />
     <m:StaticResource x:Key="ListBoxItemBackgroundSelectedPointerOver" ResourceKey="SystemControlHighlightListAccentMediumBrush" />
     <m:StaticResource x:Key="ListBoxItemBackgroundSelectedPressed" ResourceKey="SystemControlHighlightListAccentHighBrush" />
@@ -942,13 +990,13 @@
     <sys:Double x:Key="ListViewItemReorderTargetThemeScale">0.95</sys:Double>
     <sys:Double x:Key="ListViewItemReorderHintThemeOffset">10.0</sys:Double>
     <sys:Double x:Key="ListViewItemSelectedBorderThemeThickness">4</sys:Double>
-    <m:StaticResource x:Key="ListViewItemBorderBackground" ResourceKey="GhostFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="ListViewItemBackground" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ListViewItemBackgroundPointerOver" ResourceKey="GhostFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="ListViewItemBackgroundPressed" ResourceKey="GhostFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="ListViewItemBackgroundSelected" ResourceKey="GhostFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="ListViewItemBackgroundSelectedPointerOver" ResourceKey="GhostFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="ListViewItemBackgroundSelectedPressed" ResourceKey="GhostFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="ListViewItemBorderBackground" ResourceKey="SubtleFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="ListViewItemBackground" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="ListViewItemBackgroundPointerOver" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="ListViewItemBackgroundPressed" ResourceKey="SubtleFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="ListViewItemBackgroundSelected" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="ListViewItemBackgroundSelectedPointerOver" ResourceKey="SubtleFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="ListViewItemBackgroundSelectedPressed" ResourceKey="SubtleFillColorSecondaryBrush" />
     <m:StaticResource x:Key="ListViewItemForeground" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="ListViewItemForegroundPointerOver" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="ListViewItemForegroundPressed" ResourceKey="TextFillColorPrimaryBrush" />
@@ -961,13 +1009,33 @@
     <m:StaticResource x:Key="ListViewItemFocusSecondaryBorderBrush" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="ListViewItemCheckBrush" ResourceKey="TextFillColorSecondaryBrush" />
     <m:StaticResource x:Key="ListViewItemCheckBoxBrush" ResourceKey="TextFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="ListViewItemDragBackground" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ListViewItemDragForeground" ResourceKey="TextOnAccentAAFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="ListViewItemPlaceholderBackground" ResourceKey="ControlAAFillColorDisabledBrush" />
-    <m:StaticResource x:Key="ListViewItemMultiArrangeOverlayTextBorder" ResourceKey="TextOnAccentAAFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="ListViewItemMultiArrangeOverlayTextBackground" ResourceKey="AccentAAFillColorDefaultBrush" />
+    <m:StaticResource x:Key="ListViewItemDragBackground" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="ListViewItemDragForeground" ResourceKey="TextOnAccentFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="ListViewItemPlaceholderBackground" ResourceKey="ControlStrongFillColorDisabledBrush" />
+    <m:StaticResource x:Key="ListViewItemMultiArrangeOverlayTextBorder" ResourceKey="TextOnAccentFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="ListViewItemMultiArrangeOverlayTextBackground" ResourceKey="AccentFillColorDefaultBrush" />
     <sys:Boolean x:Key="ListViewItemSelectionCheckMarkVisualEnabled">True</sys:Boolean>
     <!--<ListViewItemPresenterCheckMode x:Key="ListViewItemCheckMode">Inline</ListViewItemPresenterCheckMode>-->
+
+    <!-- Resources for GridViewItem -->
+    <m:StaticResource x:Key="GridViewItemBackground" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="GridViewItemBackgroundPointerOver" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="GridViewItemBackgroundPressed" ResourceKey="SubtleFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="GridViewItemBackgroundSelected" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="GridViewItemBackgroundSelectedPointerOver" ResourceKey="SubtleFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="GridViewItemBackgroundSelectedPressed" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="GridViewItemForeground" ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="GridViewItemForegroundPointerOver" ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="GridViewItemForegroundSelected" ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="GridViewItemFocusVisualPrimaryBrush" ResourceKey="FocusStrokeColorOuterBrush" />
+    <m:StaticResource x:Key="GridViewItemFocusVisualSecondaryBrush" ResourceKey="FocusStrokeColorInnerBrush" />
+    <m:StaticResource x:Key="GridViewItemFocusBorderBrush" ResourceKey="FocusStrokeColorOuterBrush" />
+    <m:StaticResource x:Key="GridViewItemFocusSecondaryBorderBrush" ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="GridViewItemCheckBrush" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="GridViewItemCheckBoxBrush" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="GridViewItemDragBackground" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="GridViewItemDragForeground" ResourceKey="TextOnAccentFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="GridViewItemPlaceholderBackground" ResourceKey="ControlStrongFillColorDisabledBrush" />
 
     <!-- Resources for LoopingSelector -->
     <m:StaticResource x:Key="LoopingSelectorButtonBackground" ResourceKey="SystemControlBackgroundChromeMediumBrush" />
@@ -980,12 +1048,12 @@
     <m:StaticResource x:Key="LoopingSelectorItemBackgroundPressed" ResourceKey="SystemControlHighlightListMediumBrush" />
 
     <!-- Resources for MenuBar -->
-    <m:StaticResource x:Key="MenuBarBackground" ResourceKey="GhostFillColorTransparentBrush" />
+    <m:StaticResource x:Key="MenuBarBackground" ResourceKey="SubtleFillColorTransparentBrush" />
 
-    <m:StaticResource x:Key="MenuBarItemBackground" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="MenuBarItemBackgroundPointerOver" ResourceKey="GhostFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="MenuBarItemBackgroundPressed" ResourceKey="GhostFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="MenuBarItemBackgroundSelected" ResourceKey="GhostFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="MenuBarItemBackground" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="MenuBarItemBackgroundPointerOver" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="MenuBarItemBackgroundPressed" ResourceKey="SubtleFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="MenuBarItemBackgroundSelected" ResourceKey="SubtleFillColorTertiaryBrush" />
 
     <Thickness x:Key="MenuBarItemBorderThickness">0</Thickness>
 
@@ -996,39 +1064,37 @@
 
     <!-- Resources for MenuFlyout -->
     <sys:Double x:Key="MenuFlyoutSeparatorThemeHeight">1</sys:Double>
-    <sys:Double x:Key="MenuFlyoutThemeMinHeight">32</sys:Double>
     <Thickness x:Key="MenuFlyoutPresenterBorderThemeThickness">1</Thickness>
-    <Thickness x:Key="MenuFlyoutPresenterThemePadding">0,0</Thickness>
-    <Thickness x:Key="MenuFlyoutItemChevronMargin">24,0,0,0</Thickness>
+    <Thickness x:Key="MenuFlyoutItemBorderThickness">0</Thickness>
+    <Thickness x:Key="MenuFlyoutSubItemBorderThickness">0</Thickness>
     <Thickness x:Key="MenuFlyoutItemThemePadding">11,9,11,10</Thickness>
     <Thickness x:Key="MenuFlyoutItemThemePaddingNarrow">11,4,11,7</Thickness>
-    <Thickness x:Key="MenuFlyoutItemPlaceholderThemeThickness">28,0,0,0</Thickness>
     <Thickness x:Key="MenuFlyoutItemDoublePlaceholderThemeThickness">56,0,0,0</Thickness>
-    <Thickness x:Key="MenuFlyoutSeparatorThemePadding">12,4,12,4</Thickness>
-    <m:StaticResource x:Key="MenuFlyoutSeparatorBackground" ResourceKey="ControlAltFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="MenuFlyoutSeparatorBackground" ResourceKey="DividerStrokeColorDefaultBrush" />
     <m:StaticResource x:Key="MenuFlyoutPresenterBackground" ResourceKey="AcrylicBackgroundFillColorDefaultBrush" />
-    <m:StaticResource x:Key="MenuFlyoutPresenterBorderBrush" ResourceKey="SurfaceStrokeColorDefaultBrush" />
+    <m:StaticResource x:Key="MenuFlyoutPresenterBorderBrush" ResourceKey="SurfaceStrokeColorFlyoutBrush" />
     <!-- Resources for Windows.UI.Xaml.Controls.MenuFlyoutItem -->
-    <m:StaticResource x:Key="MenuFlyoutItemBackground" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="MenuFlyoutItemBackgroundPointerOver" ResourceKey="GhostFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="MenuFlyoutItemBackgroundPressed" ResourceKey="GhostFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="MenuFlyoutItemBackgroundDisabled" ResourceKey="GhostFillColorTransparentBrush" />
+    <m:StaticResource x:Key="MenuFlyoutItemBackground" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="MenuFlyoutItemBackgroundPointerOver" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="MenuFlyoutItemBackgroundPressed" ResourceKey="SubtleFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="MenuFlyoutItemBackgroundDisabled" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="MenuFlyoutItemBackgroundBrush" ResourceKey="SubtleFillColorTransparentBrush" />
     <m:StaticResource x:Key="MenuFlyoutItemForeground" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="MenuFlyoutItemForegroundPointerOver" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="MenuFlyoutItemForegroundPressed" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="MenuFlyoutItemForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
-    <m:StaticResource x:Key="MenuFlyoutItemKeyboardAcceleratorTextForeground" ResourceKey="ControlAltFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="MenuFlyoutItemKeyboardAcceleratorTextForeground" ResourceKey="TextFillColorSecondaryBrush" />
     <m:StaticResource x:Key="MenuFlyoutItemKeyboardAcceleratorTextForegroundPointerOver" ResourceKey="TextFillColorSecondaryBrush" />
     <m:StaticResource x:Key="MenuFlyoutItemKeyboardAcceleratorTextForegroundPressed" ResourceKey="TextFillColorSecondaryBrush" />
     <m:StaticResource x:Key="MenuFlyoutItemKeyboardAcceleratorTextForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
     <m:StaticResource x:Key="MenuFlyoutItemRevealBackground" ResourceKey="SystemControlTransparentRevealBackgroundBrush" />
     <m:StaticResource x:Key="MenuFlyoutItemRevealBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowRevealBackgroundBrush" />
     <m:StaticResource x:Key="MenuFlyoutItemRevealBackgroundPressed" ResourceKey="SystemControlHighlightListMediumRevealBackgroundBrush" />
-    <m:StaticResource x:Key="MenuFlyoutItemRevealBackgroundDisabled" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="MenuFlyoutItemRevealBorderBrush" ResourceKey="GhostFillColorTransparentBrush" />
+    <m:StaticResource x:Key="MenuFlyoutItemRevealBackgroundDisabled" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="MenuFlyoutItemRevealBorderBrush" ResourceKey="SubtleFillColorTransparentBrush" />
     <m:StaticResource x:Key="MenuFlyoutItemRevealBorderBrushPressed" ResourceKey="SystemControlTransparentRevealBorderBrush" />
     <m:StaticResource x:Key="MenuFlyoutItemRevealBorderBrushPointerOver" ResourceKey="SystemControlTransparentRevealBorderBrush" />
-    <m:StaticResource x:Key="MenuFlyoutItemRevealBorderBrushDisabled" ResourceKey="GhostFillColorTransparentBrush" />
+    <m:StaticResource x:Key="MenuFlyoutItemRevealBorderBrushDisabled" ResourceKey="SubtleFillColorTransparentBrush" />
     <!-- Resources for Windows.UI.Xaml.Controls.ToggleMenuFlyoutItem -->
     <m:StaticResource x:Key="ToggleMenuFlyoutItemBackground" ResourceKey="SystemControlTransparentBrush" />
     <m:StaticResource x:Key="ToggleMenuFlyoutItemBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowBrush" />
@@ -1049,131 +1115,132 @@
     <m:StaticResource x:Key="ToggleMenuFlyoutItemRevealBackground" ResourceKey="SystemControlTransparentRevealBackgroundBrush" />
     <m:StaticResource x:Key="ToggleMenuFlyoutItemRevealBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowRevealBackgroundBrush" />
     <m:StaticResource x:Key="ToggleMenuFlyoutItemRevealBackgroundPressed" ResourceKey="SystemControlHighlightListMediumRevealBackgroundBrush" />
-    <m:StaticResource x:Key="ToggleMenuFlyoutItemRevealBackgroundDisabled" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ToggleMenuFlyoutItemRevealBorderBrush" ResourceKey="GhostFillColorTransparentBrush" />
+    <m:StaticResource x:Key="ToggleMenuFlyoutItemRevealBackgroundDisabled" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="ToggleMenuFlyoutItemRevealBorderBrush" ResourceKey="SubtleFillColorTransparentBrush" />
     <m:StaticResource x:Key="ToggleMenuFlyoutItemRevealBorderBrushPressed" ResourceKey="SystemControlTransparentRevealBorderBrush" />
     <m:StaticResource x:Key="ToggleMenuFlyoutItemRevealBorderBrushPointerOver" ResourceKey="SystemControlTransparentRevealBorderBrush" />
-    <m:StaticResource x:Key="ToggleMenuFlyoutItemRevealBorderBrushDisabled" ResourceKey="GhostFillColorTransparentBrush" />
+    <m:StaticResource x:Key="ToggleMenuFlyoutItemRevealBorderBrushDisabled" ResourceKey="SubtleFillColorTransparentBrush" />
     <!-- Resources for Windows.UI.Xaml.Controls.MenuFlyoutSubItem -->
-    <m:StaticResource x:Key="MenuFlyoutSubItemBackground" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="MenuFlyoutSubItemBackgroundPointerOver" ResourceKey="GhostFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="MenuFlyoutSubItemBackgroundPressed" ResourceKey="GhostFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="MenuFlyoutSubItemBackgroundSubMenuOpened" ResourceKey="GhostFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="MenuFlyoutSubItemBackgroundDisabled" ResourceKey="GhostFillColorTransparentBrush" />
+    <m:StaticResource x:Key="MenuFlyoutSubItemBackground" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="MenuFlyoutSubItemBackgroundPointerOver" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="MenuFlyoutSubItemBackgroundPressed" ResourceKey="SubtleFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="MenuFlyoutSubItemBackgroundSubMenuOpened" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="MenuFlyoutSubItemBackgroundDisabled" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="MenuFlyoutSubItemBackgroundBrush" ResourceKey="SubtleFillColorTransparentBrush" />
     <m:StaticResource x:Key="MenuFlyoutSubItemForeground" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="MenuFlyoutSubItemForegroundPointerOver" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="MenuFlyoutSubItemForegroundPressed" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="MenuFlyoutSubItemForegroundSubMenuOpened" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="MenuFlyoutSubItemForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
     <m:StaticResource x:Key="MenuFlyoutSubItemChevron" ResourceKey="TextFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="MenuFlyoutSubItemChevronPointerOver" ResourceKey="TextFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="MenuFlyoutSubItemChevronPressed" ResourceKey="TextFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="MenuFlyoutSubItemChevronSubMenuOpened" ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="MenuFlyoutSubItemChevronPointerOver" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="MenuFlyoutSubItemChevronPressed" ResourceKey="TextFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="MenuFlyoutSubItemChevronSubMenuOpened" ResourceKey="TextFillColorSecondaryBrush" />
     <m:StaticResource x:Key="MenuFlyoutSubItemChevronDisabled" ResourceKey="TextFillColorDisabledBrush" />
     <m:StaticResource x:Key="MenuFlyoutSubItemRevealBackground" ResourceKey="SystemControlTransparentRevealBackgroundBrush" />
     <m:StaticResource x:Key="MenuFlyoutSubItemRevealBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowRevealBackgroundBrush" />
     <m:StaticResource x:Key="MenuFlyoutSubItemRevealBackgroundPressed" ResourceKey="SystemControlHighlightAccentRevealBackgroundBrush" />
     <m:StaticResource x:Key="MenuFlyoutSubItemRevealBackgroundSubMenuOpened" ResourceKey="SystemControlHighlightListLowBrush" />
-    <m:StaticResource x:Key="MenuFlyoutSubItemRevealBackgroundDisabled" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="MenuFlyoutSubItemRevealBorderBrush" ResourceKey="GhostFillColorTransparentBrush" />
+    <m:StaticResource x:Key="MenuFlyoutSubItemRevealBackgroundDisabled" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="MenuFlyoutSubItemRevealBorderBrush" ResourceKey="SubtleFillColorTransparentBrush" />
     <m:StaticResource x:Key="MenuFlyoutSubItemRevealBorderBrushPressed" ResourceKey="SystemControlTransparentRevealBorderBrush" />
     <m:StaticResource x:Key="MenuFlyoutSubItemRevealBorderBrushPointerOver" ResourceKey="SystemControlTransparentRevealBorderBrush" />
     <m:StaticResource x:Key="MenuFlyoutSubItemRevealBorderBrushSubMenuOpened" ResourceKey="SystemControlTransparentRevealBorderBrush" />
-    <m:StaticResource x:Key="MenuFlyoutSubItemRevealBorderBrushDisabled" ResourceKey="GhostFillColorTransparentBrush" />
+    <m:StaticResource x:Key="MenuFlyoutSubItemRevealBorderBrushDisabled" ResourceKey="SubtleFillColorTransparentBrush" />
 
     <!-- Resources for NavigationView -->
-    <m:StaticResource x:Key="NavigationViewDefaultPaneBackground" ResourceKey="AcrylicInAppFillColorDefaultBrush" />
-    <SolidColorBrush x:Key="NavigationViewExpandedPaneBackground" Color="{m:StaticColor SystemChromeMediumColor}" />
-    <m:StaticResource x:Key="NavigationViewTopPaneBackground" ResourceKey="AcrylicInAppFillColorDefaultBrush" />
+    <m:StaticResource x:Key="NavigationViewDefaultPaneBackground" ResourceKey="SolidBackgroundFillColorBaseBrush" />
+    <m:StaticResource x:Key="NavigationViewExpandedPaneBackground" ResourceKey="ControlFillColorTransparentBrush" />
+    <m:StaticResource x:Key="NavigationViewTopPaneBackground" ResourceKey="ControlFillColorTransparentBrush" />
+    <m:StaticResource x:Key="NavigationViewContentBackground" ResourceKey="SolidBackgroundFillColorBaseBrush" />
 
-    <m:StaticResource x:Key="NavigationViewItemBackground" ResourceKey="SystemControlTransparentRevealBackgroundBrush" />
-    <m:StaticResource x:Key="NavigationViewItemBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowRevealBackgroundBrush" />
-    <m:StaticResource x:Key="NavigationViewItemBackgroundPressed" ResourceKey="SystemControlHighlightListMediumRevealBackgroundBrush" />
-    <m:StaticResource x:Key="NavigationViewItemBackgroundDisabled" ResourceKey="SystemControlTransparentRevealBackgroundBrush" />
-    <m:StaticResource x:Key="NavigationViewItemBackgroundChecked" ResourceKey="SystemControlTransparentRevealBackgroundBrush" />
-    <m:StaticResource x:Key="NavigationViewItemBackgroundCheckedPointerOver" ResourceKey="SystemControlHighlightListLowRevealBackgroundBrush" />
-    <m:StaticResource x:Key="NavigationViewItemBackgroundCheckedPressed" ResourceKey="SystemControlHighlightListMediumRevealBackgroundBrush" />
-    <m:StaticResource x:Key="NavigationViewItemBackgroundCheckedDisabled" ResourceKey="SystemControlTransparentRevealBackgroundBrush" />
-    <m:StaticResource x:Key="NavigationViewItemBackgroundSelected" ResourceKey="SystemControlTransparentRevealBackgroundBrush" />
-    <m:StaticResource x:Key="NavigationViewItemBackgroundSelectedPointerOver" ResourceKey="SystemControlHighlightListLowRevealBackgroundBrush" />
-    <m:StaticResource x:Key="NavigationViewItemBackgroundSelectedPressed" ResourceKey="SystemControlHighlightListMediumRevealBackgroundBrush" />
-    <m:StaticResource x:Key="NavigationViewItemBackgroundSelectedDisabled" ResourceKey="SystemControlTransparentRevealBackgroundBrush" />
+    <m:StaticResource x:Key="NavigationViewItemBackground" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="NavigationViewItemBackgroundPointerOver" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="NavigationViewItemBackgroundPressed" ResourceKey="SubtleFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="NavigationViewItemBackgroundDisabled" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="NavigationViewItemBackgroundChecked" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="NavigationViewItemBackgroundCheckedPointerOver" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="NavigationViewItemBackgroundCheckedPressed" ResourceKey="SubtleFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="NavigationViewItemBackgroundCheckedDisabled" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="NavigationViewItemBackgroundSelected" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="NavigationViewItemBackgroundSelectedPointerOver" ResourceKey="SubtleFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="NavigationViewItemBackgroundSelectedPressed" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="NavigationViewItemBackgroundSelectedDisabled" ResourceKey="SubtleFillColorSecondaryBrush" />
 
-    <m:StaticResource x:Key="NavigationViewItemForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
-    <m:StaticResource x:Key="NavigationViewItemForegroundPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="NavigationViewItemForegroundPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="NavigationViewItemForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
-    <m:StaticResource x:Key="NavigationViewItemForegroundChecked" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="NavigationViewItemForegroundCheckedPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="NavigationViewItemForegroundCheckedPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="NavigationViewItemForegroundCheckedDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
-    <m:StaticResource x:Key="NavigationViewItemForegroundSelected" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="NavigationViewItemForegroundSelectedPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="NavigationViewItemForegroundSelectedPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="NavigationViewItemForegroundSelectedDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <m:StaticResource x:Key="NavigationViewItemForeground" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="NavigationViewItemForegroundPointerOver" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="NavigationViewItemForegroundPressed" ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="NavigationViewItemForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
+    <m:StaticResource x:Key="NavigationViewItemForegroundChecked" ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="NavigationViewItemForegroundCheckedPointerOver" ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="NavigationViewItemForegroundCheckedPressed" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="NavigationViewItemForegroundCheckedDisabled" ResourceKey="TextFillColorDisabledBrush" />
+    <m:StaticResource x:Key="NavigationViewItemForegroundSelected" ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="NavigationViewItemForegroundSelectedPointerOver" ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="NavigationViewItemForegroundSelectedPressed" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="NavigationViewItemForegroundSelectedDisabled" ResourceKey="TextFillColorDisabledBrush" />
 
-    <m:StaticResource x:Key="NavigationViewItemBorderBrush" ResourceKey="SystemControlBackgroundTransparentRevealBorderBrush" />
-    <m:StaticResource x:Key="NavigationViewItemBorderBrushPointerOver" ResourceKey="SystemControlHighlightAltTransparentRevealBorderBrush" />
-    <m:StaticResource x:Key="NavigationViewItemBorderBrushPressed" ResourceKey="SystemControlHighlightAltTransparentRevealBorderBrush" />
-    <m:StaticResource x:Key="NavigationViewItemBorderBrushDisabled" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="NavigationViewItemBorderBrushChecked" ResourceKey="SystemControlBackgroundTransparentRevealBorderBrush" />
-    <m:StaticResource x:Key="NavigationViewItemBorderBrushCheckedPointerOver" ResourceKey="SystemControlHighlightAltTransparentRevealBorderBrush" />
-    <m:StaticResource x:Key="NavigationViewItemBorderBrushCheckedPressed" ResourceKey="SystemControlHighlightAltTransparentRevealBorderBrush" />
-    <m:StaticResource x:Key="NavigationViewItemBorderBrushCheckedDisabled" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="NavigationViewItemBorderBrushSelected" ResourceKey="SystemControlBackgroundTransparentRevealBorderBrush" />
-    <m:StaticResource x:Key="NavigationViewItemBorderBrushSelectedPointerOver" ResourceKey="SystemControlHighlightAltTransparentRevealBorderBrush" />
-    <m:StaticResource x:Key="NavigationViewItemBorderBrushSelectedPressed" ResourceKey="SystemControlHighlightAltTransparentRevealBorderBrush" />
-    <m:StaticResource x:Key="NavigationViewItemBorderBrushSelectedDisabled" ResourceKey="GhostFillColorTransparentBrush" />
+    <m:StaticResource x:Key="NavigationViewItemBorderBrush" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="NavigationViewItemBorderBrushPointerOver" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="NavigationViewItemBorderBrushPressed" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="NavigationViewItemBorderBrushDisabled" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="NavigationViewItemBorderBrushChecked" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="NavigationViewItemBorderBrushCheckedPointerOver" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="NavigationViewItemBorderBrushCheckedPressed" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="NavigationViewItemBorderBrushCheckedDisabled" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="NavigationViewItemBorderBrushSelected" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="NavigationViewItemBorderBrushSelectedPointerOver" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="NavigationViewItemBorderBrushSelectedPressed" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="NavigationViewItemBorderBrushSelectedDisabled" ResourceKey="SubtleFillColorTransparentBrush" />
 
-    <m:StaticResource x:Key="NavigationViewItemSeparatorForeground" ResourceKey="SystemControlForegroundBaseLowBrush" />
+    <m:StaticResource x:Key="NavigationViewItemSeparatorForeground" ResourceKey="DividerStrokeColorDefaultBrush" />
 
-    <m:StaticResource x:Key="NavigationViewSelectionIndicatorForeground" ResourceKey="SystemControlForegroundAccentBrush" />
+    <m:StaticResource x:Key="NavigationViewSelectionIndicatorForeground" ResourceKey="AccentFillColorDefaultBrush" />
 
-    <m:StaticResource x:Key="TopNavigationViewItemForeground" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="TopNavigationViewItemForegroundPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="TopNavigationViewItemForegroundPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="TopNavigationViewItemForegroundSelected" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="TopNavigationViewItemForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
-    <m:StaticResource x:Key="TopNavigationViewItemBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowRevealBackgroundBrush" />
-    <m:StaticResource x:Key="TopNavigationViewItemBackgroundPressed" ResourceKey="SystemControlHighlightListMediumRevealBackgroundBrush" />
-    <m:StaticResource x:Key="TopNavigationViewItemBackgroundSelected" ResourceKey="SystemControlTransparentRevealBackgroundBrush" />
+    <m:StaticResource x:Key="TopNavigationViewItemForeground" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="TopNavigationViewItemForegroundPointerOver" ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="TopNavigationViewItemForegroundPressed" ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="TopNavigationViewItemForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
+    <m:StaticResource x:Key="TopNavigationViewItemBackgroundPointerOver" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="TopNavigationViewItemBackgroundPressed" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="TopNavigationViewItemBackgroundSelected" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="TopNavigationViewItemForegroundSelected" ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="TopNavigationViewItemForegroundSelectedPointerOver" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="TopNavigationViewItemForegroundSelectedPressed" ResourceKey="TextFillColorTertiaryBrush" />
 
-    <m:StaticResource x:Key="TopNavigationViewItemRevealBackgroundFocused" ResourceKey="SystemControlHighlightAccentBrush" />
-    <m:StaticResource x:Key="TopNavigationViewItemRevealIconForegroundFocused" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
-    <m:StaticResource x:Key="TopNavigationViewItemRevealContentForegroundFocused" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
+    <m:StaticResource x:Key="TopNavigationViewItemSeparatorForeground" ResourceKey="DividerStrokeColorDefaultBrush" />
 
-    <m:StaticResource x:Key="TopNavigationViewItemSeparatorForeground" ResourceKey="SystemControlForegroundBaseLowBrush" />
-
-    <m:StaticResource x:Key="NavigationViewButtonBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowBrush" />
-    <m:StaticResource x:Key="NavigationViewButtonBackgroundPressed" ResourceKey="SystemControlHighlightListMediumBrush" />
-    <m:StaticResource x:Key="NavigationViewButtonBackgroundDisabled" ResourceKey="SystemControlBackgroundBaseLowBrush" />
-    <m:StaticResource x:Key="NavigationViewButtonForegroundPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="NavigationViewButtonForegroundPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
-    <m:StaticResource x:Key="NavigationViewButtonForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <m:StaticResource x:Key="NavigationViewButtonBackgroundPointerOver" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="NavigationViewButtonBackgroundPressed" ResourceKey="SubtleFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="NavigationViewButtonBackgroundDisabled" ResourceKey="ControlFillColorDisabledBrush" />
+    <m:StaticResource x:Key="NavigationViewButtonForegroundPointerOver" ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="NavigationViewButtonForegroundPressed" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="NavigationViewButtonForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
 
     <!-- Resources for NavigationBackButton -->
-    <m:StaticResource x:Key="NavigationViewBackButtonBackground" ResourceKey="GhostFillColorTransparentBrush" />
+    <m:StaticResource x:Key="NavigationViewBackButtonBackground" ResourceKey="SubtleFillColorTransparentBrush" />
 
     <!-- Resources for NumberBox -->
-    <m:StaticResource x:Key="NumberBoxPopupIndicatorForeground" ResourceKey="ControlAltFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="NumberBoxPopupIndicatorForeground" ResourceKey="TextFillColorSecondaryBrush" />
 
     <!-- The following NumberBoxPopup* theme resources resource must be defined at the app level in order to take effect. -->
     <m:StaticResource x:Key="NumberBoxPopupBackground" ResourceKey="AcrylicBackgroundFillColorDefaultBrush" />
-    <m:StaticResource x:Key="NumberBoxPopupBorderBrush" ResourceKey="SurfaceStrokeColorDefaultBrush" />
+    <m:StaticResource x:Key="NumberBoxPopupBorderBrush" ResourceKey="SurfaceStrokeColorFlyoutBrush" />
     <Thickness x:Key="NumberBoxPopupBorderThickness">1</Thickness>
 
-    <m:StaticResource x:Key="NumberBoxPopupSpinButtonBackground" ResourceKey="GhostFillColorTransparentBrush" />
+    <m:StaticResource x:Key="NumberBoxPopupSpinButtonBackground" ResourceKey="SubtleFillColorTransparentBrush" />
     <Thickness x:Key="NumberBoxPopupSpinButtonBorderThickness">0</Thickness>
 
     <!-- Resources for PersonPicture -->
-    <SolidColorBrush x:Key="PersonPictureForegroundThemeBrush" Color="{m:StaticColor SystemAltHighColor}" />
+    <m:StaticResource x:Key="PersonPictureForegroundThemeBrush" ResourceKey="TextFillColorPrimaryBrush" />
     <SolidColorBrush x:Key="PersonPictureEllipseBadgeForegroundThemeBrush" Color="{m:StaticColor SystemBaseHighColor}" />
     <SolidColorBrush x:Key="PersonPictureEllipseBadgeFillThemeBrush" Color="{m:StaticColor SystemChromeDisabledHighColor}" />
     <SolidColorBrush x:Key="PersonPictureEllipseBadgeStrokeThemeBrush" Color="{m:StaticColor SystemListMediumColor}" />
-    <SolidColorBrush x:Key="PersonPictureEllipseFillThemeBrush" Color="{m:StaticColor SystemBaseMediumColor}" />
+    <m:StaticResource x:Key="PersonPictureEllipseFillThemeBrush" ResourceKey="ControlAltFillColorQuarternaryBrush" />
+    <m:StaticResource x:Key="PersonPictureEllipseFillStrokeBrush" ResourceKey="CardStrokeColorDefaultBrush" />
     <sys:Double x:Key="PersonPictureEllipseBadgeStrokeOpacity">0.8</sys:Double>
     <sys:Double x:Key="PersonPictureEllipseBadgeImageSourceStrokeOpacity">1.0</sys:Double>
-    <sys:Double x:Key="PersonPictureEllipseStrokeThickness">0</sys:Double>
+    <sys:Double x:Key="PersonPictureEllipseStrokeThickness">1</sys:Double>
     <sys:Double x:Key="PersonPictureEllipseBadgeStrokeThickness">2</sys:Double>
 
     <!-- Resources for Pivot -->
@@ -1230,14 +1297,16 @@
     <sys:Double x:Key="ProgressBarIndicatorPauseOpacity">0.6</sys:Double>
     <sys:Double x:Key="ProgressBarThemeMinHeight">4</sys:Double>
     <Thickness x:Key="ProgressBarBorderThemeThickness">0</Thickness>
-    <Color x:Key="SystemControlErrorBackgroundColor">#33FFFFFF</Color>
-    <m:StaticResource x:Key="ProgressBarForeground" ResourceKey="AccentAAFillColorDefaultBrush" />
-    <m:StaticResource x:Key="ProgressBarBackground" ResourceKey="ControlFillColorTertiaryBrush" />
+    
+    <m:StaticResource x:Key="ProgressBarForeground" ResourceKey="AccentFillColorDefaultBrush" />
+    <m:StaticResource x:Key="ProgressBarBackground" ResourceKey="ControlStrongStrokeColorDefaultBrush" />
     <m:StaticResource x:Key="ProgressBarBorderBrush" ResourceKey="ControlStrokeColorDefaultBrush" />
+    <m:StaticResource x:Key="ProgressBarPausedForegroundColor" ResourceKey="SystemFillColorCaution" />
+    <m:StaticResource x:Key="ProgressBarErrorForegroundColor" ResourceKey="SystemFillColorCritical" />
 
     <!-- Resources for ProgressRing -->
-    <m:StaticResource x:Key="ProgressRingForegroundThemeBrush" ResourceKey="AccentAAFillColorDefaultBrush" />
-    <m:StaticResource x:Key="ProgressRingBackgroundThemeBrush" ResourceKey="ControlFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="ProgressRingForegroundThemeBrush" ResourceKey="AccentFillColorDefaultBrush" />
+    <m:StaticResource x:Key="ProgressRingBackgroundThemeBrush" ResourceKey="ControlFillColorTransparentBrush" />
 
     <!-- Resources for RadioButton -->
     <sys:Double x:Key="RadioButtonBorderThemeThickness">1</sys:Double>
@@ -1255,26 +1324,26 @@
     <m:StaticResource x:Key="RadioButtonBorderBrushDisabled" ResourceKey="ControlFillColorTransparentBrush" />
 
     <!-- ColorAnimation requires TargetProperty to be Color thus some resources point to the colour instead of brush-->
-    <m:StaticResource x:Key="RadioButtonOuterEllipseStroke" ResourceKey="ControlAAStrokeColorDefaultBrush" />
-    <m:StaticResource x:Key="RadioButtonOuterEllipseStrokePointerOver" ResourceKey="ControlAAStrokeColorDefaultBrush" />
-    <m:StaticResource x:Key="RadioButtonOuterEllipseStrokePressed" ResourceKey="ControlAAStrokeColorDisabledBrush" />
-    <m:StaticResource x:Key="RadioButtonOuterEllipseStrokeDisabled" ResourceKey="ControlAAStrokeColorDisabledBrush" />
+    <m:StaticResource x:Key="RadioButtonOuterEllipseStroke" ResourceKey="ControlStrongStrokeColorDefaultBrush" />
+    <m:StaticResource x:Key="RadioButtonOuterEllipseStrokePointerOver" ResourceKey="ControlAAStrokeColorDefault" />
+    <m:StaticResource x:Key="RadioButtonOuterEllipseStrokePressed" ResourceKey="ControlAAStrokeColorDisabled" />
+    <m:StaticResource x:Key="RadioButtonOuterEllipseStrokeDisabled" ResourceKey="ControlAAStrokeColorDisabled" />
     <m:StaticResource x:Key="RadioButtonOuterEllipseFill" ResourceKey="ControlAltFillColorSecondaryBrush" />
     <m:StaticResource x:Key="RadioButtonOuterEllipseFillPointerOver" ResourceKey="ControlAltFillColorTertiaryBrush" />
     <m:StaticResource x:Key="RadioButtonOuterEllipseFillPressed" ResourceKey="ControlAltFillColorQuarternaryBrush" />
     <m:StaticResource x:Key="RadioButtonOuterEllipseFillDisabled" ResourceKey="ControlAltFillColorDisabledBrush" />
-    <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedStroke" ResourceKey="AccentAAFillColorDefaultBrush" />
-    <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedStrokePointerOver" ResourceKey="AccentAAFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedStrokePressed" ResourceKey="AccentAAFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedStrokeDisabled" ResourceKey="ControlFillColorTransparentBrush" />
-    <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedFill" ResourceKey="AccentAAFillColorDefaultBrush" />
-    <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedFillPointerOver" ResourceKey="AccentAAFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedFillPressed" ResourceKey="AccentAAFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedFillDisabled" ResourceKey="AccentAAFillColorDisabledBrush" />
-    <m:StaticResource x:Key="RadioButtonCheckGlyphFill" ResourceKey="TextOnAccentAAFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="RadioButtonCheckGlyphFillPointerOver" ResourceKey="TextOnAccentAAFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="RadioButtonCheckGlyphFillPressed" ResourceKey="TextOnAccentAAFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="RadioButtonCheckGlyphFillDisabled" ResourceKey="TextOnAccentAAFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedStroke" ResourceKey="AccentFillColorDefaultBrush" />
+    <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedStrokePointerOver" ResourceKey="AccentFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedStrokePressed" ResourceKey="AccentFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedStrokeDisabled" ResourceKey="AccentAAFillColorDisabled" />
+    <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedFill" ResourceKey="AccentFillColorDefaultBrush" />
+    <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedFillPointerOver" ResourceKey="AccentFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedFillPressed" ResourceKey="AccentFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="RadioButtonOuterEllipseCheckedFillDisabled" ResourceKey="AccentFillColorDisabledBrush" />
+    <m:StaticResource x:Key="RadioButtonCheckGlyphFill" ResourceKey="TextOnAccentFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="RadioButtonCheckGlyphFillPointerOver" ResourceKey="TextOnAccentFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="RadioButtonCheckGlyphFillPressed" ResourceKey="TextOnAccentFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="RadioButtonCheckGlyphFillDisabled" ResourceKey="TextOnAccentFillColorPrimaryBrush" />
     <m:StaticResource x:Key="RadioButtonCheckGlyphStroke" ResourceKey="CircleElevationBorderBrush" />
     <m:StaticResource x:Key="RadioButtonCheckGlyphStrokePointerOver" ResourceKey="CircleElevationBorderBrush" />
     <m:StaticResource x:Key="RadioButtonCheckGlyphStrokePressed" ResourceKey="CircleElevationBorderBrush" />
@@ -1290,11 +1359,11 @@
 
     <!-- Resources for RatingControl -->
     <m:StaticResource x:Key="RatingControlUnselectedForeground" ResourceKey="TextFillColorSecondaryBrush"/>
-    <m:StaticResource x:Key="RatingControlSelectedForeground" ResourceKey="AccentAAFillColorDefaultBrush"/>
+    <m:StaticResource x:Key="RatingControlSelectedForeground" ResourceKey="AccentFillColorDefaultBrush"/>
     <m:StaticResource x:Key="RatingControlPlaceholderForeground" ResourceKey="TextFillColorPrimaryBrush"/>
     <m:StaticResource x:Key="RatingControlPointerOverPlaceholderForeground" ResourceKey="ControlAltFillColorTertiaryBrush"/>
     <m:StaticResource x:Key="RatingControlPointerOverUnselectedForeground" ResourceKey="ControlAltFillColorTertiaryBrush"/>
-    <m:StaticResource x:Key="RatingControlPointerOverSelectedForeground" ResourceKey="AccentAAFillColorDefaultBrush"/>
+    <m:StaticResource x:Key="RatingControlPointerOverSelectedForeground" ResourceKey="AccentFillColorDefaultBrush"/>
     <m:StaticResource x:Key="RatingControlDisabledSelectedForeground" ResourceKey="TextFillColorDisabledBrush"/>
     <!-- If this Foreground property is removed/renamed, please update ThemeResourcesTests::VerifyOverrides: -->
     <m:StaticResource x:Key="RatingControlCaptionForeground" ResourceKey="TextFillColorSecondaryBrush"/>
@@ -1324,43 +1393,44 @@
 
     <!-- Resources for ScrollBar -->
     <sys:Double x:Key="ScrollBarTrackBorderThemeThickness">0</sys:Double>
-    <m:StaticResource x:Key="ScrollBarBackground" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ScrollBarBackgroundPointerOver" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ScrollBarBackgroundDisabled" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ScrollBarForeground" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ScrollBarBorderBrush" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ScrollBarBorderBrushPointerOver" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ScrollBarBorderBrushDisabled" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ScrollBarButtonBackground" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ScrollBarButtonBackgroundPointerOver" ResourceKey="GhostFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="ScrollBarButtonBackgroundPressed" ResourceKey="ControlAAFillColorDefaultBrush" />
-    <m:StaticResource x:Key="ScrollBarButtonBackgroundDisabled" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ScrollBarButtonBorderBrush" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ScrollBarButtonBorderBrushPointerOver" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ScrollBarButtonBorderBrushPressed" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ScrollBarButtonBorderBrushDisabled" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ScrollBarButtonArrowForeground" ResourceKey="TextFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="ScrollBarButtonArrowForegroundPointerOver" ResourceKey="TextFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="ScrollBarButtonArrowForegroundPressed" ResourceKey="FocusStrokeColorOuterBrush" />
-    <m:StaticResource x:Key="ScrollBarButtonArrowForegroundDisabled" ResourceKey="DividerStrokeColorDefaultBrush" />
-    <m:StaticResource x:Key="ScrollBarThumbFill" ResourceKey="ControlAAFillColorDefaultBrush" />
-    <m:StaticResource x:Key="ScrollBarThumbFillPointerOver" ResourceKey="ControlAltFillColorQuarternaryBrush" />
-    <m:StaticResource x:Key="ScrollBarThumbFillPressed" ResourceKey="ControlAAFillColorDefaultBrush" />
-    <m:StaticResource x:Key="ScrollBarThumbFillDisabled" ResourceKey="GhostFillColorDisabledBrush" />
-    <SolidColorBrush x:Key="ScrollBarTrackFill" Color="{m:StaticColor SystemChromeMediumColor}" Opacity="0.9" />
-    <SolidColorBrush x:Key="ScrollBarTrackFillPointerOver" Color="{m:StaticColor SystemChromeMediumColor}" Opacity="0.9" />
-    <m:StaticResource x:Key="ScrollBarTrackFillDisabled" ResourceKey="GhostFillColorDisabledBrush" />
-    <m:StaticResource x:Key="ScrollBarTrackStroke" ResourceKey="ControlStrokeColorDefaultBrush" />
-    <m:StaticResource x:Key="ScrollBarTrackStrokePointerOver" ResourceKey="ControlStrokeColorDefaultBrush" />
-    <m:StaticResource x:Key="ScrollBarTrackStrokeDisabled" ResourceKey="GhostFillColorDisabledBrush" />
-    <m:StaticResource x:Key="ScrollBarPanningThumbBackgroundDisabled" ResourceKey="ControlAAFillColorDisabledBrush" />
-    <m:StaticResource x:Key="ScrollBarThumbBackgroundColor" ResourceKey="SystemBaseLowColor" />
-    <m:StaticResource x:Key="ScrollBarPanningThumbBackgroundColor" ResourceKey="SystemChromeDisabledLowColor" />
-    <SolidColorBrush x:Key="ScrollBarThumbBackground" Color="{m:StaticResource ScrollBarThumbBackgroundColor}" />
-    <SolidColorBrush x:Key="ScrollBarPanningThumbBackground" Color="{m:StaticResource ScrollBarPanningThumbBackgroundColor}" />
+    <m:StaticResource x:Key="ScrollBarBackground" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="ScrollBarBackgroundPointerOver" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="ScrollBarBackgroundDisabled" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="ScrollBarForeground" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="ScrollBarBorderBrush" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="ScrollBarBorderBrushPointerOver" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="ScrollBarBorderBrushDisabled" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="ScrollBarButtonBackground" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="ScrollBarButtonBackgroundPointerOver" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="ScrollBarButtonBackgroundPressed" ResourceKey="ControlStrongFillColorDefaultBrush" />
+    <m:StaticResource x:Key="ScrollBarButtonBackgroundDisabled" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="ScrollBarButtonBorderBrush" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="ScrollBarButtonBorderBrushPointerOver" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="ScrollBarButtonBorderBrushPressed" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="ScrollBarButtonBorderBrushDisabled" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="ScrollBarButtonArrowForeground" ResourceKey="ControlStrongFillColorDefaultBrush" />
+    <m:StaticResource x:Key="ScrollBarButtonArrowForegroundPointerOver" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="ScrollBarButtonArrowForegroundPressed" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="ScrollBarButtonArrowForegroundDisabled" ResourceKey="ControlStrongFillColorDisabledBrush" />
+    <m:StaticResource x:Key="ScrollBarThumbFill" ResourceKey="ControlStrongFillColorDefaultBrush" />
+    <m:StaticResource x:Key="ScrollBarThumbFillPointerOver" ResourceKey="ControlStrongFillColorDefaultBrush" />
+    <m:StaticResource x:Key="ScrollBarThumbFillPressed" ResourceKey="ControlStrongFillColorDefaultBrush" />
+    <m:StaticResource x:Key="ScrollBarThumbFillDisabled" ResourceKey="ControlStrongFillColorDisabledBrush" />
+    <m:StaticResource x:Key="ScrollBarThumbBorderBrush" ResourceKey="ControlFillColorTransparentBrush" />
+    <m:StaticResource x:Key="ScrollBarTrackFill" ResourceKey="AcrylicInAppFillColorDefaultBrush" />
+    <m:StaticResource x:Key="ScrollBarTrackFillPointerOver" ResourceKey="AcrylicInAppFillColorDefaultBrush"  />
+    <m:StaticResource x:Key="ScrollBarTrackFillDisabled" ResourceKey="AcrylicInAppFillColorDefaultBrush" />
+    <m:StaticResource x:Key="ScrollBarTrackStroke" ResourceKey="AcrylicInAppFillColorDefaultBrush" />
+    <m:StaticResource x:Key="ScrollBarTrackStrokePointerOver" ResourceKey="AcrylicInAppFillColorDefaultBrush" />
+    <m:StaticResource x:Key="ScrollBarTrackStrokeDisabled" ResourceKey="AcrylicInAppFillColorDefaultBrush" />
+    <m:StaticResource x:Key="ScrollBarThumbBackground" ResourceKey="ControlStrongFillColorDefaultBrush" />
+    <m:StaticResource x:Key="ScrollBarPanningThumbBackground" ResourceKey="ControlStrongFillColorDefaultBrush" />
+    <m:StaticResource x:Key="ScrollBarPanningThumbBackgroundDisabled" ResourceKey="ControlStrongFillColorDisabledBrush" />
+    <m:StaticResource x:Key="ScrollBarThumbBackgroundColor" ResourceKey="ControlAAFillColorDefault" />
+    <m:StaticResource x:Key="ScrollBarPanningThumbBackgroundColor" ResourceKey="ControlAAFillColorDefault" />
 
     <!-- Resource for ScrollViewer -->
-    <SolidColorBrush x:Key="ScrollViewerScrollBarSeparatorBackground" Color="{m:StaticColor SystemChromeMediumColor}" Opacity="0.9" />
+    <m:StaticResource x:Key="ScrollViewerScrollBarSeparatorBackground" ResourceKey="ControlFillColorTransparentBrush" />
 
     <!-- Resources for Slider -->
     <sys:Double x:Key="SliderOutsideTickBarThemeHeight">4</sys:Double>
@@ -1372,24 +1442,24 @@
     <m:StaticResource x:Key="SliderContainerBackgroundPointerOver" ResourceKey="ControlFillColorTransparentBrush" />
     <m:StaticResource x:Key="SliderContainerBackgroundPressed" ResourceKey="ControlFillColorTransparentBrush" />
     <m:StaticResource x:Key="SliderContainerBackgroundDisabled" ResourceKey="ControlFillColorTransparentBrush" />
-    <m:StaticResource x:Key="SliderThumbBackground" ResourceKey="AccentAAFillColorDefaultBrush" />
-    <m:StaticResource x:Key="SliderThumbBackgroundPointerOver" ResourceKey="AccentAAFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="SliderThumbBackgroundPressed" ResourceKey="AccentAAFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="SliderThumbBackgroundDisabled" ResourceKey="AccentAAFillColorDisabledBrush" />
+    <m:StaticResource x:Key="SliderThumbBackground" ResourceKey="AccentFillColorDefaultBrush" />
+    <m:StaticResource x:Key="SliderThumbBackgroundPointerOver" ResourceKey="AccentFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="SliderThumbBackgroundPressed" ResourceKey="AccentFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="SliderThumbBackgroundDisabled" ResourceKey="AccentFillColorDisabledBrush" />
     <m:StaticResource x:Key="SliderThumbBorderBrush" ResourceKey="ControlElevationBorderBrush" />
     <m:StaticResource x:Key="SliderOuterThumbBackground" ResourceKey="ControlSolidFillColorDefaultBrush" />
-    <m:StaticResource x:Key="SliderTrackFill" ResourceKey="ControlAAFillColorDefaultBrush" />
-    <m:StaticResource x:Key="SliderTrackFillPointerOver" ResourceKey="ControlAAFillColorDefaultBrush" />
-    <m:StaticResource x:Key="SliderTrackFillPressed" ResourceKey="ControlAAFillColorDefaultBrush" />
-    <m:StaticResource x:Key="SliderTrackFillDisabled" ResourceKey="ControlAAFillColorDisabledBrush" />
-    <m:StaticResource x:Key="SliderTrackValueFill" ResourceKey="AccentAAFillColorDefaultBrush" />
-    <m:StaticResource x:Key="SliderTrackValueFillPointerOver" ResourceKey="AccentAAFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="SliderTrackValueFillPressed" ResourceKey="AccentAAFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="SliderTrackValueFillDisabled" ResourceKey="AccentAAFillColorDisabledBrush" />
+    <m:StaticResource x:Key="SliderTrackFill" ResourceKey="ControlStrongFillColorDefaultBrush" />
+    <m:StaticResource x:Key="SliderTrackFillPointerOver" ResourceKey="ControlStrongFillColorDefaultBrush" />
+    <m:StaticResource x:Key="SliderTrackFillPressed" ResourceKey="ControlStrongFillColorDefaultBrush" />
+    <m:StaticResource x:Key="SliderTrackFillDisabled" ResourceKey="ControlStrongFillColorDisabledBrush" />
+    <m:StaticResource x:Key="SliderTrackValueFill" ResourceKey="AccentFillColorDefaultBrush" />
+    <m:StaticResource x:Key="SliderTrackValueFillPointerOver" ResourceKey="AccentFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="SliderTrackValueFillPressed" ResourceKey="AccentFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="SliderTrackValueFillDisabled" ResourceKey="AccentFillColorDisabledBrush" />
     <m:StaticResource x:Key="SliderHeaderForeground" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="SliderHeaderForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
-    <m:StaticResource x:Key="SliderTickBarFill" ResourceKey="ControlAAFillColorDefaultBrush" />
-    <m:StaticResource x:Key="SliderTickBarFillDisabled" ResourceKey="ControlAAFillColorDisabledBrush" />
+    <m:StaticResource x:Key="SliderTickBarFill" ResourceKey="ControlStrongFillColorDefaultBrush" />
+    <m:StaticResource x:Key="SliderTickBarFillDisabled" ResourceKey="ControlStrongFillColorDisabledBrush" />
     <m:StaticResource x:Key="SliderInlineTickBarFill" ResourceKey="ControlFillColorInputActiveBrush" />
 
     <!-- Resources for SplitButton -->
@@ -1397,17 +1467,17 @@
     <m:StaticResource x:Key="SplitButtonBackgroundPointerOver" ResourceKey="ControlFillColorSecondaryBrush" />
     <m:StaticResource x:Key="SplitButtonBackgroundPressed" ResourceKey="ControlFillColorTertiaryBrush" />
     <m:StaticResource x:Key="SplitButtonBackgroundDisabled" ResourceKey="ControlFillColorDisabledBrush" />
-    <m:StaticResource x:Key="SplitButtonBackgroundChecked" ResourceKey="AccentAAFillColorDefaultBrush" />
-    <m:StaticResource x:Key="SplitButtonBackgroundCheckedPointerOver" ResourceKey="AccentAAFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="SplitButtonBackgroundCheckedPressed" ResourceKey="AccentAAFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="SplitButtonBackgroundCheckedDisabled" ResourceKey="AccentAAFillColorDisabledBrush" />
+    <m:StaticResource x:Key="SplitButtonBackgroundChecked" ResourceKey="AccentFillColorDefaultBrush" />
+    <m:StaticResource x:Key="SplitButtonBackgroundCheckedPointerOver" ResourceKey="AccentFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="SplitButtonBackgroundCheckedPressed" ResourceKey="SystemAccentColorLight1Brush" />
+    <m:StaticResource x:Key="SplitButtonBackgroundCheckedDisabled" ResourceKey="AccentFillColorDisabledBrush" />
     <m:StaticResource x:Key="SplitButtonForeground" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="SplitButtonForegroundPointerOver" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="SplitButtonForegroundPressed" ResourceKey="TextFillColorSecondaryBrush" />
     <m:StaticResource x:Key="SplitButtonForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
-    <m:StaticResource x:Key="SplitButtonForegroundChecked" ResourceKey="TextOnAccentAAFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="SplitButtonForegroundCheckedPointerOver" ResourceKey="TextOnAccentAAFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="SplitButtonForegroundCheckedPressed" ResourceKey="TextOnAccentAAFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="SplitButtonForegroundChecked" ResourceKey="TextOnAccentFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="SplitButtonForegroundCheckedPointerOver" ResourceKey="TextOnAccentFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="SplitButtonForegroundCheckedPressed" ResourceKey="TextOnAccentFillColorSecondaryBrush" />
     <m:StaticResource x:Key="SplitButtonForegroundCheckedDisabled" ResourceKey="TextFillColorDisabledBrush" />
     <m:StaticResource x:Key="SplitButtonForegroundSecondary" ResourceKey="TextFillColorSecondaryBrush" />
     <m:StaticResource x:Key="SplitButtonForegroundSecondaryPressed" ResourceKey="TextFillColorTertiaryBrush" />
@@ -1420,8 +1490,10 @@
     <m:StaticResource x:Key="SplitButtonBorderBrushCheckedPointerOver" ResourceKey="AccentControlElevationBorderBrush" />
     <m:StaticResource x:Key="SplitButtonBorderBrushCheckedPressed" ResourceKey="ControlFillColorTransparentBrush" />
     <m:StaticResource x:Key="SplitButtonBorderBrushCheckedDisabled" ResourceKey="ControlFillColorTransparentBrush" />
-    <m:StaticResource x:Key="SplitButtonBorderBrushCheckedDivider" ResourceKey="ControlStrokeColorOnAccentDefaultBrush" />
+    <m:StaticResource x:Key="SplitButtonBorderBrushCheckedDivider" ResourceKey="ControlStrokeColorOnAccentTertiaryBrush" />
     <Thickness x:Key="SplitButtonBorderThemeThickness">1</Thickness>
+
+    <m:StaticResource x:Key="SplitButtonInAppBarUnfocusedPointerOver" ResourceKey="SubtleFillColorTertiaryBrush" />
 
     <!-- Resources for SplitView -->
     <sys:Double x:Key="SplitViewOpenPaneThemeLength">320</sys:Double>
@@ -1431,45 +1503,45 @@
     <m:StaticResource x:Key="SplitViewLightDismissOverlayBackground" ResourceKey="SystemControlPageBackgroundMediumAltMediumBrush" />
 
     <!-- Resources for TabView -->
-    <m:StaticResource x:Key="TabViewBackground"                                       ResourceKey="ControlFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="TabViewItemHeaderBackground"                             ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="TabViewItemHeaderBackgroundSelected"                     ResourceKey="ControlFillColorInputActiveBrush" />
-    <SolidColorBrush  x:Key="TabViewItemHeaderBackgroundPointerOver"                  Color="{m:StaticColor SystemAltMediumLowColor}" />
-    <SolidColorBrush  x:Key="TabViewItemHeaderBackgroundPressed"                       Color="{m:StaticColor SystemAltMediumColor}" />
-    <m:StaticResource x:Key="TabViewItemHeaderBackgroundDisabled"                     ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="TabViewItemHeaderForeground"                             ResourceKey="TextFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="TabViewItemHeaderForegroundPressed"                      ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="TabViewBackground"                                       ResourceKey="SolidBackgroundFillColorBaseBrush" />
+    <m:StaticResource x:Key="TabViewItemHeaderBackground"                             ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="TabViewItemHeaderBackgroundSelected"                     ResourceKey="SolidBackgroundFillColorQuarternary" />
+    <m:StaticResource x:Key="TabViewItemHeaderBackgroundPointerOver"                  ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="TabViewItemHeaderBackgroundPressed"                      ResourceKey="SubtleFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="TabViewItemHeaderBackgroundDisabled"                     ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="TabViewItemHeaderForeground"                             ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="TabViewItemHeaderForegroundPressed"                      ResourceKey="TextFillColorTertiaryBrush" />
     <m:StaticResource x:Key="TabViewItemHeaderForegroundSelected"                     ResourceKey="TextFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="TabViewItemHeaderForegroundPointerOver"                  ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="TabViewItemHeaderForegroundPointerOver"                  ResourceKey="TextFillColorSecondaryBrush" />
     <m:StaticResource x:Key="TabViewItemHeaderForegroundDisabled"                     ResourceKey="TextFillColorDisabledBrush" />
     <m:StaticResource x:Key="TabViewItemIconForeground"                               ResourceKey="TextFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="TabViewItemIconForegroundPressed"                        ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="TabViewItemIconForegroundPressed"                        ResourceKey="TextFillColorTertiaryBrush" />
     <m:StaticResource x:Key="TabViewItemIconForegroundSelected"                       ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="TabViewItemIconForegroundPointerOver"                    ResourceKey="TextFillColorSecondaryBrush" />
     <m:StaticResource x:Key="TabViewItemIconForegroundDisabled"                       ResourceKey="TextFillColorDisabledBrush" />
-    <m:StaticResource x:Key="TabViewButtonBackground"                                 ResourceKey="GhostFillColorTransparentBrush" />
-    <SolidColorBrush  x:Key="TabViewButtonBackgroundPressed"                          Color="{m:StaticColor SystemAltMediumColor}" />
-    <SolidColorBrush  x:Key="TabViewButtonBackgroundPointerOver"                      Color="{m:StaticColor SystemAltMediumLowColor}" />
-    <m:StaticResource x:Key="TabViewButtonBackgroundDisabled"                         ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="TabViewButtonForeground"                                 ResourceKey="ControlAAFillColorDefaultBrush" />
-    <m:StaticResource x:Key="TabViewButtonForegroundPressed"                          ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="TabViewButtonBackground"                                 ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="TabViewButtonBackgroundPressed"                          ResourceKey="SubtleFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="TabViewButtonBackgroundPointerOver"                      ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="TabViewButtonBackgroundDisabled"                         ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="TabViewButtonForeground"                                 ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="TabViewButtonForegroundPressed"                          ResourceKey="TextFillColorSecondaryBrush" />
     <m:StaticResource x:Key="TabViewButtonForegroundPointerOver"                      ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="TabViewButtonForegroundDisabled"                         ResourceKey="TextFillColorDisabledBrush" />
-    <m:StaticResource x:Key="TabViewScrollButtonBackground"                           ResourceKey="GhostFillColorTransparentBrush" />
+    <m:StaticResource x:Key="TabViewScrollButtonBackground"                           ResourceKey="SubtleFillColorTransparentBrush" />
     <m:StaticResource x:Key="TabViewItemSeparator"                                    ResourceKey="DividerStrokeColorDefaultBrush" />
-    <m:StaticResource x:Key="TabViewItemHeaderCloseButtonBackground"                  ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="TabViewItemHeaderCloseButtonBackgroundPressed"           ResourceKey="GhostFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="TabViewItemHeaderCloseButtonBackgroundPointerOver"       ResourceKey="GhostFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="TabViewItemHeaderPressedCloseButtonBackground"           ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="TabViewItemHeaderPointerOverCloseButtonBackground"       ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="TabViewItemHeaderSelectedCloseButtonBackground"          ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="TabViewItemHeaderDisabledCloseButtonBackground"          ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="TabViewItemHeaderCloseButtonForeground"                  ResourceKey="ControlAAFillColorDefaultBrush" />
+    <m:StaticResource x:Key="TabViewItemHeaderCloseButtonBackground"                  ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="TabViewItemHeaderCloseButtonBackgroundPressed"           ResourceKey="SubtleFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="TabViewItemHeaderCloseButtonBackgroundPointerOver"       ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="TabViewItemHeaderPressedCloseButtonBackground"           ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="TabViewItemHeaderPointerOverCloseButtonBackground"       ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="TabViewItemHeaderSelectedCloseButtonBackground"          ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="TabViewItemHeaderDisabledCloseButtonBackground"          ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="TabViewItemHeaderCloseButtonForeground"                  ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="TabViewItemHeaderCloseButtonForegroundPressed"           ResourceKey="TextFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="TabViewItemHeaderCloseButtonForegroundPointerOver"       ResourceKey="TextFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="TabViewItemHeaderPressedCloseButtonForeground"           ResourceKey="ControlAAFillColorDefaultBrush" />
-    <m:StaticResource x:Key="TabViewItemHeaderPointerOverCloseButtonForeground"       ResourceKey="ControlAAFillColorDefaultBrush" />
-    <m:StaticResource x:Key="TabViewItemHeaderSelectedCloseButtonForeground"          ResourceKey="ControlAAFillColorDefaultBrush" />
+    <m:StaticResource x:Key="TabViewItemHeaderCloseButtonForegroundPointerOver"       ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="TabViewItemHeaderPressedCloseButtonForeground"           ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="TabViewItemHeaderPointerOverCloseButtonForeground"       ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="TabViewItemHeaderSelectedCloseButtonForeground"          ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="TabViewItemHeaderDisabledCloseButtonForeground"          ResourceKey="TextFillColorDisabledBrush" />
 
     <!-- Resources for Thumb -->
@@ -1489,27 +1561,27 @@
     <Thickness x:Key="TimePickerThirdHostThemeMargin">20,0,0,0</Thickness>
     <FontWeight x:Key="TimePickerHeaderThemeFontWeight">Normal</FontWeight>
     <m:StaticResource x:Key="TimePickerSpacerFill" ResourceKey="DividerStrokeColorDefaultBrush" />
-    <m:StaticResource x:Key="TimePickerSpacerFillDisabled" ResourceKey="AccentAAFillColorDisabledBrush" />
+    <m:StaticResource x:Key="TimePickerSpacerFillDisabled" ResourceKey="AccentFillColorDisabledBrush" />
     <m:StaticResource x:Key="TimePickerHeaderForeground" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="TimePickerHeaderForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
     <m:StaticResource x:Key="TimePickerButtonBorderBrush" ResourceKey="ControlAltFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="TimePickerButtonBorderBrushPointerOver" ResourceKey="ControlAAStrokeColorDefaultBrush" />
+    <m:StaticResource x:Key="TimePickerButtonBorderBrushPointerOver" ResourceKey="ControlStrongStrokeColorDefaultBrush" />
     <m:StaticResource x:Key="TimePickerButtonBorderBrushPressed" ResourceKey="ControlStrokeColorDefaultBrush" />
-    <m:StaticResource x:Key="TimePickerButtonBorderBrushDisabled" ResourceKey="AccentAAFillColorDisabledBrush" />
+    <m:StaticResource x:Key="TimePickerButtonBorderBrushDisabled" ResourceKey="AccentFillColorDisabledBrush" />
     <m:StaticResource x:Key="TimePickerButtonBackground" ResourceKey="ControlFillColorDefaultBrush" />
-    <m:StaticResource x:Key="TimePickerButtonBackgroundPointerOver" ResourceKey="GhostFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="TimePickerButtonBackgroundPointerOver" ResourceKey="SubtleFillColorSecondaryBrush" />
     <m:StaticResource x:Key="TimePickerButtonBackgroundPressed" ResourceKey="ControlFillColorTertiaryBrush" />
     <m:StaticResource x:Key="TimePickerButtonBackgroundDisabled" ResourceKey="ControlFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="TimePickerButtonBackgroundFocused" ResourceKey="GhostFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="TimePickerButtonBackgroundFocused" ResourceKey="SubtleFillColorTertiaryBrush" />
     <m:StaticResource x:Key="TimePickerButtonForeground" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="TimePickerButtonForegroundPointerOver" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="TimePickerButtonForegroundPressed" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="TimePickerButtonForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
     <m:StaticResource x:Key="TimePickerButtonForegroundFocused" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="TimePickerFlyoutPresenterBackground" ResourceKey="AcrylicBackgroundFillColorDefaultBrush" />
-    <m:StaticResource x:Key="TimePickerFlyoutPresenterBorderBrush" ResourceKey="SurfaceStrokeColorDefaultBrush" />
+    <m:StaticResource x:Key="TimePickerFlyoutPresenterBorderBrush" ResourceKey="SurfaceStrokeColorFlyoutBrush" />
     <m:StaticResource x:Key="TimePickerFlyoutPresenterSpacerFill" ResourceKey="DividerStrokeColorDefaultBrush" />
-    <m:StaticResource x:Key="TimePickerFlyoutPresenterHighlightFill" ResourceKey="GhostFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="TimePickerFlyoutPresenterHighlightFill" ResourceKey="SubtleFillColorTertiaryBrush" />
     <m:StaticResource x:Key="TimePickerLightDismissOverlayBackground" ResourceKey="SystemControlPageBackgroundMediumAltMediumBrush" />
 
     <!-- Resources for ToggleButton -->
@@ -1518,10 +1590,10 @@
     <m:StaticResource x:Key="ToggleButtonBackgroundPointerOver" ResourceKey="ControlFillColorSecondaryBrush" />
     <m:StaticResource x:Key="ToggleButtonBackgroundPressed" ResourceKey="ControlFillColorTertiaryBrush" />
     <m:StaticResource x:Key="ToggleButtonBackgroundDisabled" ResourceKey="ControlFillColorDisabledBrush" />
-    <m:StaticResource x:Key="ToggleButtonBackgroundChecked" ResourceKey="AccentAAFillColorDefaultBrush" />
-    <m:StaticResource x:Key="ToggleButtonBackgroundCheckedPointerOver" ResourceKey="AccentAAFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="ToggleButtonBackgroundCheckedPressed" ResourceKey="AccentAAFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="ToggleButtonBackgroundCheckedDisabled" ResourceKey="AccentAAFillColorDisabledBrush" />
+    <m:StaticResource x:Key="ToggleButtonBackgroundChecked" ResourceKey="AccentFillColorDefaultBrush" />
+    <m:StaticResource x:Key="ToggleButtonBackgroundCheckedPointerOver" ResourceKey="AccentFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="ToggleButtonBackgroundCheckedPressed" ResourceKey="AccentFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="ToggleButtonBackgroundCheckedDisabled" ResourceKey="AccentFillColorDisabledBrush" />
     <m:StaticResource x:Key="ToggleButtonBackgroundIndeterminate" ResourceKey="ControlFillColorDefaultBrush" />
     <m:StaticResource x:Key="ToggleButtonBackgroundIndeterminatePointerOver" ResourceKey="ControlFillColorSecondaryBrush" />
     <m:StaticResource x:Key="ToggleButtonBackgroundIndeterminatePressed" ResourceKey="ControlFillColorTertiaryBrush" />
@@ -1530,9 +1602,9 @@
     <m:StaticResource x:Key="ToggleButtonForegroundPointerOver" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="ToggleButtonForegroundPressed" ResourceKey="TextFillColorSecondaryBrush" />
     <m:StaticResource x:Key="ToggleButtonForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
-    <m:StaticResource x:Key="ToggleButtonForegroundChecked" ResourceKey="TextOnAccentAAFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="ToggleButtonForegroundCheckedPointerOver" ResourceKey="TextOnAccentAAFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="ToggleButtonForegroundCheckedPressed" ResourceKey="TextOnAccentAAFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="ToggleButtonForegroundChecked" ResourceKey="TextOnAccentFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="ToggleButtonForegroundCheckedPointerOver" ResourceKey="TextOnAccentFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="ToggleButtonForegroundCheckedPressed" ResourceKey="TextOnAccentFillColorSecondaryBrush" />
     <m:StaticResource x:Key="ToggleButtonForegroundCheckedDisabled" ResourceKey="TextOnAccentAAFillColorDisabled" />
     <m:StaticResource x:Key="ToggleButtonForegroundIndeterminate" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="ToggleButtonForegroundIndeterminatePointerOver" ResourceKey="TextFillColorPrimaryBrush" />
@@ -1558,48 +1630,50 @@
     <m:StaticResource x:Key="ToggleSwitchContentForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
     <m:StaticResource x:Key="ToggleSwitchHeaderForeground" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="ToggleSwitchHeaderForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
-    <m:StaticResource x:Key="ToggleSwitchContainerBackground" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ToggleSwitchContainerBackgroundPointerOver" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ToggleSwitchContainerBackgroundPressed" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ToggleSwitchContainerBackgroundDisabled" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ToggleSwitchFillOff" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ToggleSwitchFillOffPointerOver" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ToggleSwitchFillOffPressed" ResourceKey="ControlStrokeColorDefaultBrush" />
-    <m:StaticResource x:Key="ToggleSwitchFillOffDisabled" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="ToggleSwitchStrokeOff" ResourceKey="ControlAltFillColorTertiaryBrush" />
-    <m:StaticResource x:Key="ToggleSwitchStrokeOffPointerOver" ResourceKey="ControlAAStrokeColorDefaultBrush" />
-    <m:StaticResource x:Key="ToggleSwitchStrokeOffPressed" ResourceKey="TextFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="ToggleSwitchStrokeOffDisabled" ResourceKey="TextFillColorDisabledBrush" />
-    <m:StaticResource x:Key="ToggleSwitchFillOn" ResourceKey="AccentAAFillColorDefaultBrush" />
-    <m:StaticResource x:Key="ToggleSwitchFillOnPointerOver" ResourceKey="SystemAccentColorLight1Brush" />
-    <m:StaticResource x:Key="ToggleSwitchFillOnPressed" ResourceKey="SystemAccentColorDark1Brush" />
-    <m:StaticResource x:Key="ToggleSwitchFillOnDisabled" ResourceKey="AccentAAFillColorDisabledBrush" />
-    <m:StaticResource x:Key="ToggleSwitchStrokeOn" ResourceKey="TextFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="ToggleSwitchStrokeOnPointerOver" ResourceKey="SystemAccentColorLight1Brush" />
-    <m:StaticResource x:Key="ToggleSwitchStrokeOnPressed" ResourceKey="SystemAccentColorDark1Brush" />
-    <m:StaticResource x:Key="ToggleSwitchStrokeOnDisabled" ResourceKey="TextFillColorDisabledBrush" />
-    <m:StaticResource x:Key="ToggleSwitchKnobFillOff" ResourceKey="TextFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="ToggleSwitchKnobFillOffPointerOver" ResourceKey="TextFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="ToggleSwitchKnobFillOffPressed" ResourceKey="TextFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="ToggleSwitchKnobFillOffDisabled" ResourceKey="TextFillColorDisabledBrush" />
-    <m:StaticResource x:Key="ToggleSwitchKnobFillOn" ResourceKey="TextOnAccentAAFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="ToggleSwitchKnobFillOnPointerOver" ResourceKey="SystemControlHighlightChromeWhiteBrush" />
-    <m:StaticResource x:Key="ToggleSwitchKnobFillOnPressed" ResourceKey="TextOnAccentAAFillColorPrimaryBrush" />
-    <m:StaticResource x:Key="ToggleSwitchKnobFillOnDisabled" ResourceKey="TextOnAccentAAFillColorDisabledBrush" />
+    <m:StaticResource x:Key="ToggleSwitchContainerBackground" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="ToggleSwitchContainerBackgroundPointerOver" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="ToggleSwitchContainerBackgroundPressed" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="ToggleSwitchContainerBackgroundDisabled" ResourceKey="SubtleFillColorTransparentBrush" />
+
+    <!-- ColorAnimation requires TargetProperty to be Color thus some resources point to the colour instead of brush-->
+    <m:StaticResource x:Key="ToggleSwitchFillOff" ResourceKey="ControlAltFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="ToggleSwitchFillOffPointerOver" ResourceKey="ControlAltFillColorTertiary" />
+    <m:StaticResource x:Key="ToggleSwitchFillOffPressed" ResourceKey="ControlAltFillColorQuarternary" />
+    <m:StaticResource x:Key="ToggleSwitchFillOffDisabled" ResourceKey="ControlAltFillColorDisabled" />
+    <m:StaticResource x:Key="ToggleSwitchStrokeOff" ResourceKey="ControlStrongStrokeColorDefaultBrush" />
+    <m:StaticResource x:Key="ToggleSwitchStrokeOffPointerOver" ResourceKey="ControlAAStrokeColorDefault" />
+    <m:StaticResource x:Key="ToggleSwitchStrokeOffPressed" ResourceKey="ControlAAStrokeColorDefault" />
+    <m:StaticResource x:Key="ToggleSwitchStrokeOffDisabled" ResourceKey="ControlAAStrokeColorDisabled" />
+    <m:StaticResource x:Key="ToggleSwitchFillOn" ResourceKey="AccentFillColorDefaultBrush" />
+    <m:StaticResource x:Key="ToggleSwitchFillOnPointerOver" ResourceKey="AccentFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="ToggleSwitchFillOnPressed" ResourceKey="AccentFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="ToggleSwitchFillOnDisabled" ResourceKey="AccentFillColorDefaultBrush" />
+    <m:StaticResource x:Key="ToggleSwitchStrokeOn" ResourceKey="AccentFillColorDefaultBrush" />
+    <m:StaticResource x:Key="ToggleSwitchStrokeOnPointerOver" ResourceKey="AccentFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="ToggleSwitchStrokeOnPressed" ResourceKey="AccentFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="ToggleSwitchStrokeOnDisabled" ResourceKey="AccentFillColorDefaultBrush" />
+    <m:StaticResource x:Key="ToggleSwitchKnobFillOff" ResourceKey="TextFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="ToggleSwitchKnobFillOffPointerOver" ResourceKey="TextFillColorSecondary" />
+    <m:StaticResource x:Key="ToggleSwitchKnobFillOffPressed" ResourceKey="TextFillColorSecondary" />
+    <m:StaticResource x:Key="ToggleSwitchKnobFillOffDisabled" ResourceKey="TextFillColorDisabled" />
+    <m:StaticResource x:Key="ToggleSwitchKnobFillOn" ResourceKey="TextOnAccentFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="ToggleSwitchKnobFillOnPointerOver" ResourceKey="TextOnAccentAAFillColorPrimary" />
+    <m:StaticResource x:Key="ToggleSwitchKnobFillOnPressed" ResourceKey="TextOnAccentAAFillColorPrimary" />
+    <m:StaticResource x:Key="ToggleSwitchKnobFillOnDisabled" ResourceKey="TextOnAccentAAFillColorDisabled" />
+    <m:StaticResource x:Key="ToggleSwitchKnobStrokeOn" ResourceKey="CircleElevationBorderBrush" />
 
     <!-- Resources for ToolTip -->
     <sys:Double x:Key="ToolTipContentThemeFontSize">12</sys:Double>
     <Thickness x:Key="ToolTipBorderThemeThickness">1</Thickness>
-    <Thickness x:Key="ToolTipBorderThemePadding">8,5,8,7</Thickness>
-    <m:StaticResource x:Key="ToolTipForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
-    <m:StaticResource x:Key="ToolTipBackground" ResourceKey="SystemControlBackgroundChromeMediumLowBrush" />
-    <m:StaticResource x:Key="ToolTipBorderBrush" ResourceKey="SurfaceStrokeColorDefaultBrush" />
+    <m:StaticResource x:Key="ToolTipForegroundBrush" ResourceKey="TextFillColorPrimaryBrush" />
+    <m:StaticResource x:Key="ToolTipBackgroundBrush" ResourceKey="AcrylicBackgroundFillColorDefaultBrush" />
+    <m:StaticResource x:Key="ToolTipBorderBrush" ResourceKey="SurfaceStrokeColorFlyoutBrush" />
 
     <!-- Resources for TreeView -->
     <m:StaticResource x:Key="TreeViewItemBackground" ResourceKey="SystemControlTransparentRevealBackgroundBrush" />
     <m:StaticResource x:Key="TreeViewItemBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowRevealBackgroundBrush" />
     <m:StaticResource x:Key="TreeViewItemBackgroundPressed" ResourceKey="SystemControlHighlightListMediumRevealBackgroundBrush" />
-    <m:StaticResource x:Key="TreeViewItemBackgroundDisabled" ResourceKey="GhostFillColorTransparentBrush" />
+    <m:StaticResource x:Key="TreeViewItemBackgroundDisabled" ResourceKey="SubtleFillColorTransparentBrush" />
     <m:StaticResource x:Key="TreeViewItemBackgroundSelected" ResourceKey="SystemControlHighlightAccent3RevealBackgroundBrush" />
     <m:StaticResource x:Key="TreeViewItemBackgroundSelectedPointerOver" ResourceKey="SystemControlHighlightAccent2RevealBackgroundBrush" />
     <m:StaticResource x:Key="TreeViewItemBackgroundSelectedPressed" ResourceKey="SystemControlHighlightListMediumRevealBackgroundBrush" />
@@ -1612,15 +1686,15 @@
     <m:StaticResource x:Key="TreeViewItemForegroundSelectedPointerOver" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="TreeViewItemForegroundSelectedPressed" ResourceKey="TextFillColorPrimaryBrush" />
     <m:StaticResource x:Key="TreeViewItemForegroundSelectedDisabled" ResourceKey="TextFillColorDisabledBrush" />
-    <m:StaticResource x:Key="TreeViewItemBorderBrush" ResourceKey="GhostFillColorTransparentBrush" />
+    <m:StaticResource x:Key="TreeViewItemBorderBrush" ResourceKey="SubtleFillColorTransparentBrush" />
     <m:StaticResource x:Key="TreeViewItemBorderBrushPointerOver" ResourceKey="SystemControlHighlightAltTransparentRevealBorderBrush" />
     <m:StaticResource x:Key="TreeViewItemBorderBrushPressed" ResourceKey="SystemControlHighlightAltTransparentRevealBorderBrush" />
-    <m:StaticResource x:Key="TreeViewItemBorderBrushDisabled" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="TreeViewItemBorderBrushSelected" ResourceKey="GhostFillColorTransparentBrush" />
+    <m:StaticResource x:Key="TreeViewItemBorderBrushDisabled" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="TreeViewItemBorderBrushSelected" ResourceKey="SubtleFillColorTransparentBrush" />
     <m:StaticResource x:Key="TreeViewItemBorderBrushSelectedPointerOver" ResourceKey="SystemControlBackgroundTransparentRevealBorderBrush" />
     <m:StaticResource x:Key="TreeViewItemBorderBrushSelectedPressed" ResourceKey="SystemControlBackgroundTransparentRevealBorderBrush" />
-    <m:StaticResource x:Key="TreeViewItemBorderBrushSelectedDisabled" ResourceKey="GhostFillColorTransparentBrush" />
-    <m:StaticResource x:Key="TreeViewItemCheckBoxBackgroundSelected" ResourceKey="GhostFillColorTransparentBrush" />
+    <m:StaticResource x:Key="TreeViewItemBorderBrushSelectedDisabled" ResourceKey="SubtleFillColorTransparentBrush" />
+    <m:StaticResource x:Key="TreeViewItemCheckBoxBackgroundSelected" ResourceKey="SubtleFillColorTransparentBrush" />
     <m:StaticResource x:Key="TreeViewItemCheckBoxBorderSelected" ResourceKey="TextFillColorSecondaryBrush" />
     <m:StaticResource x:Key="TreeViewItemCheckGlyphSelected" ResourceKey="TextFillColorSecondaryBrush" />
     <Thickness x:Key="TreeViewItemBorderThemeThickness">1</Thickness>
@@ -1649,10 +1723,10 @@
     <m:StaticResource x:Key="TextControlPlaceholderForegroundPointerOver" ResourceKey="TextFillColorSecondaryBrush" />
     <m:StaticResource x:Key="TextControlPlaceholderForegroundFocused" ResourceKey="TextFillColorTertiaryBrush" />
     <m:StaticResource x:Key="TextControlPlaceholderForegroundDisabled" ResourceKey="TextFillColorDisabledBrush" />
-    <m:StaticResource x:Key="TextControlSelectionHighlightColor" ResourceKey="AccentFillColorDefaultBrush" />
+    <m:StaticResource x:Key="TextControlSelectionHighlightColor" ResourceKey="AccentFillColorSelectedTextBackgroundBrush" />
 
-    <m:StaticResource x:Key="TextControlButtonBackgroundPointerOver" ResourceKey="GhostFillColorSecondaryBrush" />
-    <m:StaticResource x:Key="TextControlButtonBackgroundPressed" ResourceKey="GhostFillColorTertiaryBrush" />
+    <m:StaticResource x:Key="TextControlButtonBackgroundPointerOver" ResourceKey="SubtleFillColorSecondaryBrush" />
+    <m:StaticResource x:Key="TextControlButtonBackgroundPressed" ResourceKey="SubtleFillColorTertiaryBrush" />
     <m:StaticResource x:Key="TextControlButtonBorderBrush" ResourceKey="ControlFillColorTransparentBrush" />
     <m:StaticResource x:Key="TextControlButtonBorderBrushPointerOver" ResourceKey="ControlFillColorTransparentBrush" />
     <m:StaticResource x:Key="TextControlButtonBorderBrushPressed" ResourceKey="ControlFillColorTransparentBrush" />
@@ -1665,17 +1739,17 @@
             <ScaleTransform ScaleY="-1" CenterY="0.5"/>
         </LinearGradientBrush.RelativeTransform>
         <LinearGradientBrush.GradientStops>
-            <GradientStop Offset="0" Color="{StaticResource ControlAAFillColorDefault}"/>
+            <GradientStop Offset="0.5" Color="{StaticResource ControlAAStrokeColorDefault}"/>
             <GradientStop Offset="1.0" Color="{StaticResource ControlStrokeColorDefault}"/>
         </LinearGradientBrush.GradientStops>
     </LinearGradientBrush>
 
-    <LinearGradientBrush x:Key="TextControlElevationBorderFocusedBrush" MappingMode="Absolute" StartPoint="0,1.5" EndPoint="0,2.5">
+    <LinearGradientBrush x:Key="TextControlElevationBorderFocusedBrush" MappingMode="Absolute" StartPoint="0,0" EndPoint="0,2">
         <LinearGradientBrush.RelativeTransform>
             <ScaleTransform ScaleY="-1" CenterY="0.5"/>
         </LinearGradientBrush.RelativeTransform>
         <LinearGradientBrush.GradientStops>
-            <GradientStop Offset="0" Color="{StaticResource AccentFillColorDefault}"/>
+            <GradientStop Offset="1.0" Color="{DynamicResource SystemAccentColorLight2}"/>
             <GradientStop Offset="1.0" Color="{StaticResource ControlStrokeColorDefault}"/>
         </LinearGradientBrush.GradientStops>
     </LinearGradientBrush>
@@ -1702,10 +1776,12 @@
                     <Border
                         BorderBrush="{TemplateBinding primitives:FocusVisualHelper.FocusVisualPrimaryBrush}"
                         BorderThickness="{TemplateBinding primitives:FocusVisualHelper.FocusVisualPrimaryThickness}"
+                        CornerRadius="{TemplateBinding primitives:ControlHelper.CornerRadius}"
                         SnapsToDevicePixels="True">
                         <Border
                             BorderBrush="{TemplateBinding primitives:FocusVisualHelper.FocusVisualSecondaryBrush}"
-                            BorderThickness="{TemplateBinding primitives:FocusVisualHelper.FocusVisualSecondaryThickness}" />
+                            BorderThickness="{TemplateBinding primitives:FocusVisualHelper.FocusVisualSecondaryThickness}"
+                            CornerRadius="{TemplateBinding primitives:ControlHelper.CornerRadius}" />
                     </Border>
                 </ControlTemplate>
             </Setter.Value>

@@ -38,7 +38,6 @@
         <Style.Setters>
             <Setter Property="Focusable" Value="False" />
             <Setter Property="Width" Value="40" />
-            <Setter Property="Height" Value="32" />
             <Setter Property="Background" Value="{DynamicResource NumberBoxPopupSpinButtonBackground}" />
             <Setter Property="BorderThickness" Value="{DynamicResource NumberBoxPopupSpinButtonBorderThickness}" />
             <Setter Property="FontFamily" Value="{DynamicResource SymbolThemeFontFamily}" />
@@ -77,7 +76,7 @@
                                                 VerticalAlignment="Center"
                                                 HorizontalAlignment="Center"
                                                 FontStyle="Normal"
-                                                FontSize="12"
+                                                FontSize="{DynamicResource TextBoxIconFontSize}"
                                                 Data="{StaticResource Cancel}"
                                                 FontFamily="{DynamicResource SymbolThemeFontFamily}" />
                                         </Border>
@@ -187,6 +186,7 @@
                             IsTabStop="False"
                             Visibility="Collapsed"
                             FontSize="{TemplateBinding FontSize}"
+                            HorizontalAlignment="Right"
                             MinWidth="34"
                             VerticalAlignment="Stretch"
                             ui:TextBoxHelper.IsDeleteButton="True" />
@@ -259,6 +259,9 @@
         <Setter Property="FontFamily" Value="{DynamicResource ContentControlThemeFontFamily}" />
         <Setter Property="FontSize" Value="{DynamicResource ControlContentThemeFontSize}" />
         <Setter Property="CornerRadius" Value="{DynamicResource ControlCornerRadius}" />
+        <Setter Property="BorderThickness" Value="{DynamicResource TextControlBorderThemeThickness}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource TextControlBorderBrush}" />
+        <Setter Property="Padding" Value="{DynamicResource TextControlThemePadding}" />
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="Template">
             <Setter.Value>
@@ -268,7 +271,7 @@
                         <StreamGeometry x:Key="ChevronUp">M 19.091797 14.970703 L 10 5.888672 L 0.908203 14.970703 L 0.029297 14.091797 L 10 4.111328 L 19.970703 14.091797 Z</StreamGeometry>
                     </ControlTemplate.Resources>
                     
-                    <Grid ui:ThemeManager.HasThemeResources="True">
+                    <Grid Height="{TemplateBinding Height}" ui:ThemeManager.HasThemeResources="True">
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">
                                 <VisualState x:Name="Normal" />
@@ -332,7 +335,7 @@
 
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
 
@@ -366,6 +369,10 @@
                             FontSize="{TemplateBinding FontSize}"
                             FontWeight="{TemplateBinding FontWeight}"
                             FontFamily="{TemplateBinding FontFamily}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            Padding="{TemplateBinding Padding}"
+                            Foreground="{TemplateBinding Foreground}"
                             TextAlignment="{TemplateBinding TextAlignment}"
                             ui:ControlHelper.CornerRadius="{TemplateBinding CornerRadius}" />
 
@@ -416,6 +423,7 @@
                             Grid.Column="1"
                             Visibility="Collapsed"
                             FontSize="{TemplateBinding FontSize}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
                             Content="{StaticResource ChevronUp}"
                             Style="{StaticResource NumberBoxSpinButtonStyle}"
                             ui:ControlHelper.CornerRadius="0" />
@@ -426,6 +434,7 @@
                             Grid.Column="2"
                             Visibility="Collapsed"
                             FontSize="{TemplateBinding FontSize}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
                             Content="{StaticResource ChevronDown}"
                             Style="{StaticResource NumberBoxSpinButtonStyle}"
                             ui:ControlHelper.CornerRadius="{TemplateBinding CornerRadius, Converter={StaticResource RightCornerRadiusFilterConverter}}" />

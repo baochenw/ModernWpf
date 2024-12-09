@@ -14,7 +14,9 @@
         <Setter Property="FontWeight" Value="Normal" />
         <Setter Property="Width" Value="68" />
         <Setter Property="UseSystemFocusVisuals" Value="{DynamicResource UseSystemFocusVisuals}" />
+        <Setter Property="FocusVisualMargin" Value="-3" />
         <Setter Property="FocusVisualStyle" Value="{DynamicResource {x:Static SystemParameters.FocusVisualStyleKey}}" />
+        <Setter Property="CornerRadius" Value="{DynamicResource ControlCornerRadius}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="local:AppBarButton">
@@ -23,12 +25,9 @@
                     </ControlTemplate.Resources>
                     <Border
                         x:Name="Root"
+                        Background="Transparent"
                         MinWidth="{TemplateBinding MinWidth}"
                         MaxWidth="{TemplateBinding MaxWidth}"
-                        Background="{TemplateBinding Background}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="{TemplateBinding CornerRadius}"
                         SnapsToDevicePixels="True">
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="ApplicationViewStates">
@@ -73,10 +72,14 @@
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
                         <Grid>
-                            <Rectangle
-                                x:Name="AppBarButtonInnerBorder"
-                                StrokeThickness="1"
-                                Stroke="{TemplateBinding BorderBrush}" />
+                            <Border x:Name="AppBarButtonInnerBorder"                                       
+                                    Margin="{DynamicResource AppBarButtonInnerBorderMargin}"
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{TemplateBinding CornerRadius}"
+                                    ui:FocusVisualHelper.IsTemplateFocusTarget="True" />
+                            
                             <Grid
                                 x:Name="ContentRoot"
                                 MinHeight="{DynamicResource AppBarThemeMinHeight}">
@@ -152,6 +155,7 @@
                         <!--#region ApplicationViewStates-->
                         <!-- Compact -->
                         <Trigger SourceName="ApplicationViewStatesListener" Property="CurrentStateName" Value="Compact">
+                            <Setter TargetName="AppBarButtonInnerBorder" Property="Margin" Value="{StaticResource AppBarButtonInnerBorderCompactMargin}" />
                             <Setter TargetName="TextLabel" Property="Visibility" Value="Collapsed" />
                         </Trigger>
                         <!-- LabelOnRight -->
@@ -172,6 +176,7 @@
                         <!-- Overflow -->
                         <Trigger SourceName="ApplicationViewStatesListener" Property="CurrentStateName" Value="Overflow">
                             <Setter TargetName="ContentRoot" Property="MinHeight" Value="0" />
+                            <Setter TargetName="AppBarButtonInnerBorder" Property="Margin" Value="{DynamicResource AppBarButtonInnerBorderOverflowMargin}" />
                             <Setter TargetName="ContentViewbox" Property="Visibility" Value="Collapsed" />
                             <Setter TargetName="TextLabel" Property="Visibility" Value="Collapsed" />
                             <Setter TargetName="OverflowTextLabel" Property="Visibility" Value="Visible" />
@@ -179,6 +184,7 @@
                         <!-- OverflowWithToggleButtons -->
                         <Trigger SourceName="ApplicationViewStatesListener" Property="CurrentStateName" Value="OverflowWithToggleButtons">
                             <Setter TargetName="ContentRoot" Property="MinHeight" Value="0" />
+                            <Setter TargetName="AppBarButtonInnerBorder" Property="Margin" Value="{DynamicResource AppBarButtonInnerBorderOverflowMargin}" />
                             <Setter TargetName="ContentViewbox" Property="Visibility" Value="Collapsed" />
                             <Setter TargetName="TextLabel" Property="Visibility" Value="Collapsed" />
                             <Setter TargetName="OverflowTextLabel" Property="Visibility" Value="Visible" />
@@ -187,6 +193,7 @@
                         <!-- OverflowWithMenuIcons -->
                         <Trigger SourceName="ApplicationViewStatesListener" Property="CurrentStateName" Value="OverflowWithMenuIcons">
                             <Setter TargetName="ContentRoot" Property="MinHeight" Value="0" />
+                            <Setter TargetName="AppBarButtonInnerBorder" Property="Margin" Value="{DynamicResource AppBarButtonInnerBorderOverflowMargin}" />
                             <Setter TargetName="ContentViewbox" Property="HorizontalAlignment" Value="Left" />
                             <Setter TargetName="ContentViewbox" Property="VerticalAlignment" Value="Center" />
                             <Setter TargetName="ContentViewbox" Property="Width" Value="16" />
@@ -199,6 +206,7 @@
                         <!-- OverflowWithToggleButtonsAndMenuIcons -->
                         <Trigger SourceName="ApplicationViewStatesListener" Property="CurrentStateName" Value="OverflowWithToggleButtonsAndMenuIcons">
                             <Setter TargetName="ContentRoot" Property="MinHeight" Value="0" />
+                            <Setter TargetName="AppBarButtonInnerBorder" Property="Margin" Value="{DynamicResource AppBarButtonInnerBorderOverflowMargin}" />
                             <Setter TargetName="ContentViewbox" Property="HorizontalAlignment" Value="Left" />
                             <Setter TargetName="ContentViewbox" Property="VerticalAlignment" Value="Center" />
                             <Setter TargetName="ContentViewbox" Property="Width" Value="16" />
@@ -212,9 +220,8 @@
                         <!--#region CommonStates-->
                         <!-- PointerOver -->
                         <Trigger SourceName="CommonStatesListener" Property="CurrentStateName" Value="PointerOver">
-                            <Setter TargetName="Root" Property="Background" Value="{DynamicResource AppBarButtonBackgroundPointerOver}" />
-                            <Setter TargetName="Root" Property="BorderBrush" Value="{DynamicResource AppBarButtonBorderBrushPointerOver}" />
-                            <Setter TargetName="AppBarButtonInnerBorder" Property="Stroke" Value="{DynamicResource AppBarButtonBorderBrushPointerOver}" />
+                            <Setter TargetName="AppBarButtonInnerBorder" Property="Background" Value="{DynamicResource AppBarButtonBackgroundPointerOver}" />
+                            <Setter TargetName="AppBarButtonInnerBorder" Property="BorderBrush" Value="{DynamicResource AppBarButtonBorderBrushPointerOver}" />
                             <Setter TargetName="Content" Property="TextElement.Foreground" Value="{DynamicResource AppBarButtonForegroundPointerOver}" />
                             <Setter TargetName="TextLabel" Property="Foreground" Value="{DynamicResource AppBarButtonForegroundPointerOver}" />
                             <Setter TargetName="OverflowTextLabel" Property="Foreground" Value="{DynamicResource AppBarButtonForegroundPointerOver}" />
@@ -222,9 +229,8 @@
                         </Trigger>
                         <!-- Pressed -->
                         <Trigger SourceName="CommonStatesListener" Property="CurrentStateName" Value="Pressed">
-                            <Setter TargetName="Root" Property="Background" Value="{DynamicResource AppBarButtonBackgroundPressed}" />
-                            <Setter TargetName="Root" Property="BorderBrush" Value="{DynamicResource AppBarButtonBorderBrushPressed}" />
-                            <Setter TargetName="AppBarButtonInnerBorder" Property="Stroke" Value="{DynamicResource AppBarButtonBorderBrushPressed}" />
+                            <Setter TargetName="AppBarButtonInnerBorder" Property="Background" Value="{DynamicResource AppBarButtonBackgroundPressed}" />
+                            <Setter TargetName="AppBarButtonInnerBorder" Property="BorderBrush" Value="{DynamicResource AppBarButtonBorderBrushPressed}" />
                             <Setter TargetName="Content" Property="TextElement.Foreground" Value="{DynamicResource AppBarButtonForegroundPressed}" />
                             <Setter TargetName="TextLabel" Property="Foreground" Value="{DynamicResource AppBarButtonForegroundPressed}" />
                             <Setter TargetName="OverflowTextLabel" Property="Foreground" Value="{DynamicResource AppBarButtonForegroundPressed}" />
@@ -232,9 +238,8 @@
                         </Trigger>
                         <!-- Disabled -->
                         <Trigger SourceName="CommonStatesListener" Property="CurrentStateName" Value="Disabled">
-                            <Setter TargetName="Root" Property="Background" Value="{DynamicResource AppBarButtonBackgroundDisabled}" />
-                            <Setter TargetName="Root" Property="BorderBrush" Value="{DynamicResource AppBarButtonBorderBrushDisabled}" />
-                            <Setter TargetName="AppBarButtonInnerBorder" Property="Stroke" Value="{DynamicResource AppBarButtonBorderBrushDisabled}" />
+                            <Setter TargetName="AppBarButtonInnerBorder" Property="Background" Value="{DynamicResource AppBarButtonBackgroundDisabled}" />
+                            <Setter TargetName="AppBarButtonInnerBorder" Property="BorderBrush" Value="{DynamicResource AppBarButtonBorderBrushDisabled}" />
                             <Setter TargetName="Content" Property="TextElement.Foreground" Value="{DynamicResource AppBarButtonForegroundDisabled}" />
                             <Setter TargetName="TextLabel" Property="Foreground" Value="{DynamicResource AppBarButtonForegroundDisabled}" />
                             <Setter TargetName="OverflowTextLabel" Property="Foreground" Value="{DynamicResource AppBarButtonForegroundDisabled}" />
@@ -242,9 +247,8 @@
                         </Trigger>
                         <!-- OverflowPointerOver -->
                         <Trigger SourceName="CommonStatesListener" Property="CurrentStateName" Value="OverflowPointerOver">
-                            <Setter TargetName="Root" Property="Background" Value="{DynamicResource AppBarButtonBackgroundPointerOver}" />
-                            <Setter TargetName="Root" Property="BorderBrush" Value="{DynamicResource AppBarButtonBorderBrushPointerOver}" />
-                            <Setter TargetName="AppBarButtonInnerBorder" Property="Stroke" Value="{DynamicResource AppBarButtonBorderBrushPointerOver}" />
+                            <Setter TargetName="AppBarButtonInnerBorder" Property="Background" Value="{DynamicResource AppBarButtonBackgroundPointerOver}" />
+                            <Setter TargetName="AppBarButtonInnerBorder" Property="BorderBrush" Value="{DynamicResource AppBarButtonBorderBrushPointerOver}" />
                             <Setter TargetName="Content" Property="TextElement.Foreground" Value="{DynamicResource AppBarButtonForegroundPointerOver}" />
                             <Setter TargetName="TextLabel" Property="Foreground" Value="{DynamicResource AppBarButtonForegroundPointerOver}" />
                             <Setter TargetName="OverflowTextLabel" Property="Foreground" Value="{DynamicResource AppBarButtonForegroundPointerOver}" />
@@ -253,9 +257,8 @@
                         </Trigger>
                         <!-- OverflowPressed -->
                         <Trigger SourceName="CommonStatesListener" Property="CurrentStateName" Value="OverflowPressed">
-                            <Setter TargetName="Root" Property="Background" Value="{DynamicResource AppBarButtonBackgroundPressed}" />
-                            <Setter TargetName="Root" Property="BorderBrush" Value="{DynamicResource AppBarButtonBorderBrushPressed}" />
-                            <Setter TargetName="AppBarButtonInnerBorder" Property="Stroke" Value="{DynamicResource AppBarButtonBorderBrushPressed}" />
+                            <Setter TargetName="AppBarButtonInnerBorder" Property="Background" Value="{DynamicResource AppBarButtonBackgroundPressed}" />
+                            <Setter TargetName="AppBarButtonInnerBorder" Property="BorderBrush" Value="{DynamicResource AppBarButtonBorderBrushPressed}" />
                             <Setter TargetName="Content" Property="TextElement.Foreground" Value="{DynamicResource AppBarButtonForegroundPressed}" />
                             <Setter TargetName="TextLabel" Property="Foreground" Value="{DynamicResource AppBarButtonForegroundPressed}" />
                             <Setter TargetName="OverflowTextLabel" Property="Foreground" Value="{DynamicResource AppBarButtonForegroundPressed}" />
@@ -264,9 +267,8 @@
                         </Trigger>
                         <!-- OverflowSubMenuOpened -->
                         <!--<Trigger>
-                            <Setter TargetName="Root" Property="Background" Value="{DynamicResource AppBarButtonBackgroundSubMenuOpened}" />
-                            <Setter TargetName="Root" Property="BorderBrush" Value="{DynamicResource AppBarButtonBorderBrushSubMenuOpened}" />
-                            <Setter TargetName="AppBarButtonInnerBorder" Property="Stroke" Value="{DynamicResource AppBarButtonBorderBrushSubMenuOpened}" />
+                            <Setter TargetName="AppBarButtonInnerBorder" Property="Background" Value="{DynamicResource AppBarButtonBackgroundSubMenuOpened}" />
+                            <Setter TargetName="AppBarButtonInnerBorder" Property="BorderBrush" Value="{DynamicResource AppBarButtonBorderBrushSubMenuOpened}" />
                             <Setter TargetName="Content" Property="TextElement.Foreground" Value="{DynamicResource AppBarButtonForegroundSubMenuOpened}" />
                             <Setter TargetName="TextLabel" Property="Foreground" Value="{DynamicResource AppBarButtonForegroundSubMenuOpened}" />
                             <Setter TargetName="OverflowTextLabel" Property="Foreground" Value="{DynamicResource AppBarButtonForegroundSubMenuOpened}" />

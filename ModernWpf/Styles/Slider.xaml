@@ -7,6 +7,7 @@
     xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
     <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Common.xaml" />
         <ResourceDictionary Source="ToolTip.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
@@ -74,11 +75,11 @@
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SliderInnerThumb" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)">
                                             <!-- 0.86 is relative scale from 14px to 12px -->
-                                            <SplineDoubleKeyFrame KeyTime="0:0:0.167" KeySpline="0.0,0.0 0.0,1.0" Value="0.86" />
+                                            <SplineDoubleKeyFrame KeyTime="{StaticResource ControlFasterAnimationDuration}" KeySpline="{StaticResource ControlFastOutSlowInKeySpline}" Value="0.86" />
                                         </DoubleAnimationUsingKeyFrames>
                                         <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SliderInnerThumb" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)">
                                             <!-- 0.86 is relative scale from 14px to 12px -->
-                                            <SplineDoubleKeyFrame KeyTime="0:0:0.167" KeySpline="0.0,0.0 0.0,1.0" Value="0.86" />
+                                            <SplineDoubleKeyFrame KeyTime="{StaticResource ControlFasterAnimationDuration}" KeySpline="{StaticResource ControlFastOutSlowInKeySpline}" Value="0.86" />
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -86,11 +87,11 @@
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SliderInnerThumb" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)">
                                             <!-- 1.167 is relative scale from 12px to 14px -->
-                                            <SplineDoubleKeyFrame KeyTime="0:0:0.25" KeySpline="0.0,0.0 0.0,1.0" Value="1.167" />
+                                            <SplineDoubleKeyFrame KeyTime="{StaticResource ControlNormalAnimationDuration}" KeySpline="{StaticResource ControlFastOutSlowInKeySpline}" Value="1.167" />
                                         </DoubleAnimationUsingKeyFrames>
                                         <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SliderInnerThumb" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)">
                                             <!-- 1.167 is relative scale from 12px to 14px -->
-                                            <SplineDoubleKeyFrame KeyTime="0:0:0.25" KeySpline="0.0,0.0 0.0,1.0" Value="1.167" />
+                                            <SplineDoubleKeyFrame KeyTime="{StaticResource ControlNormalAnimationDuration}" KeySpline="{StaticResource ControlFastOutSlowInKeySpline}" Value="1.167" />
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -98,11 +99,11 @@
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SliderInnerThumb" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)">
                                             <!-- 0.71 is relative scale from 14px to 10px -->
-                                            <SplineDoubleKeyFrame KeyTime="0:0:0.25" KeySpline="0.0,0.0 0.0,1.0" Value="0.71" />
+                                            <SplineDoubleKeyFrame KeyTime="{StaticResource ControlNormalAnimationDuration}" KeySpline="{StaticResource ControlFastOutSlowInKeySpline}" Value="0.71" />
                                         </DoubleAnimationUsingKeyFrames>
                                         <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SliderInnerThumb" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)">
                                             <!-- 0.71 is relative scale from 14px to 10px -->
-                                            <SplineDoubleKeyFrame KeyTime="0:0:0.25" KeySpline="0.0,0.0 0.0,1.0" Value="0.71" />
+                                            <SplineDoubleKeyFrame KeyTime="{StaticResource ControlNormalAnimationDuration}" KeySpline="{StaticResource ControlFastOutSlowInKeySpline}" Value="0.71" />
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -110,11 +111,11 @@
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SliderInnerThumb" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)">
                                             <!-- 1.167 is relative scale from 12px to 14px -->
-                                            <SplineDoubleKeyFrame KeyTime="0:0:0.167" KeySpline="0.0,0.0 0.0,1.0" Value="1.167" />
+                                            <SplineDoubleKeyFrame KeyTime="{StaticResource ControlFasterAnimationDuration}" KeySpline="{StaticResource ControlFastOutSlowInKeySpline}" Value="1.167" />
                                         </DoubleAnimationUsingKeyFrames>
                                         <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SliderInnerThumb" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)">
                                             <!-- 1.167 is relative scale from 12px to 14px -->
-                                            <SplineDoubleKeyFrame KeyTime="0:0:0.167" KeySpline="0.0,0.0 0.0,1.0" Value="1.167" />
+                                            <SplineDoubleKeyFrame KeyTime="{StaticResource ControlFasterAnimationDuration}" KeySpline="{StaticResource ControlFastOutSlowInKeySpline}" Value="1.167" />
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -150,11 +151,12 @@
                 TextWrapping="Wrap"
                 Visibility="{TemplateBinding primitives:ControlHelper.HeaderVisibility}"
                 SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
-            <Grid
+            <Border
                 x:Name="SliderContainer"
                 Grid.Row="1"
                 Background="{DynamicResource SliderContainerBackground}"
-                primitives:FocusVisualHelper.IsTemplateFocusTarget="True">
+                primitives:FocusVisualHelper.IsTemplateFocusTarget="True"
+                CornerRadius="{DynamicResource ControlCornerRadius}">
                 <Grid
                     x:Name="HorizontalTemplate"
                     MinHeight="{DynamicResource SliderHorizontalHeight}">
@@ -229,6 +231,7 @@
                                 DataContext="{TemplateBinding Value}"
                                 Height="{DynamicResource SliderHorizontalThumbHeight}"
                                 Width="{DynamicResource SliderHorizontalThumbWidth}"
+                                primitives:ControlHelper.CornerRadius="{DynamicResource ControlCornerRadius}"
                                 primitives:FocusVisualHelper.FocusVisualMargin="-14,-6,-14,-6">
                                 <Thumb.Resources>
                                     <Style TargetType="ToolTip" BasedOn="{StaticResource SliderAutoToolTipStyle}" />
@@ -237,7 +240,7 @@
                         </Track.Thumb>
                     </Track>
                 </Grid>
-            </Grid>
+            </Border>
         </Grid>
         <ControlTemplate.Triggers>
             <Trigger Property="TickPlacement" Value="TopLeft">
@@ -295,11 +298,12 @@
                 Visibility="{TemplateBinding primitives:ControlHelper.HeaderVisibility}"
                 SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
             </local:ContentPresenterEx>
-            <Grid
+            <Border
                 x:Name="SliderContainer"
                 Grid.Row="1"
                 Background="{DynamicResource SliderContainerBackground}"
-                primitives:FocusVisualHelper.IsTemplateFocusTarget="True">
+                primitives:FocusVisualHelper.IsTemplateFocusTarget="True"
+                CornerRadius="{DynamicResource ControlCornerRadius}">
                 <Grid
                     x:Name="VerticalTemplate"
                     MinWidth="{DynamicResource SliderVerticalWidth}">
@@ -375,6 +379,7 @@
                                 DataContext="{TemplateBinding Value}"
                                 Width="{DynamicResource SliderVerticalThumbWidth}"
                                 Height="{DynamicResource SliderVerticalThumbHeight}"
+                                primitives:ControlHelper.CornerRadius="{DynamicResource ControlCornerRadius}"
                                 primitives:FocusVisualHelper.FocusVisualMargin="-6,-14,-6,-14">
                                 <Thumb.Resources>
                                     <Style TargetType="ToolTip" BasedOn="{StaticResource SliderAutoToolTipStyle}" />
@@ -383,7 +388,7 @@
                         </Track.Thumb>
                     </Track>
                 </Grid>
-            </Grid>
+            </Border>
         </Grid>
         <ControlTemplate.Triggers>
             <Trigger Property="TickPlacement" Value="TopLeft">

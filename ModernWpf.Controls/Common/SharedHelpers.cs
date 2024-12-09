@@ -162,11 +162,11 @@ namespace ModernWpf.Controls
         {
             if (iconSource is FontIconSource fontIconSource)
             {
-                FontIcon fontIcon = new FontIcon();
+                FontIcon fontIcon = new();
 
                 fontIcon.Glyph = fontIconSource.Glyph;
                 fontIcon.FontSize = fontIconSource.FontSize;
-                if (fontIconSource.Foreground is Brush newForeground)
+                if (fontIconSource.Foreground is { } newForeground)
                 {
                     fontIcon.Foreground = newForeground;
                 }
@@ -185,18 +185,17 @@ namespace ModernWpf.Controls
             }
             else if (iconSource is SymbolIconSource symbolIconSource)
             {
-                SymbolIcon symbolIcon = new SymbolIcon();
+                SymbolIcon symbolIcon = new();
                 symbolIcon.Symbol = symbolIconSource.Symbol;
-                if (symbolIconSource.Foreground is Brush newForeground)
+                if (symbolIconSource.Foreground is { } newForeground)
                 {
                     symbolIcon.Foreground = newForeground;
                 }
-
                 return symbolIcon;
             }
             else if (iconSource is BitmapIconSource bitmapIconSource)
             {
-                BitmapIcon bitmapIcon = new BitmapIcon();
+                BitmapIcon bitmapIcon = new();
 
                 if (bitmapIconSource.UriSource != null)
                 {
@@ -204,26 +203,24 @@ namespace ModernWpf.Controls
                 }
 
                 bitmapIcon.ShowAsMonochrome = bitmapIconSource.ShowAsMonochrome;
-                if (bitmapIconSource.Foreground is Brush newForeground)
+                if (bitmapIconSource.Foreground is { } newForeground)
                 {
                     bitmapIcon.Foreground = newForeground;
                 }
-
                 return bitmapIcon;
             }
             else if (iconSource is PathIconSource pathIconSource)
             {
-                PathIcon pathIcon = new PathIcon();
+                PathIcon pathIcon = new();
 
                 if (pathIconSource.Data != null)
                 {
                     pathIcon.Data = pathIconSource.Data;
                 }
-                if (pathIconSource.Foreground is Brush newForeground)
+                if (pathIconSource.Foreground is { } newForeground)
                 {
                     pathIcon.Foreground = newForeground;
                 }
-
                 return pathIcon;
             }
 
